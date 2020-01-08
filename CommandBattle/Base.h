@@ -25,10 +25,6 @@
 
 #define		ENDFRAME			{999,999,999}
 
-typedef		int					UNKOINT;
-typedef		float				UNKOFLOAT;
-typedef		bool				UNKOBOOL;
-
 
 // ƒOƒ[ƒoƒ‹•Ï”
 

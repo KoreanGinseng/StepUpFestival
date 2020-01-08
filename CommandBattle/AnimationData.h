@@ -1,11 +1,9 @@
 #pragma once
-#include	"DxLib.h"
+#include	"DxLibPlus.h"
 #include	"TextureManager.h"
 
 //ANIM構造体
-struct SpriteAnimationCreate {
-
-};
+typedef ANIMATIONFRAME SpriteAnimationCreate;
 
 
 //アニメーションデータクラス

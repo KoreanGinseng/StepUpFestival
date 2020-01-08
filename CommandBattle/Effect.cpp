@@ -6,7 +6,7 @@ CEffect::CEffect(void) :
 m_pTexture(nullptr),
 m_Motion(),
 m_bShow(false),
-m_Pos(Vector2(0, 0))
+m_Pos(Vector2<float>(Vector2Get<float>(0, 0)))
 {
 }
 
@@ -20,7 +20,7 @@ bool CEffect::IsShow(void) const
 	return m_bShow;
 }
 
-void CEffect::Start(const Vector2 & pos)
+void CEffect::Start(const Vector2<float> & pos)
 {
 	//発生位置に座標セット
 	m_Pos = pos;
@@ -70,7 +70,8 @@ void CEffect::Update(void)
 		return;
 	}
 	//アニメーションを更新
-	m_Motion.AddTimer(CUtilities::GetFrameSecond());
+	//m_Motion.AddTimer(CUtilities::GetFrameSecond());
+	m_Motion.AddTimer();
 	//アニメーションが終了していればフラグを折る
 	if (m_Motion.IsEndMotion())
 	{

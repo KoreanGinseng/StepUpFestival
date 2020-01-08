@@ -1,9 +1,7 @@
 #pragma once
 #include	"Base.h"
-#include	"Singleton.h"
 
 class CInput {
-	friend	SingletonHolder<CInput>;
 private:
 	char	KeyStateAll[256];
 	int		m_Key[256];
@@ -21,10 +19,7 @@ public:
 	bool	IsMousePull(int MouseCode);
 	int		GetMousePos(int *XBuf, int *YBuf);
 	int		GetMousePos(Vector2<int> *pos);
+	static CInput* GetInstance() { static CInput obj; return &obj; }
 };
 
-// SingletonHolderを使う際のお決まりtypedef
-typedef SingletonHolder<CInput>    CInputHolder;
-// 海外のコードでよくみかけるdefineやexternで使うthe...形式(ちょっとオシャレ?)
-#define theCInput CInputHolder::getInstance()
-#define g_pInput CInputHolder::getInstancePtr()
+#define g_pInput CInput::GetInstance()

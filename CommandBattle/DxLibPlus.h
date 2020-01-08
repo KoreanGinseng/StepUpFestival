@@ -2,13 +2,13 @@
 #include	"Fps.h"
 #include	"Circle.h"
 #include	"Texture.h"
-#include	"SoundManager.h"
 #include	"Rectangle.h"
 #include	"Animation.h"
 #include	"Input.h"
-#include	"Graphics.h"
 
-// グローバル
-extern CSoundManager	sound;					//サウンド
-extern Fps				gFps;					//FPS
-extern CInput			g_Input;				//Inpput
+#include	<crtdbg.h>
+#ifdef _DEBUG
+#define		NEW		new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#else
+#define		NEW		new
+#endif

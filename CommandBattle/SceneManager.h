@@ -1,5 +1,5 @@
 #pragma once
-#include	"Mof.h"
+#include	"DxLibPlus.h"
 #include	"SceneBase.h"
 #include	"SceneEffectBase.h"
 #include	"GameDefine.h"

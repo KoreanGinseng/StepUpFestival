@@ -1,5 +1,5 @@
 #pragma once
-#include	"DxLib.h"
+#include	"DxLibPlus.h"
 #include	"AnimationData.h"
 #include	<unordered_map>
 

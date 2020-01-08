@@ -47,7 +47,7 @@ void CAnimation::Create(ANIMATIONFRAME* anim, int animCount) {
  * @param()		なし
  * @return		なし
  *********************************************************************************************************/
-void CAnimation::addTimer() { 
+void CAnimation::AddTimer() { 
 	// アニメーションパターン数がマイナスにならないようにする
 	if (m_AnimCount < 0) {
 		m_AnimCount = 0;
@@ -84,4 +84,15 @@ SRectangle	CAnimation::GetSrcRect() {
 		m_pAnimFrame[m_AnimCount].OffsetY + m_pAnimFrame[m_AnimCount].Height * m_pAnimFrame[m_AnimCount].Pattern[m_NowFrame].Step,
 		m_pAnimFrame[m_AnimCount].Width,
 		m_pAnimFrame[m_AnimCount].Height);
+}
+
+void CAnimation::SetTime(const int & time)
+{
+	m_NowFrame = time;
+	m_NowWait = 0;
+}
+
+bool CAnimation::IsEndMotion(void)
+{
+	return m_pAnimFrame[m_AnimCount].bLoop ? false : m_NowFrame == m_FrameCount ? true : false;
 }

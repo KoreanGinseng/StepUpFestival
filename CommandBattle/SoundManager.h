@@ -1,6 +1,7 @@
 #pragma once
-#include	"Mof.h"
+#include	"DxLibPlus.h"
 #include	<unordered_map>
+#include	<vector>
 #include	"Sound.h"
 
 constexpr	int		DefSoundPool = 10;			//! 再生プール数
@@ -9,7 +10,7 @@ constexpr	int		DefSoundPool = 10;			//! 再生プール数
 class CSoundManager
 {
 private:
-	std::unordered_map<std::string, CDynamicArray<CSound*>> m_ResourceSE;	//! データ
+	std::unordered_map<std::string, std::vector<CSound*>> m_ResourceSE;		//! データ
 	std::unordered_map<std::string, CSoundBuffer*> m_ResourceBGM;			//! データ
 	CSoundManager(void);
 	~CSoundManager(void);

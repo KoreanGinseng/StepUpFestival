@@ -1,5 +1,5 @@
 #pragma once
-#include	"Mof.h"
+#include	"DxLibPlus.h"
 #include	<unordered_map>
 
 class CTextureManager
