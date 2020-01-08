@@ -1,6 +1,6 @@
 #pragma once
 #include "SceneBase.h"
-#include "Mof.h"
+#include "DxLibPlus.h"
 
 //ƒQ[ƒ€ƒNƒ‰ƒX
 class CGame : public CSceneBase

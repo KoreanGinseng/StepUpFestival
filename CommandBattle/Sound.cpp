@@ -23,19 +23,16 @@ bool CSound::IsPlay(void) const
 	return m_bPlay;
 }
 
-void CSound::Play(void)
+void CSound::Play(const int& playType)
 {
-	m_pSound->Play();
+	m_pSound->Play(playType);
 	m_bPlay = true;
 }
 
 bool CSound::Load(const std::string & str)
 {
 	m_pSound = new CSoundBuffer();
-	if (!m_pSound->Load(str.c_str()))
-	{
-		return false;
-	}
+	m_pSound->Load(str.c_str());
 	return true;
 }
 
@@ -56,5 +53,9 @@ void CSound::Update(void)
 void CSound::Release(void)
 {
 	m_pSound->Release();
-	MOF_SAFE_DELETE(m_pSound);
+	if (m_pSound)
+	{
+		delete m_pSound;
+		m_pSound = nullptr;
+	}
 }

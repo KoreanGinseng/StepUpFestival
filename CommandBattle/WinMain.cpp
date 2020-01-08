@@ -30,6 +30,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	{
 		//FPS‚ÌŒv‘ª
 		g_pFps->Update();
+		g_pInput->RefreshKey();
+
 		//XV
 		gameApp.Update();
 

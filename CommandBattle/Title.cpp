@@ -22,17 +22,15 @@ void CTitle::Initialize(void)
 
 void CTitle::Update(void)
 {
-	if (g_pInput->IsKeyPush(MOFKEY_RETURN) && !CSceneManager::IsEffectIn())
+	if (g_pInput->IsKeyPush(KEY_INPUT_RETURN))
 	{
-		CSceneManager::SceneEffectIn(SCENE_EFFECT_FADE, 2.0f);
-		CSceneManager::SceneEffectOut(SCENE_EFFECT_FADE, 2.0f);
 		CSceneManager::ChangeScene(SCENE_GAME);
 	}
 }
 
 void CTitle::Render(void)
 {
-	CGraphicsUtilities::RenderString(0, 0, "タイトルシーン\nエンターキーでゲームへ");
+	DrawFormatString(0, 0, COLOR_WHITE, "タイトルシーン\nエンターキーでゲームへ");
 }
 
 void CTitle::Release(void)

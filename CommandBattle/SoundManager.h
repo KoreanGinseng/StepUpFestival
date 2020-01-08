@@ -19,8 +19,8 @@ public:
 	static CSound* GetSoundSE(const std::string& str);						//! 再生可能なサウンド取得
 	static CSoundBuffer* GetSoundBGM(const std::string& str);				//! 再生可能なサウンド取得
 	static CSoundBuffer* GetSoundBuffer(const std::string& str);			//! 再生可能なサウンド取得
-	static void PlaySE(const std::string& str);								//! 再生
-	static void PlayBGM(const std::string& str);							//! 再生
+	static void PlaySE(const std::string& str, const int& playType);		//! 再生
+	static void PlayBGM(const std::string& str, const int& playType);		//! 再生
 	static void SetVolumeSE(const std::string& str, const float& vol);		//! 音量の調節 vol(0.0f ~ 1.0f)
 	static void SetVolumeBGM(const std::string& str, const float& vol);		//! 音量の調節 vol(0.0f ~ 1.0f)
 	static bool LoadSE(const std::string& str);								//! 読込

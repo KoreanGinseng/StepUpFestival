@@ -35,7 +35,29 @@ void CAnimation::ChangeMotion(int animNo) {
  *********************************************************************************************************/
 void CAnimation::Create(ANIMATIONFRAME* anim, int animCount) {
 	// アニメーションパターンのポインタをセット
-	m_pAnimFrame = anim;
+	ANIMATIONFRAME* pAnim = new ANIMATIONFRAME[animCount];
+	//for (int i = 0; i < animCount; i++)
+	//{
+	//	int frameCount = 0;
+	//	while (m_pAnimFrame[m_AnimCount].Pattern[i].Wait != 999 && m_pAnimFrame[m_AnimCount].Pattern[i].No != 999 && m_pAnimFrame[m_AnimCount].Pattern[i].Step != 999)
+	//	{
+	//		frameCount++;
+	//	}
+	//	pAnim[i].Name = anim[i].Name;
+	//	pAnim[i].OffsetX = anim[i].OffsetX;
+	//	pAnim[i].OffsetY = anim[i].OffsetY;
+	//	pAnim[i].Width = anim[i].Width;
+	//	pAnim[i].Height = anim[i].Height;
+	//	pAnim[i].bLoop = anim[i].bLoop;
+	//	for (int j = 0; j < frameCount; j++)
+	//	{
+	//		pAnim[i].Pattern[j].No = anim[i].Pattern[j].No;
+	//		pAnim[i].Pattern[j].Step = anim[i].Pattern[j].Step;
+	//		pAnim[i].Pattern[j].Wait = anim[i].Pattern[j].Wait;
+	//	}
+	//}
+	*pAnim = *anim;
+	m_pAnimFrame = pAnim;
 	// アニメーションパターンの最大数をセット
 	m_MAXAnimCount = animCount;
 }
@@ -95,4 +117,13 @@ void CAnimation::SetTime(const int & time)
 bool CAnimation::IsEndMotion(void)
 {
 	return m_pAnimFrame[m_AnimCount].bLoop ? false : m_NowFrame == m_FrameCount ? true : false;
+}
+
+void CAnimation::Release(void)
+{
+	if (m_pAnimFrame)
+	{
+		delete m_pAnimFrame;
+		m_pAnimFrame = nullptr;
+	}
 }

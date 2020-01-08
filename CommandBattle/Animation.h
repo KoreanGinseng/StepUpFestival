@@ -91,4 +91,5 @@ public:
 
 	void		SetTime(const int& time);
 	bool		IsEndMotion(void);
+	void		Release(void);
 };

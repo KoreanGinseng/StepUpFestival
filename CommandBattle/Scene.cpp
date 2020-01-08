@@ -2,7 +2,6 @@
 #include	"GameDefine.h"
 #include	"Game.h"
 #include	"Title.h"
-#include	"Fade.h"
 
 bool CSceneManager::Load(void)
 {
@@ -10,7 +9,6 @@ bool CSceneManager::Load(void)
 	CSceneManager::GetManager()->m_pScenes[SCENE_GAME] = NEW CGame();
 
 
-	CSceneManager::GetManager()->m_pEffectScenes[SCENE_EFFECT_FADE] = NEW CFade();
 
 	for (int i = 0; i < SCENE_COUNT; i++)
 	{
@@ -23,16 +21,16 @@ bool CSceneManager::Load(void)
 			return false;
 		}
 	}
-	for (int i = 0; i < SCENE_EFFECT_COUNT; i++)
-	{
-		if (CSceneManager::GetManager()->m_pEffectScenes[i] == nullptr)
-		{
-			return false;
-		}
-		if (!CSceneManager::GetManager()->m_pEffectScenes[i]->Load())
-		{
-			return false;
-		}
-	}
+	//for (int i = 0; i < SCENE_EFFECT_COUNT; i++)
+	//{
+	//	if (CSceneManager::GetManager()->m_pEffectScenes[i] == nullptr)
+	//	{
+	//		return false;
+	//	}
+	//	if (!CSceneManager::GetManager()->m_pEffectScenes[i]->Load())
+	//	{
+	//		return false;
+	//	}
+	//}
 	return true;
 }

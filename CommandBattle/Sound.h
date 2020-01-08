@@ -15,7 +15,7 @@ public:
 	int Stop() { return StopSoundMem(m_Handle); }								//サウンド停止
 	int Resume(int PlayType) { return PlaySoundMem(m_Handle, PlayType, FALSE); } //サウンド再開
 	int Release() { return DeleteSoundMem(m_Handle); }							//サウンド削除
-	int ChengeVolume(int VolumePal) { m_Volume = VolumePal; return ChangeVolumeSoundMem(m_Volume, m_Handle); }//音量調整
+	int SetVolume(int VolumePal) { m_Volume = VolumePal; return ChangeVolumeSoundMem(m_Volume, m_Handle); }//音量調整
 	int GetVolume() { return m_Volume; }
 };
 
@@ -30,7 +30,7 @@ public:
 	~CSound(void);									//! デストラクタ
 	CSoundBuffer*	GetSoundBuffer(void);			//! サウンド取得
 	bool			IsPlay(void) const;				//! 再生フラグ取得
-	void			Play(void);						//! 再生
+	void			Play(const int& playType);		//! 再生
 	bool			Load(const std::string& str);	//! 読込
 	void			Update(void);					//! 更新
 	void			Release(void);					//! 解放

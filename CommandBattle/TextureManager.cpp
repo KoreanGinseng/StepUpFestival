@@ -25,10 +25,7 @@ CTexture * CTextureManager::GetTexture(const std::string & str)
 bool CTextureManager::Load(const std::string& str)
 {
 	CTextureManager::GetTexture()->m_Resource[str] = new CTexture();
-	if (!CTextureManager::GetTexture()->m_Resource[str]->Load(str.c_str()))
-	{
-		return false;
-	}
+	CTextureManager::GetTexture()->m_Resource[str]->Load(str.c_str());
 	return true;
 }
 

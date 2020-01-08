@@ -6,14 +6,3 @@ enum tag_SCENE {
 	
 	SCENE_COUNT,
 };
-
-enum tag_SCENE_EFFECT {
-	SCENE_EFFECT_FADE,
-
-	SCENE_EFFECT_COUNT,
-};
-
-enum tag_EFFECTTYPE {
-	EFFECTTYPE_IN,
-	EFFECTTYPE_OUT,
-};

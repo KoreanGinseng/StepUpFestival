@@ -151,7 +151,6 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Effect.cpp" />
     <ClCompile Include="EffectManager.cpp" />
-    <ClCompile Include="Fade.cpp" />
     <ClCompile Include="Fps.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameApp.cpp" />
@@ -159,7 +158,6 @@
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneBase.cpp" />
-    <ClCompile Include="SceneEffectBase.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundManager.cpp" />
@@ -176,7 +174,6 @@
     <ClInclude Include="DxLibPlus.h" />
     <ClInclude Include="Effect.h" />
     <ClInclude Include="EffectManager.h" />
-    <ClInclude Include="Fade.h" />
     <ClInclude Include="Fps.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameApp.h" />
