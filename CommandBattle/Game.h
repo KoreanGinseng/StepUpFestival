@@ -1,10 +1,13 @@
 #pragma once
 #include "SceneBase.h"
 #include "DxLibPlus.h"
+#include "Menu.h"
 
 //ゲームクラス
 class CGame : public CSceneBase
 {
+private:
+	CMenu	m_Battle;
 public:
 	CGame(void);								//! コンストラクタ
 	virtual ~CGame(void);						//! デストラクタ

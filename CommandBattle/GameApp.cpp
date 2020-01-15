@@ -37,10 +37,10 @@ int CGameApp::Initialize(void)
 
 void CGameApp::Update(void)
 {
-	if (g_pInput->IsKeyPush(KEY_INPUT_X))
-	{
-		CSoundManager::PlaySE("explosion.mp3", DX_PLAYTYPE_NORMAL);
-	}
+	//if (g_pInput->IsKeyPush(KEY_INPUT_X))
+	//{
+	//	CSoundManager::PlaySE("explosion.mp3", DX_PLAYTYPE_NORMAL);
+	//}
 	
 	CSoundManager::Update();
 	CEffectManager::Update();
@@ -50,7 +50,7 @@ void CGameApp::Update(void)
 
 void CGameApp::Render(void)
 {
-	CTextureManager::GetTexture("bomc.png")->Render(0, 0);
+	//CTextureManager::GetTexture("bomc.png")->Render(0, 0);
 	CSceneManager::Render();
 }
 
