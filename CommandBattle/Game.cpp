@@ -5,7 +5,12 @@
 const char battleTitle[] = "‚½‚½‚©‚¤";
 const char* battleMenu[] = {
 	"‚±‚¤‚°‚«",
-	"‚É‚°‚é",
+	"‚É‚°‚é1",
+	"‚É‚°‚é2",
+	"‚É‚°‚é3",
+	"‚É‚°‚é4",
+	"‚É‚°‚é5",
+	"‚É‚°‚é6",
 };
 
 CGame::CGame(void)
@@ -23,7 +28,7 @@ bool CGame::Load(void)
 
 void CGame::Initialize(void)
 {
-	m_Battle.Create(battleTitle, battleMenu, 2);
+	m_Battle.Create(battleTitle, battleMenu, 7);
 	m_Battle.Show(100, 100);
 }
 

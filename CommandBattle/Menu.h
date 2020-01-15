@@ -10,6 +10,9 @@ private:
 	int						m_HSpace;
 	int						m_VSpace;
 
+	int						m_Page;
+	int						m_MaxPage;
+
 	int						m_Count;
 	char*					m_pTitle;
 	char**					m_pItem;
@@ -21,8 +24,8 @@ private:
 	CRectangle				m_Rect;
 	CRectangle				m_HeaderRect;
 public:
-	CMenu();
-	~CMenu();
+	CMenu(void);
+	~CMenu(void);
 	void Create(const char* pTitle,const char** pItem,int cnt);
 	void Release(void);
 	void Show(float cx,float cy);

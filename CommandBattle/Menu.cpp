@@ -16,7 +16,9 @@ CMenu::CMenu() :
 	m_bShow(false),
 	m_bEnter(false),
 	m_Rect(),
-	m_HeaderRect() {
+	m_HeaderRect(),
+	m_Page(0),
+	m_MaxPage(0) {
 }
 
 /**
@@ -41,6 +43,14 @@ void CMenu::Create(const char* pTitle, const char** pItem, int cnt) {
 	Release();
 	//引数の文字列を保存
 	m_Count = cnt;
+	if (m_Count >= 4)
+	{
+		m_MaxPage = (m_Count / 4.0f) + 0.5f;
+	}
+	else
+	{
+		m_MaxPage = 0;
+	}
 	m_pTitle = (char*)malloc(strlen(pTitle) + 1);
 	strcpy(m_pTitle, pTitle);
 	m_pItem = (char**)malloc(sizeof(char*) * cnt);
@@ -52,11 +62,15 @@ void CMenu::Create(const char* pTitle, const char** pItem, int cnt) {
 	//メニューの文字列の最大、最少矩形を求める
 	CRectangle trec;
 	//CGraphicsUtilities::CalculateStringRect(0, 0, m_pTitle, trec);
-	trec.SetRect(0, 0, strlen(m_pTitle) * 24, 24);
+	trec.SetRect(0, 0, strlen(m_pTitle) * 12, 12);
 	float r = max(m_Rect.GetSRect().Right, trec.GetSRect().Right + m_HSpace * 2);
-	float b =  trec.GetSRect().Bottom + m_VSpace * 2;
+	float b = trec.GetSRect().Bottom + m_VSpace * 2;
 	m_Rect.SetRect(0, 0, r, b);
 	m_HeaderRect = m_Rect;
+	if (m_MaxPage > 0)
+	{
+		m_Rect.SetRect(0, 0, r, b + trec.GetSRect().Bottom + m_VSpace * 2);
+	}
 	for (int i = 0; i < m_Count; i++)
 	{
 		//CGraphicsUtilities::CalculateStringRect(0, 0, m_pItem[i], trec);
@@ -64,6 +78,10 @@ void CMenu::Create(const char* pTitle, const char** pItem, int cnt) {
 		SRectangle hrect = m_HeaderRect.GetSRect();
 		SRectangle rect = m_Rect.GetSRect();
 		m_HeaderRect.SetRect(hrect.Left, hrect.Top, hr, hrect.Bottom);
+		if (i > 3)
+		{
+			break;
+		}
 		m_Rect.SetRect(rect.Left, rect.Top, hr, rect.Bottom + trec.GetSRect().Bottom + m_VSpace);
 	}
 	SRectangle rect = m_Rect.GetSRect();
@@ -130,15 +148,32 @@ void CMenu::Update(void) {
 		m_Select--;
 		if (m_Select < 0)
 		{
-			m_Select = m_Count - 1;
+			m_Select = 4 - 1;
 		}
 	}
 	else if (g_pInput->IsKeyPush(KEY_INPUT_DOWN))
 	{
 		m_Select++;
-		if (m_Select >= m_Count)
+		if (m_Select >= 4)
 		{
 			m_Select = 0;
+		}
+	}
+	//左右キーでページ選択
+	if (g_pInput->IsKeyPush(KEY_INPUT_LEFT))
+	{
+		m_Page--;
+		if (m_Page < 0)
+		{
+			m_Page = 0;
+		}
+	}
+	else if (g_pInput->IsKeyPush(KEY_INPUT_RIGHT))
+	{
+		m_Page++;
+		if (m_Page > m_MaxPage - 1)
+		{
+			m_Page = m_MaxPage - 1;
 		}
 	}
 	//Enterで決定
@@ -164,15 +199,26 @@ void CMenu::Render(void) {
 	m_HeaderRect.Draw(COLOR_WHITE, FALSE);
 	//項目の文字を描画する
 	CRectangle trec;
-	trec.SetRect(0, 0, strlen(m_pTitle) * 24, 24);
+	trec.SetRect(0, 0, strlen(m_pTitle) * 12, 12);
 	float py = m_Rect.GetSRect().Top + m_VSpace;
 	//CGraphicsUtilities::CalculateStringRect(0, 0, m_pTitle, trec);
 	DrawFormatString(m_cx, py, COLOR_WHITE, m_pTitle);
 	py += trec.GetSRect().Bottom + m_VSpace;
-	for (int i = 0; i < m_Count; i++)
+	//for (int i = 0; i < m_Count; i++)
+	int ic = 4;
+	if ((m_Count - 4 * m_Page) / 4 <= 0)
+	{
+		ic = m_Count % 4;
+	}
+	for (int i = 0; i < ic; i++)
 	{
 		//CGraphicsUtilities::CalculateStringRect(0, 0, m_pItem[i], trec);
-		DrawFormatString(m_cx, py + m_VSpace, ((m_Select == i) ? GetColor(255, 255, 255) : GetColor(128, 128, 128)), m_pItem[i]);
+		int c = i + 4 * m_Page;
+		DrawFormatString(m_cx, py + m_VSpace, ((m_Select == i) ? GetColor(255, 255, 255) : GetColor(128, 128, 128)), m_pItem[c]);
 		py += trec.GetSRect().Bottom + m_VSpace;
+	}
+	if (m_MaxPage > 0)
+	{
+		DrawFormatString(m_cx, py + m_VSpace, COLOR_WHITE, "%d / %d", m_Page + 1, m_MaxPage);
 	}
 }
