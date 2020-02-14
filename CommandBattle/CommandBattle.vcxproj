@@ -151,51 +151,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="AnimationData.cpp" />
-    <ClCompile Include="AnimationManager.cpp" />
-    <ClCompile Include="Circle.cpp" />
-    <ClCompile Include="Effect.cpp" />
-    <ClCompile Include="EffectManager.cpp" />
-    <ClCompile Include="Fps.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="DxLibUtillities.cpp" />
     <ClCompile Include="GameApp.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SceneBase.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="Sound.cpp" />
-    <ClCompile Include="SoundManager.cpp" />
-    <ClCompile Include="TextureManager.cpp" />
-    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="GameAppBase.cpp" />
+    <ClCompile Include="GraphicsUtillities.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animation.h" />
-    <ClInclude Include="AnimationData.h" />
-    <ClInclude Include="AnimationManager.h" />
-    <ClInclude Include="Base.h" />
-    <ClInclude Include="Circle.h" />
     <ClInclude Include="DxLibPlus.h" />
-    <ClInclude Include="Effect.h" />
-    <ClInclude Include="EffectManager.h" />
-    <ClInclude Include="Fps.h" />
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="DxLibUtillities.h" />
     <ClInclude Include="GameApp.h" />
-    <ClInclude Include="GameDefine.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="SceneBase.h" />
-    <ClInclude Include="SceneEffectBase.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="Sound.h" />
-    <ClInclude Include="SoundManager.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="TextureManager.h" />
-    <ClInclude Include="Title.h" />
+    <ClInclude Include="GameAppBase.h" />
+    <ClInclude Include="GraphicsUtillities.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

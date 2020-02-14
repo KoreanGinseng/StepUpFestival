@@ -13,149 +13,38 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ソース ファイル\MANAGER">
-      <UniqueIdentifier>{f5312b29-d45f-415a-9735-e8ff5ddc1e46}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\DXLIBPLUS">
-      <UniqueIdentifier>{94409d0d-f3d4-42a5-9919-e965a1420193}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\MANAGER">
-      <UniqueIdentifier>{fa738439-6927-4b9e-9657-1322f12bb165}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\DXLIBPLUS">
-      <UniqueIdentifier>{2db380e9-59c5-4be7-9bc1-77d30deb4f28}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="GameAppBase.cpp">
       <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneBase.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Title.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Animation.cpp">
-      <Filter>ソース ファイル\DXLIBPLUS</Filter>
-    </ClCompile>
-    <ClCompile Include="AnimationData.cpp">
-      <Filter>ソース ファイル\MANAGER</Filter>
-    </ClCompile>
-    <ClCompile Include="AnimationManager.cpp">
-      <Filter>ソース ファイル\MANAGER</Filter>
-    </ClCompile>
-    <ClCompile Include="Circle.cpp">
-      <Filter>ソース ファイル\DXLIBPLUS</Filter>
-    </ClCompile>
-    <ClCompile Include="Effect.cpp">
-      <Filter>ソース ファイル\MANAGER</Filter>
-    </ClCompile>
-    <ClCompile Include="EffectManager.cpp">
-      <Filter>ソース ファイル\MANAGER</Filter>
-    </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
-      <Filter>ソース ファイル\DXLIBPLUS</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>ソース ファイル\MANAGER</Filter>
-    </ClCompile>
-    <ClCompile Include="Sound.cpp">
-      <Filter>ソース ファイル\MANAGER</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundManager.cpp">
-      <Filter>ソース ファイル\MANAGER</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
-      <Filter>ソース ファイル\MANAGER</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>ソース ファイル\DXLIBPLUS</Filter>
-    </ClCompile>
-    <ClCompile Include="Fps.cpp">
-      <Filter>ソース ファイル\DXLIBPLUS</Filter>
     </ClCompile>
     <ClCompile Include="GameApp.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="DxLibUtillities.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsUtillities.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="GameAppBase.h">
       <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="GameDefine.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneBase.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneEffectBase.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Title.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation.h">
-      <Filter>ヘッダー ファイル\DXLIBPLUS</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimationData.h">
-      <Filter>ヘッダー ファイル\MANAGER</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimationManager.h">
-      <Filter>ヘッダー ファイル\MANAGER</Filter>
-    </ClInclude>
-    <ClInclude Include="Base.h">
-      <Filter>ヘッダー ファイル\DXLIBPLUS</Filter>
-    </ClInclude>
-    <ClInclude Include="Circle.h">
-      <Filter>ヘッダー ファイル\DXLIBPLUS</Filter>
     </ClInclude>
     <ClInclude Include="DxLibPlus.h">
-      <Filter>ヘッダー ファイル\DXLIBPLUS</Filter>
-    </ClInclude>
-    <ClInclude Include="Effect.h">
-      <Filter>ヘッダー ファイル\MANAGER</Filter>
-    </ClInclude>
-    <ClInclude Include="EffectManager.h">
-      <Filter>ヘッダー ファイル\MANAGER</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>ヘッダー ファイル\DXLIBPLUS</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>ヘッダー ファイル\MANAGER</Filter>
-    </ClInclude>
-    <ClInclude Include="Sound.h">
-      <Filter>ヘッダー ファイル\MANAGER</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundManager.h">
-      <Filter>ヘッダー ファイル\MANAGER</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureManager.h">
-      <Filter>ヘッダー ファイル\MANAGER</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>ヘッダー ファイル\DXLIBPLUS</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>ヘッダー ファイル\DXLIBPLUS</Filter>
-    </ClInclude>
-    <ClInclude Include="Fps.h">
-      <Filter>ヘッダー ファイル\DXLIBPLUS</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="GameApp.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
+    <ClInclude Include="DxLibUtillities.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsUtillities.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
