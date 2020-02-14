@@ -1,44 +1,34 @@
 /*************************************************************************//*!
 
-					@file	GameApp.cpp
-					@brief	ゲームアプリクラス
+					@file	GameAppBase.cpp
+					@brief	ゲームアプリ基礎クラス
 
 															@author	いのうえ
 															@date	2020.02.14
 *//**************************************************************************/
 
 //INCLUDE
-#include "GameApp.h"
+#include "GameAppBase.h"
 
 namespace DxLibPlus
 {
 	/*************************************************************************//*!
-			@brief			初期化
+			@brief			コンストラクタ
 			@param			None
 
 			@return			None
 	*//**************************************************************************/
-	void CGameApp::Initialize(void)
+	CGameAppBase::CGameAppBase(void)
 	{
 	}
 
 	/*************************************************************************//*!
-			@brief			更新
+			@brief			デストラクタ
 			@param			None
 
 			@return			None
 	*//**************************************************************************/
-	void CGameApp::Update(void)
-	{
-	}
-
-	/*************************************************************************//*!
-			@brief			描画
-			@param			None
-
-			@return			None
-	*//**************************************************************************/
-	void CGameApp::Render(void)
+	CGameAppBase::~CGameAppBase(void)
 	{
 	}
 
@@ -48,7 +38,7 @@ namespace DxLibPlus
 
 			@return			None
 	*//**************************************************************************/
-	void CGameApp::Release(void)
+	void CGameAppBase::Release(void)
 	{
 	}
 }

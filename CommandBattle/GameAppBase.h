@@ -1,7 +1,7 @@
 /*************************************************************************//*!
 
-					@file	GameApp.h
-					@brief	ゲームアプリクラス
+					@file	GameAppBase.h
+					@brief	ゲームアプリ基礎クラス
 
 															@author	いのうえ
 															@date	2020.02.14
@@ -10,18 +10,14 @@
 //ONCE
 #pragma once
 
-//INCLUDE
-#include "GameAppBase.h"
-#include "DxLibPlus.h"
-
 namespace DxLibPlus
 {
 	/*******************************//*!
-	@brief	ゲームアプリクラス
+	@brief	ゲームアプリ基礎クラス
 
 	@author	いのうえ
 	*//********************************/
-	class CGameApp : public CGameAppBase
+	class CGameAppBase
 	{
 	public:
 		/*************************************************************************//*!
@@ -30,42 +26,45 @@ namespace DxLibPlus
 
 				@return			None
 		*//**************************************************************************/
-		CGameApp(void) : CGameAppBase() {}
+		CGameAppBase(void);
 		/*************************************************************************//*!
 				@brief			デストラクタ
 				@param			None
 
 				@return			None
 		*//**************************************************************************/
-		~CGameApp(void) {}
+		virtual ~CGameAppBase(void);
 		/*************************************************************************//*!
-				@brief			初期化
+				@brief			初期化<br>
+								実装は各ゲームアプリクラスで行う
 				@param			None
 
 				@return			None
 		*//**************************************************************************/
-		virtual void Initialize(void) override;
+		virtual void Initialize(void) = 0;
 		/*************************************************************************//*!
-				@brief			更新
+				@brief			更新<br>
+								実装は各ゲームアプリクラスで行う
 				@param			None
 
 				@return			None
 		*//**************************************************************************/
-		virtual void Update(void) override;
+		virtual void Update(void) = 0;
 		/*************************************************************************//*!
-				@brief			描画
+				@brief			描画<br>
+								実装は各ゲームアプリクラスで行う
 				@param			None
 
 				@return			None
 		*//**************************************************************************/
-		virtual void Render(void) override;
+		virtual void Render(void) = 0;
 		/*************************************************************************//*!
 				@brief			解放
 				@param			None
 
 				@return			None
 		*//**************************************************************************/
-		virtual void Release(void) override;
+		virtual void Release(void);
 	};
 }
 
