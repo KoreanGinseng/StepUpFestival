@@ -31,6 +31,6 @@ namespace DxLibPlus
 		static int SetWindowTitle(const std::string& title);
 		static int SetWindowIcon(const int& id);
 		static int SetWindowSize(const int& w, const int& h);
-		//static int 
+		static int SetFontSize(const int& size);
 	};
 }
