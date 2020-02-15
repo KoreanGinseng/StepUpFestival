@@ -8,6 +8,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	//ゲーム本体
 	CGameApp gameApp;
 
+	//初期化
+	CGraphicsUtillities::ChangeWindowMode(true);
+	CGraphicsUtillities::SetWindowSize(1024, 768);
+	CGraphicsUtillities::SetWindowTitle("コマンドバトル");
+
 	//ＤＸライブラリ初期化処理
 	if (CDxLibUtillities::DxLibInit() == -1)
 	{
@@ -24,6 +29,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		gameApp.Update();
 
 		//描画
+
 		gameApp.Render();
 	}
 

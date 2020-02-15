@@ -14,5 +14,6 @@
 #include	<crtdbg.h>
 #include	"GameApp.h"
 #include	"DxLibUtillities.h"
+#include	"GraphicsUtillities.h"
 
 using namespace DxLibPlus;

@@ -60,4 +60,20 @@ namespace DxLibPlus
 	{
 		return DxLib::SetFontSize(size);
 	}
+	int CGraphicsUtillities::GetTargetWidth(void)
+	{
+		int width;
+		int height;
+		int bit;
+		DxLib::GetScreenState(&width, &height, &bit);
+		return width;
+	}
+	int CGraphicsUtillities::GetTargetHeight(void)
+	{
+		int width;
+		int height;
+		int bit;
+		DxLib::GetScreenState(&width, &height, &bit);
+		return height;
+	}
 }
