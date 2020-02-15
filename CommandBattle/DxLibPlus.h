@@ -15,5 +15,6 @@
 #include	"GameApp.h"
 #include	"DxLibUtillities.h"
 #include	"GraphicsUtillities.h"
+#include	"TextureManager.h"
 
 using namespace DxLibPlus;

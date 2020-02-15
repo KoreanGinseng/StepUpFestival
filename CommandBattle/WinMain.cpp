@@ -20,6 +20,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 
 	//‰Šú‰»
+	CGraphicsUtillities::SetDrawScreen(DX_SCREEN_BACK);
 	gameApp.Initialize();
 
 	//ƒQ[ƒ€ƒ‹[ƒv
@@ -29,8 +30,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		gameApp.Update();
 
 		//•`‰æ
-
+		CGraphicsUtillities::ClearDrawScreen();
 		gameApp.Render();
+		CGraphicsUtillities::ScreenFlip();
 	}
 
 	//‰ğ•ú

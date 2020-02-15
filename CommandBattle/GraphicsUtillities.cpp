@@ -1,3 +1,11 @@
+/*************************************************************************//*!
+
+					@file	GraphicsUtillities.cpp
+					@brief	描画ユーティリティクラス
+
+															@author	いのうえ
+															@date	2020.02.14
+*//**************************************************************************/
 #include "GraphicsUtillities.h"
 
 
@@ -47,7 +55,7 @@ namespace DxLibPlus
 	*//**************************************************************************/
 	int CGraphicsUtillities::SetWindowSize(const int & w, const int & h)
 	{
-		return DxLib::SetWindowSize(w, h);
+		return DxLib::SetGraphMode(w, h, 16);
 	}
 	/*************************************************************************//*!
 			@brief			フォントのサイズを変更する
@@ -60,6 +68,12 @@ namespace DxLibPlus
 	{
 		return DxLib::SetFontSize(size);
 	}
+	/*************************************************************************//*!
+			@brief			画面のサイズ幅を取得する
+			@param			None
+
+			@return			画面幅
+	*//**************************************************************************/
 	int CGraphicsUtillities::GetTargetWidth(void)
 	{
 		int width;
@@ -68,6 +82,12 @@ namespace DxLibPlus
 		DxLib::GetScreenState(&width, &height, &bit);
 		return width;
 	}
+	/*************************************************************************//*!
+			@brief			画面のサイズ縦を取得する
+			@param			None
+
+			@return			画面高さ
+	*//**************************************************************************/
 	int CGraphicsUtillities::GetTargetHeight(void)
 	{
 		int width;
@@ -75,5 +95,38 @@ namespace DxLibPlus
 		int bit;
 		DxLib::GetScreenState(&width, &height, &bit);
 		return height;
+	}
+	/*************************************************************************//*!
+			@brief			描画先グラフィック領域の指定
+			@param[in]		screen		対象となるグラフィック領域を指定する
+
+			@return			0			成功<br>
+							-1			エラー発生
+	*//**************************************************************************/
+	int CGraphicsUtillities::SetDrawScreen(const int & screen)
+	{
+		return DxLib::SetDrawScreen(screen);
+	}
+	/*************************************************************************//*!
+			@brief			画面に書かれたものを削除する
+			@param			None
+
+			@return			0			成功<br>
+							-1			エラー発生
+	*//**************************************************************************/
+	int CGraphicsUtillities::ClearDrawScreen(void)
+	{
+		return DxLib::ClearDrawScreen();
+	}
+	/*************************************************************************//*!
+			@brief			画面裏に書かれたものを表に反映する
+			@param[in]		size		サイズ
+
+			@return			0			成功<br>
+							-1			エラー発生
+	*//**************************************************************************/
+	int CGraphicsUtillities::ScreenFlip(void)
+	{
+		return DxLib::ScreenFlip();
 	}
 }
