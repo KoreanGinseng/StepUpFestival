@@ -1,40 +1,25 @@
 #pragma once
-#include	"GameAppBase.h"
 
 namespace DxLibPlus
 {
-	class CTurnManager : public CGameAppBase
+	enum Turn {
+		TURN_PLAYER,
+		TURN_ENEMY,
+	};
+	class CTurnManager
 	{
-	public:
+	private:
+		Turn		m_Turn;
+		Turn		m_PrevTurn;
+		bool		m_bChange;
 		CTurnManager(void);
 		~CTurnManager(void);
-		/*************************************************************************//*!
-				@brief			‰Šú‰»
-				@param			None
-
-				@return			None
-		*//**************************************************************************/
-		virtual void Initialize(void) override;
-		/*************************************************************************//*!
-				@brief			XV
-				@param			None
-
-				@return			None
-		*//**************************************************************************/
-		virtual void Update(void) override;
-		/*************************************************************************//*!
-				@brief			•`‰æ
-				@param			None
-
-				@return			None
-		*//**************************************************************************/
-		virtual void Render(void) override;
-		/*************************************************************************//*!
-				@brief			‰ğ•ú
-				@param			None
-
-				@return			None
-		*//**************************************************************************/
-		virtual void Release(void) override;
+	public:
+		static CTurnManager& GetTurnManager(void);
+		void RefreshTurn(void);
+		void SetTurn(const Turn& turn);
+		Turn GetTurn(void) const;
+		bool IsChanged(void) const;
 	};
+#define	theTurnManager CTurnManager::GetTurnManager()
 }

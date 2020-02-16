@@ -27,6 +27,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	while (CDxLibUtillities::ProcessMessage() == 0)
 	{
 		//çXêV
+		theTurnManager.RefreshTurn();
 		gameApp.Update();
 
 		//ï`âÊ

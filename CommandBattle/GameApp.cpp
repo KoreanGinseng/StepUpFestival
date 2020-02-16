@@ -33,6 +33,9 @@ namespace DxLibPlus
 		SetCurrentDirectory("../Resource");
 		//画像の読み込み
 		theTextureManager.LoadList(TexFile, TEXKEY_COUNT);
+
+		//ターンの初期化
+		theTurnManager.SetTurn(TURN_PLAYER);
 	}
 	/*************************************************************************//*!
 			@brief			更新
@@ -42,7 +45,20 @@ namespace DxLibPlus
 	*//**************************************************************************/
 	void CGameApp::Update(void)
 	{
+		//現在のターン取得
+		Turn nowTurn = theTurnManager.GetTurn();
+		//ターンによって更新
+		switch (nowTurn)
+		{
+		case TURN_PLAYER:
 
+			break;
+		case TURN_ENEMY:
+
+			break;
+		default:
+			break;
+		}
 	}
 	/*************************************************************************//*!
 			@brief			描画

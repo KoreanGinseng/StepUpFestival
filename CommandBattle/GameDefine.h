@@ -11,6 +11,29 @@ enum TextureKey {
 	TEXKEY_COUNT,
 };
 
+struct Status {
+	int		hp;
+	int		attack;
+};
+
+enum BattleCommand {
+	BATTLE_ATTACK_NOMAL,
+	BATTLE_ATTACK_SKILL,
+	BATTLE_ITEM,
+};
+
+enum EffectType {
+	SKILL_FIRE,
+	SKILL_ICE,
+	SKILL_THUNDER,
+};
+
+struct Skill {
+	std::string name;
+	float		rate;
+	EffectType  effect;
+};
+
 constexpr	int		PlayerRectX = 0;
 constexpr	int		PlayerRectY = 0;
 constexpr	int		PlayerRectW = 150;
