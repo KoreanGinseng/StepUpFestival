@@ -161,6 +161,8 @@
     <ClCompile Include="GameApp.cpp" />
     <ClCompile Include="GameAppBase.cpp" />
     <ClCompile Include="GraphicsUtillities.cpp" />
+    <ClCompile Include="Chara.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="TurnManager.cpp" />
     <ClCompile Include="WinMain.cpp" />
@@ -172,6 +174,8 @@
     <ClInclude Include="GameAppBase.h" />
     <ClInclude Include="GameDefine.h" />
     <ClInclude Include="GraphicsUtillities.h" />
+    <ClInclude Include="Chara.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="TurnManager.h" />
   </ItemGroup>

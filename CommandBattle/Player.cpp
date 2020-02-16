@@ -84,7 +84,6 @@ namespace DxLibPlus
 		switch (m_State)
 		{
 		case COMMAND_ATTACK:
-			theTurnManager.SetTurn(TURN_ENEMY);
 		case COMMAND_WAIT:
 			listmax = 2;
 			break;
