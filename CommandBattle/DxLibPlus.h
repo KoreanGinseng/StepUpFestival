@@ -17,5 +17,6 @@
 #include	"GraphicsUtillities.h"
 #include	"TextureManager.h"
 #include	"TurnManager.h"
+#include	"EffectManager.h"
 
 using namespace DxLibPlus;

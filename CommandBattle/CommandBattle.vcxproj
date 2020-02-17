@@ -158,6 +158,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DxLibUtillities.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="EffectManager.cpp" />
     <ClCompile Include="GameApp.cpp" />
     <ClCompile Include="GameAppBase.cpp" />
     <ClCompile Include="GraphicsUtillities.cpp" />
@@ -170,6 +172,8 @@
   <ItemGroup>
     <ClInclude Include="DxLibPlus.h" />
     <ClInclude Include="DxLibUtillities.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="EffectManager.h" />
     <ClInclude Include="GameApp.h" />
     <ClInclude Include="GameAppBase.h" />
     <ClInclude Include="GameDefine.h" />

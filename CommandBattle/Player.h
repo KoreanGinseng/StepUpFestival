@@ -10,8 +10,10 @@ namespace DxLibPlus
 			COMMAND_WAIT,
 			COMMAND_ATTACK,
 			COMMAND_SKILL,
+			COMMAND_ITEM,
 		} m_State;
 		int					m_Cursor;
+		float				m_AttackRate;
 		std::vector<Skill>	m_SkillList;
 	public:
 		/*************************************************************************//*!

@@ -16,18 +16,6 @@ struct Status {
 	int		attack;
 };
 
-enum BattleCommand {
-	BATTLE_ATTACK_NOMAL,
-	BATTLE_ATTACK_SKILL,
-	BATTLE_ITEM,
-};
-
-enum EffectType {
-	SKILL_FIRE,
-	SKILL_ICE,
-	SKILL_THUNDER,
-};
-
 struct Skill {
 	std::string name;
 	float		rate;

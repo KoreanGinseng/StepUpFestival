@@ -2,6 +2,14 @@
 
 namespace DxLibPlus
 {
+	// ********************************************************************************
+	/// <summary>
+	/// コンストラクタ
+	/// </summary>
+	/// <returns>None</returns>
+	/// <created>いのうえ,2020/02/17</created>
+	/// <changed>いのうえ,2020/02/17</changed>
+	// ********************************************************************************
 	CPlayer::CPlayer(void) :
 		CChara(),
 		m_Cursor(0),
@@ -9,10 +17,27 @@ namespace DxLibPlus
 	{
 	}
 
+	// ********************************************************************************
+	/// <summary>
+	/// デストラクタ
+	/// </summary>
+	/// <returns>None</returns>
+	/// <created>いのうえ,2020/02/17</created>
+	/// <changed>いのうえ,2020/02/17</changed>
+	// ********************************************************************************
 	CPlayer::~CPlayer(void)
 	{
 	}
 
+	// ********************************************************************************
+	/// <summary>
+	/// 読み込み
+	/// </summary>
+	/// <returns>true  成功</param>
+	/// 			 false 失敗</returns>
+	/// <created>いのうえ,2020/02/17</created>
+	/// <changed>いのうえ,2020/02/17</changed>
+	// ********************************************************************************
 	bool CPlayer::Load(void)
 	{
 		//ファイルを開く
@@ -60,6 +85,13 @@ namespace DxLibPlus
 		return true;
 	}
 
+	// ********************************************************************************
+	/// <summary>
+	/// 初期化
+	/// </summary>
+	/// <created>いのうえ,2020/02/17</created>
+	/// <changed>いのうえ,2020/02/17</changed>
+	// ********************************************************************************
 	void CPlayer::Initialize(void)
 	{
 		m_Cursor = 0;
@@ -108,6 +140,16 @@ namespace DxLibPlus
 			switch (m_State)
 			{
 			case COMMAND_WAIT:
+				m_State = static_cast<CommandState>(m_Cursor + 1);
+				if (m_State == COMMAND_ATTACK)
+				{
+					m_AttackRate = 1.0f;
+					theTurnManager.SetTurn(TURN_ENEMY);
+				}
+				break;
+			case COMMAND_SKILL:
+				m_State = COMMAND_ATTACK;
+				m_AttackRate = m_SkillList[m_Cursor].rate;
 				break;
 			default:
 				break;
