@@ -21,6 +21,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	//‰Šú‰»
 	CGraphicsUtillities::SetDrawScreen(DX_SCREEN_BACK);
+	CGraphicsUtillities::SetFontSize(24);
 	gameApp.Initialize();
 
 	//ƒQ[ƒ€ƒ‹[ƒv

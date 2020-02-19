@@ -1,5 +1,11 @@
 #include "Player.h"
 
+std::string gCommandList[] = {
+	"たたかう",
+	"とくぎ",
+	"どうぐ",
+};
+
 namespace DxLibPlus
 {
 	// ********************************************************************************
@@ -98,6 +104,13 @@ namespace DxLibPlus
 		m_State = COMMAND_WAIT;
 	}
 
+	// ********************************************************************************
+	/// <summary>
+	/// 更新
+	/// </summary>
+	/// <created>いのうえ,2020/02/19</created>
+	/// <changed>いのうえ,2020/02/19</changed>
+	// ********************************************************************************
 	void CPlayer::Update(void)
 	{
 		//上キーを押したら選択を上にする
@@ -120,7 +133,7 @@ namespace DxLibPlus
 			listmax = 2;
 			break;
 		case COMMAND_SKILL:
-			listmax = m_SkillList.size;
+			listmax = static_cast<int>(m_SkillList.size());
 			break;
 		default:
 			break;
@@ -157,12 +170,44 @@ namespace DxLibPlus
 		}
 	}
 
+	// ********************************************************************************
+	/// <summary>
+	/// 描画
+	/// </summary>
+	/// <created>いのうえ,2020/02/19</created>
+	/// <changed>いのうえ,2020/02/19</changed>
+	// ********************************************************************************
 	void CPlayer::Render(void)
 	{
+		switch (m_State)
+		{
+		case COMMAND_WAIT:
+			for (int i = 0; i < 3; i++)
+			{
+				DxLib::DrawFormatString(CommandRectX, CommandRectY + i * 24, GetColor(255, 255, 255), "%s", gCommandList[i].c_str());
+			}
+			break;
+		case COMMAND_ATTACK:
+			break;
+		case COMMAND_SKILL:
+			break;
+		case COMMAND_ITEM:
+			break;
+		default:
+			break;
+		}
 	}
 
+	// ********************************************************************************
+	/// <summary>
+	/// 解放
+	/// </summary>
+	/// <created>いのうえ,2020/02/19</created>
+	/// <changed>いのうえ,2020/02/19</changed>
+	// ********************************************************************************
 	void CPlayer::Release(void)
 	{
+		m_SkillList.clear();
 	}
 }
 

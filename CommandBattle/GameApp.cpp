@@ -10,6 +10,7 @@
 //INCLUDE
 #include "GameApp.h"
 #include "GameDefine.h"
+#include "Player.h"
 
 //画像登録情報
 TexMngInfo TexFile[] = {
@@ -18,6 +19,8 @@ TexMngInfo TexFile[] = {
    { "dragon_green"  , "Enemy/dragon_green.png"  },
    { "dragon_komodo" , "Enemy/komodo_dragon.png" },
 };
+
+CPlayer		gPlayer;
 
 namespace DxLibPlus
 {
@@ -36,6 +39,9 @@ namespace DxLibPlus
 
 		//ターンの初期化
 		theTurnManager.SetTurn(TURN_PLAYER);
+
+		gPlayer.Load();
+		gPlayer.Initialize();
 	}
 	/*************************************************************************//*!
 			@brief			更新
@@ -51,7 +57,7 @@ namespace DxLibPlus
 		switch (nowTurn)
 		{
 		case TURN_PLAYER:
-
+			gPlayer.Update();
 			break;
 		case TURN_ENEMY:
 
@@ -76,6 +82,8 @@ namespace DxLibPlus
 		DxLib::DrawBox(CommandRectX, CommandRectY, CommandRectX + CommandRectW, CommandRectY + CommandRectH, DxLib::GetColor(255, 255, 255), false);
 		DxLib::DrawBox(MessageRectX, MessageRectY, MessageRectX + MessageRectW, MessageRectY + MessageRectH, DxLib::GetColor(255, 255, 255), false);
 		DxLib::DrawBox(PlayerRectX, PlayerRectY, PlayerRectX + PlayerRectW, PlayerRectY + PlayerRectH, DxLib::GetColor(255, 255, 255), false);
+
+		gPlayer.Render();
 	}
 	/*************************************************************************//*!
 			@brief			解放
@@ -85,5 +93,6 @@ namespace DxLibPlus
 	*//**************************************************************************/
 	void CGameApp::Release(void)
 	{
+		gPlayer.Release();
 	}
 }
