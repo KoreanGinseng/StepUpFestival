@@ -18,5 +18,6 @@
 #include	"TextureManager.h"
 #include	"TurnManager.h"
 #include	"EffectManager.h"
+#include	"KeyInput.h"
 
 using namespace DxLibPlus;

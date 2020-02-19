@@ -12,6 +12,7 @@
 
 //INCLUDE
 #include	"DxLib.h"
+#include	<string>
 
 namespace DxLibPlus
 {
@@ -88,6 +89,16 @@ namespace DxLibPlus
 								-1			エラー発生
 		*//**************************************************************************/
 		static int SetRandom(const int& seed);
+		// ********************************************************************************
+		/// <summary>
+		/// wstringをstringへ変換
+		/// </summary>
+		/// <param name="oWString">ワイド文字列</param>
+		/// <returns>マルチバイト文字列</returns>
+		/// <created>いのうえ,2020/02/19</created>
+		/// <changed>いのうえ,2020/02/19</changed>
+		// ********************************************************************************
+		static std::string WStringToString(std::wstring oWString);
 	};
 }
 

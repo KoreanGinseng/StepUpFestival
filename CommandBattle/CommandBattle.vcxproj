@@ -164,6 +164,7 @@
     <ClCompile Include="GameAppBase.cpp" />
     <ClCompile Include="GraphicsUtillities.cpp" />
     <ClCompile Include="Chara.cpp" />
+    <ClCompile Include="KeyInput.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="TurnManager.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="GameDefine.h" />
     <ClInclude Include="GraphicsUtillities.h" />
     <ClInclude Include="Chara.h" />
+    <ClInclude Include="KeyInput.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="TurnManager.h" />

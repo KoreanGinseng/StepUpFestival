@@ -47,47 +47,37 @@ namespace DxLibPlus
 	bool CPlayer::Load(void)
 	{
 		//ファイルを開く
-		FILE* fp = fopen("PlayerStatus.txt", "rt");
-		//開けなかった場合error
-		if (fp == NULL)
+		std::wifstream ifs("PlayerStatus.txt", std::ios::in);
+		//開けない場合error
+		if (!ifs)
 		{
 			return false;
 		}
-		//文字列を取り込む
-		std::string buff;
-		//ステータスから読み込み
-		fscanf(fp, "%s,", buff);	//status,
-		if (buff == "status")
+		//ファイルの終端まで読み込む
+		ifs.imbue(std::locale(std::locale::empty(), new std::codecvt_utf8<wchar_t>));
+		std::wstring wstr((std::istreambuf_iterator<wchar_t>(ifs)), std::istreambuf_iterator<wchar_t>());
+		std::string buff = CDxLibUtillities::WStringToString(wstr);
+		int length = buff.length();
+		int indentCnt = 0;
+		while (length > indentCnt)
 		{
-			//体力攻撃の順番で読む
-			fscanf(fp, "%d,", &m_Status.hp);
-			fscanf(fp, "%d,", &m_Status.attack);
-		}
-		//先頭にステータスが記述されていない場合error
-		else
-		{
-			fclose(fp);
-			return false;
-		}
-		//スキルを読み込む
-		fscanf(fp, "%s,", buff);	//skill,
-		if (buff == "skill")
-		{
-			//スキルの数を取得する
-			int skillCnt;
-			fscanf(fp, "%d,", &skillCnt);
-			//スキルの数だけ読み込む
-			for (int i = 0; i < skillCnt; i++)
+			int strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
+			std::string str = buff.substr(indentCnt, strlen);
+			indentCnt += strlen + 1;
+			//ステータスコマンドの場合
+			if (str == "status")
+			{
+
+			}
+			//スキルコマンドの場合
+			else if (str == "skill")
 			{
 				Skill addData;
-				fscanf(fp, "%s,", &addData.name);
-				fscanf(fp, "%f,", &addData.rate);
-				fscanf(fp, "%s,", buff);
-				addData.effect = (buff == "FIRE") ? SKILL_FIRE : (buff == "ICE") ? SKILL_ICE : SKILL_THUNDER;
+				addData.effect = (str == "FIRE") ? SKILL_FIRE : (str == "ICE") ? SKILL_ICE : SKILL_THUNDER;
+				//スキルの登録
 				m_SkillList.push_back(addData);
 			}
 		}
-		fclose(fp);
 		return true;
 	}
 
@@ -148,7 +138,8 @@ namespace DxLibPlus
 			m_Cursor = 0;
 		}
 		//状態ごとにエンターキーを押したときの操作を分ける
-		if (DxLib::CheckHitKey(KEY_INPUT_RETURN))
+		//if (DxLib::CheckHitKey(KEY_INPUT_RETURN))
+		if (theInput.IsKeyPush(KEY_INPUT_RETURN))
 		{
 			switch (m_State)
 			{
@@ -184,12 +175,20 @@ namespace DxLibPlus
 		case COMMAND_WAIT:
 			for (int i = 0; i < 3; i++)
 			{
-				DxLib::DrawFormatString(CommandRectX, CommandRectY + i * 24, GetColor(255, 255, 255), "%s", gCommandList[i].c_str());
+				DxLib::DrawFormatString(CommandRectX + 24, CommandRectY + i * 24 + 4 + i * 4, GetColor(255, 255, 255), "%s", gCommandList[i].c_str());
 			}
 			break;
 		case COMMAND_ATTACK:
+			for (int i = 0; i < 3; i++)
+			{
+				DxLib::DrawFormatString(CommandRectX + 24, CommandRectY + i * 24 + 4 + i * 4, GetColor(128, 128, 128), "%s", gCommandList[i].c_str());
+			}
 			break;
 		case COMMAND_SKILL:
+			for (int i = 0; i < m_SkillList.size(); i++)
+			{
+				DxLib::DrawFormatString(CommandRectX + 24, CommandRectY + i * 24 + 4 + i * 4, GetColor(255, 255, 255), "%s", m_SkillList[i].name.c_str());
+			}
 			break;
 		case COMMAND_ITEM:
 			break;

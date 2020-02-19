@@ -1,4 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "GameApp.h"
+
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -28,6 +30,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	while (CDxLibUtillities::ProcessMessage() == 0)
 	{
 		//更新
+		theInput.RefreshKey();
 		theTurnManager.RefreshTurn();
 		gameApp.Update();
 

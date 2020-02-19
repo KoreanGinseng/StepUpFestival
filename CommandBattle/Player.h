@@ -2,6 +2,9 @@
 
 //INCLUDE
 #include "Chara.h"
+#include <iostream>
+#include <fstream>
+#include <codecvt>
 
 namespace DxLibPlus
 {

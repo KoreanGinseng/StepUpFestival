@@ -1,6 +1,7 @@
-status,
-10,100,
-
-skill,
-1,
-ファイヤー,1.5,FIRE,
+status
+10
+100
+skill
+ファイヤー
+1.5
+FIRE
