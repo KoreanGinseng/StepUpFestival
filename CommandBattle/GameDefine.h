@@ -56,7 +56,7 @@ struct Status {
 struct Skill {
 	std::string name;
 	float		rate;
-	EffectType  effect;
+	SkillType  effect;
 };
 
 constexpr	int		FontMargin = 4;

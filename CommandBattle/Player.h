@@ -1,3 +1,13 @@
+/*************************************************************************//*!
+
+					@file	Player.h
+					@brief	プレイヤークラス
+
+															@author	いのうえ
+															@date	2020.02.21
+*//**************************************************************************/
+
+//ONCE
 #pragma once
 
 //INCLUDE
@@ -8,7 +18,9 @@
 
 namespace DxLibPlus
 {
+	//行最大数
 	constexpr int LineMax = (CommandRectH / (FontSize + FontMargin * 2)) + ((CommandRectH % (FontSize + FontMargin * 2)) ? 1 : 0);
+	
 	// ********************************************************************************
 	/// <summary>
 	/// プレイヤークラス
@@ -17,15 +29,15 @@ namespace DxLibPlus
 	class CPlayer : public CChara
 	{
 	private:
+		/// <summary>コマンドの状態列挙</summary>
 		enum CommandState {
-			COMMAND_WAIT,
-			COMMAND_ATTACK,
-			COMMAND_SKILL,
-			COMMAND_ITEM,
-			COMMAND_EXIT,
-		} m_State;
-		int					m_Cursor;
-		std::vector<Skill>	m_SkillList;
+			COMMAND_WAIT,								//!<待機
+			COMMAND_ATTACK,								//!<攻撃
+			COMMAND_SKILL,								//!<スキル
+			COMMAND_EXIT,								//!<ゲーム終了
+		} m_State;										//!<状態
+		int							m_Cursor;			//!<カーソル
+		std::vector<Skill>			m_SkillList;		//!<スキルリスト
 	public:
 		// ********************************************************************************
 		/// <summary>
@@ -94,8 +106,20 @@ namespace DxLibPlus
 		/// <changed>いのうえ,2020/02/21</changed>
 		// ********************************************************************************
 		virtual void Release(void) override;
-
+		// ********************************************************************************
+		/// <summary>
+		/// 切り替え処理
+		/// </summary>
+		/// <created>いのうえ,2020/02/21</created>
+		/// <changed>いのうえ,2020/02/21</changed>
+		// ********************************************************************************
 		void TurnStart(void);
+
+	private:
+		void CursorMove(void);
+		void CursorOver(void);
+		void EnterWait(void);
+		void EnterSkill(void);
 	};
 }
 

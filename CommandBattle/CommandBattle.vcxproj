@@ -166,7 +166,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DxLibUtillities.cpp" />
-    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="EffectManager.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameApp.cpp" />

@@ -1,9 +1,19 @@
+/*************************************************************************//*!
+
+					@file	Player.cpp
+					@brief	プレイヤークラス
+
+															@author	いのうえ
+															@date	2020.02.21
+*//**************************************************************************/
+
+//INCLUDE
 #include "Player.h"
 
+//コマンドリスト
 std::string gCommandList[] = {
 	"たたかう",
 	"とくぎ",
-	"どうぐ",
 	"ゲーム終了",
 };
 
@@ -141,98 +151,24 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CPlayer::Update(void)
 	{
-		//上キーを押したら選択を上にする
-		if (theInput.IsKeyPush(KEY_INPUT_UP))
-		{
-			m_Cursor--;
-			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
-		}
-		//下キーを押したら選択を下にする
-		else if (theInput.IsKeyPush(KEY_INPUT_DOWN))
-		{
-			m_Cursor++;
-			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
-		}
-		//左キーを押したら選択を1ページ分上にする
-		else if (theInput.IsKeyPush(KEY_INPUT_LEFT))
-		{
-			m_Cursor -= LineMax;
-			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
-		}
-		//右キーを押したら選択を1ページ分下にする
-		else if (theInput.IsKeyPush(KEY_INPUT_RIGHT))
-		{
-			m_Cursor += LineMax;
-			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
-		}
-		//選択できる最大
-		int listmax = 0;
-		//状態ごとに操作を変える
-		switch (m_State)
-		{
-		case COMMAND_ATTACK:
-		case COMMAND_WAIT:
-			listmax = 3;
-			break;
-		case COMMAND_SKILL:
-			listmax = static_cast<int>(m_SkillList.size()) - 1;
-			break;
-		default:
-			break;
-		}
+		//カーソルを動かす
+		CursorMove();
+
 		//選択が枠外に行かないようにする
-		if (m_Cursor < 0)
-		{
-			m_Cursor = listmax;
-		}
-		else if (m_Cursor > listmax)
-		{
-			m_Cursor = 0;
-		}
+		CursorOver();
+
 		//状態ごとにエンターキーを押したときの操作を分ける
 		if (theInput.IsKeyPush(KEY_INPUT_RETURN))
 		{
+			//決定音を鳴らす
 			theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENTER].key);
 			switch (m_State)
 			{
 			case COMMAND_WAIT:
-				m_State = static_cast<CommandState>(m_Cursor + 1);
-				if (m_State == COMMAND_ATTACK)
-				{
-					m_AttackRate = 1.0f;
-					theEffectManager.Start(SKILL_SLASH);
-					theSoundManager.Play(SoundFile[SOUNDKEY_SE_SLASH].key);
-					theTurnManager.SetTurn(TURN_ENEMY);
-					gMessage = "プレイヤーの攻撃！";
-				}
-				else if (m_State == COMMAND_EXIT)
-				{
-					PostQuitMessage(0);
-				}
-				else
-				{
-					m_Cursor = 0;
-				}
+				EnterWait();
 				break;
 			case COMMAND_SKILL:
-			{
-				//スキルの一番最後(戻るコマンド)なら一つ戻る
-				if (m_Cursor == m_SkillList.size() - 1)
-				{
-					m_State = COMMAND_WAIT;
-					break;
-				}
-				m_State = COMMAND_ATTACK;
-				m_AttackRate = m_SkillList[m_Cursor].rate;
-				theEffectManager.Start(m_SkillList[m_Cursor].effect);
-				int sound = SOUNDKEY_BGM_COUNT + m_SkillList[m_Cursor].effect;
-				theSoundManager.Play(SoundFile[sound].key);
-				theTurnManager.SetTurn(TURN_ENEMY);
-				gMessage = "プレイヤーの" + m_SkillList[m_Cursor].name + "！";
-				m_Cursor = 0;
-				break;
-			}
-			default:
+				EnterSkill();
 				break;
 			}
 		}
@@ -250,6 +186,7 @@ namespace DxLibPlus
 		//コマンド部分の表示
 		unsigned int Color = DxLib::GetColor(255, 255, 255);
 		int scroll = 0;
+		//状態によって表示色を変える
 		switch (m_State)
 		{
 		case COMMAND_ATTACK:
@@ -259,11 +196,12 @@ namespace DxLibPlus
 			{
 				Color = DxLib::GetColor(192, 64, 64);
 			}
-			for (int i = 0; i < 4; i++)
+			for (int i = 0; i < 3; i++)
 			{
 				DxLib::DrawFormatString(CommandRectX + FontSize, CommandRectY + i * (FontSize + FontMargin) + FontMargin, Color, "%s", gCommandList[i].c_str());
 			}
 			break;
+			//スキルページの表示
 		case COMMAND_SKILL:
 			for (int i = 0; i < static_cast<int>(m_SkillList.size()); i++)
 			{
@@ -281,11 +219,10 @@ namespace DxLibPlus
 				DxLib::DrawFormatString(CommandRectX + FontSize, CommandRectY + i * (FontSize + FontMargin) + FontMargin - scroll, Color, "%s", m_SkillList[i].name.c_str());
 			}
 			break;
-		case COMMAND_ITEM:
-			break;
 		default:
 			break;
 		}
+		//カーソルの表示
 		int cursorGraph = theTextureManager.GetGraphHandle(TexFile[TEXKEY_CURSOR].key);
 		DxLib::DrawGraph(CommandRectX, CommandRectY + m_Cursor * (FontSize + FontMargin) + FontMargin - scroll, cursorGraph, true);
 	}
@@ -321,13 +258,110 @@ namespace DxLibPlus
 	{
 		m_SkillList.clear();
 	}
-
+	// ********************************************************************************
+	/// <summary>
+	/// 切り替え処理
+	/// </summary>
+	/// <created>いのうえ,2020/02/21</created>
+	/// <changed>いのうえ,2020/02/21</changed>
+	// ********************************************************************************
 	void CPlayer::TurnStart(void)
 	{
 		m_Cursor = 0;
 		m_State = COMMAND_WAIT;
 		gMessage = "どうする？";
 
+	}
+	void CPlayer::CursorMove(void)
+	{
+		//上キーを押したら選択を上にする
+		if (theInput.IsKeyPush(KEY_INPUT_UP))
+		{
+			m_Cursor--;
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
+		}
+		//下キーを押したら選択を下にする
+		else if (theInput.IsKeyPush(KEY_INPUT_DOWN))
+		{
+			m_Cursor++;
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
+		}
+		//左キーを押したら選択を1ページ分上にする
+		else if (theInput.IsKeyPush(KEY_INPUT_LEFT))
+		{
+			m_Cursor -= LineMax;
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
+		}
+		//右キーを押したら選択を1ページ分下にする
+		else if (theInput.IsKeyPush(KEY_INPUT_RIGHT))
+		{
+			m_Cursor += LineMax;
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
+		}
+	}
+	void CPlayer::CursorOver(void)
+	{
+		//選択できる最大
+		int listmax = 0;
+		//状態ごとに操作を変える
+		switch (m_State)
+		{
+		case COMMAND_ATTACK:
+		case COMMAND_WAIT:
+			listmax = 2;
+			break;
+		case COMMAND_SKILL:
+			listmax = static_cast<int>(m_SkillList.size()) - 1;
+			break;
+		default:
+			break;
+		}
+		//選択が枠外に行かないようにする
+		if (m_Cursor < 0)
+		{
+			m_Cursor = listmax;
+		}
+		else if (m_Cursor > listmax)
+		{
+			m_Cursor = 0;
+		}
+	}
+	void CPlayer::EnterWait(void)
+	{
+		m_State = static_cast<CommandState>(m_Cursor + 1);
+		if (m_State == COMMAND_ATTACK)
+		{
+			m_AttackRate = 1.0f;
+			theEffectManager.Start(SKILL_SLASH);
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SLASH].key);
+			theTurnManager.SetTurn(TURN_ENEMY);
+			gMessage = "プレイヤーの攻撃！";
+		}
+		else if (m_State == COMMAND_EXIT)
+		{
+			PostQuitMessage(0);
+		}
+		else
+		{
+			m_Cursor = 0;
+		}
+	}
+	void CPlayer::EnterSkill(void)
+	{
+		//スキルの一番最後(戻るコマンド)なら一つ戻る
+		if (m_Cursor == m_SkillList.size() - 1)
+		{
+			m_State = COMMAND_WAIT;
+			return;
+		}
+		m_State = COMMAND_ATTACK;
+		m_AttackRate = m_SkillList[m_Cursor].rate;
+		theEffectManager.Start(m_SkillList[m_Cursor].effect);
+		int sound = SOUNDKEY_BGM_COUNT + m_SkillList[m_Cursor].effect;
+		theSoundManager.Play(SoundFile[sound].key);
+		theTurnManager.SetTurn(TURN_ENEMY);
+		gMessage = "プレイヤーの" + m_SkillList[m_Cursor].name + "！";
+		m_Cursor = 0;
 	}
 }
 

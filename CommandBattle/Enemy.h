@@ -1,4 +1,16 @@
+/*************************************************************************//*!
+
+					@file	Enemy.h
+					@brief	敵クラス
+
+															@author	いのうえ
+															@date	2020.02.21
+*//**************************************************************************/
+
+//ONCE
 #pragma once
+
+//INCLUDE
 #include "Chara.h"
 #include <iostream>
 #include <fstream>
@@ -6,23 +18,45 @@
 
 namespace DxLibPlus
 {
+	/// <summary>敵タイプの列挙</summary>
 	enum EnemyType {
-		ENE_RED,
-		ENE_GREEN,
-		ENE_BLUE,
-		ENE_KOMODO,
+		ENE_RED,		//!<赤(ドラゴン)
+		ENE_GREEN,		//!<緑(龍)
+		ENE_BLUE,		//!<青(ワイバーン)
+		ENE_KOMODO,		//!<コモドドラゴン
 
-		ENE_COUNT,
+		ENE_COUNT,		//!<敵の種類
 	};
 
+	// ********************************************************************************
+	/// <summary>
+	/// 敵クラス
+	/// </summary>
+	// ********************************************************************************
 	class CEnemy : public CChara
 	{
 	private:
-		EnemyType	m_Type;
-		int			m_GraphHandle;
-		TextureKey  m_TexKey;
+		EnemyType	m_Type;				//!<敵のタイプ
+		int			m_GraphHandle;		//!<画像ハンドル
+		TextureKey  m_TexKey;			//!<画像のキー
 	public:
+		// ********************************************************************************
+		/// <summary>
+		/// コンストラクタ
+		/// </summary>
+		/// <returns>None</returns>
+		/// <created>いのうえ,2020/02/21</created>
+		/// <changed>いのうえ,2020/02/21</changed>
+		// ********************************************************************************
 		CEnemy(void);
+		// ********************************************************************************
+		/// <summary>
+		/// デストラクタ
+		/// </summary>
+		/// <returns>None</returns>
+		/// <created>いのうえ,2020/02/21</created>
+		/// <changed>いのうえ,2020/02/21</changed>
+		// ********************************************************************************
 		~CEnemy(void);
 		// ********************************************************************************
 		/// <summary>

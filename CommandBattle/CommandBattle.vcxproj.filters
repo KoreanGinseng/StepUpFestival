@@ -42,9 +42,6 @@
     <ClCompile Include="Player.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Animation.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="EffectManager.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
