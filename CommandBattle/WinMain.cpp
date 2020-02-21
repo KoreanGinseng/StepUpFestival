@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "GameApp.h"
 #include "GameDefine.h"
+#include "resource.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -14,6 +15,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	CGraphicsUtillities::ChangeWindowMode(true);
 	CGraphicsUtillities::SetWindowSize(1024, 768);
 	CGraphicsUtillities::SetWindowTitle("コマンドバトル");
+	CGraphicsUtillities::SetWindowIcon(IDI_ICON1);
 
 	//ＤＸライブラリ初期化処理
 	if (CDxLibUtillities::DxLibInit() == -1)

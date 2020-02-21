@@ -145,21 +145,25 @@ namespace DxLibPlus
 		if (theInput.IsKeyPush(KEY_INPUT_UP))
 		{
 			m_Cursor--;
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
 		}
 		//下キーを押したら選択を下にする
 		else if (theInput.IsKeyPush(KEY_INPUT_DOWN))
 		{
 			m_Cursor++;
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
 		}
 		//左キーを押したら選択を1ページ分上にする
 		else if (theInput.IsKeyPush(KEY_INPUT_LEFT))
 		{
 			m_Cursor -= LineMax;
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
 		}
 		//右キーを押したら選択を1ページ分下にする
 		else if (theInput.IsKeyPush(KEY_INPUT_RIGHT))
 		{
 			m_Cursor += LineMax;
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
 		}
 		//選択できる最大
 		int listmax = 0;
@@ -188,6 +192,7 @@ namespace DxLibPlus
 		//状態ごとにエンターキーを押したときの操作を分ける
 		if (theInput.IsKeyPush(KEY_INPUT_RETURN))
 		{
+			theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENTER].key);
 			switch (m_State)
 			{
 			case COMMAND_WAIT:
@@ -196,6 +201,7 @@ namespace DxLibPlus
 				{
 					m_AttackRate = 1.0f;
 					theEffectManager.Start(SKILL_SLASH);
+					theSoundManager.Play(SoundFile[SOUNDKEY_SE_SLASH].key);
 					theTurnManager.SetTurn(TURN_ENEMY);
 					gMessage = "プレイヤーの攻撃！";
 				}
@@ -209,6 +215,7 @@ namespace DxLibPlus
 				}
 				break;
 			case COMMAND_SKILL:
+			{
 				//スキルの一番最後(戻るコマンド)なら一つ戻る
 				if (m_Cursor == m_SkillList.size() - 1)
 				{
@@ -218,10 +225,13 @@ namespace DxLibPlus
 				m_State = COMMAND_ATTACK;
 				m_AttackRate = m_SkillList[m_Cursor].rate;
 				theEffectManager.Start(m_SkillList[m_Cursor].effect);
+				int sound = SOUNDKEY_BGM_COUNT + m_SkillList[m_Cursor].effect;
+				theSoundManager.Play(SoundFile[sound].key);
 				theTurnManager.SetTurn(TURN_ENEMY);
 				gMessage = "プレイヤーの" + m_SkillList[m_Cursor].name + "！";
 				m_Cursor = 0;
 				break;
+			}
 			default:
 				break;
 			}

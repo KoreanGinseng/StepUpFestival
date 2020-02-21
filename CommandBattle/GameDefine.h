@@ -18,6 +18,24 @@ enum TextureKey {
 	TEXKEY_COUNT,
 };
 
+enum SoundKey {
+	SOUNDKEY_BGM_BATTLE,
+	SOUNDKEY_BGM_CLEAR,
+	SOUNDKEY_BGM_OVER,
+
+	SOUNDKEY_BGM_COUNT,
+
+	SOUNDKEY_SE_FIRE = SOUNDKEY_BGM_COUNT,
+	SOUNDKEY_SE_ICE,
+	SOUNDKEY_SE_THUNDER,
+	SOUNDKEY_SE_SLASH,
+	SOUNDKEY_SE_SELECT,
+	SOUNDKEY_SE_ENTER,
+	SOUNDKEY_SE_ENEMYATTACK,
+
+	SOUNDKEY_COUNT,
+};
+
 enum GameState {
 	STATE_GAME			= 0x00000000,
 	STATE_GAMEOVER		= 0x00000001,
@@ -26,8 +44,9 @@ enum GameState {
 	STATE_CHECK			= 0xFFFFFFFF,
 };
 
-extern TexMngInfo TexFile[TEXKEY_COUNT];
-extern std::string gMessage;
+extern TexMngInfo	TexFile[TEXKEY_COUNT];
+extern SoundMngInfo SoundFile[SOUNDKEY_COUNT];
+extern std::string  gMessage;
 
 struct Status {
 	int		hp;

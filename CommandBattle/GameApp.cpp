@@ -15,15 +15,29 @@
 
 //画像登録情報
 TexMngInfo TexFile[] = {
-   { "dragon_blue"   , "Enemy/dragon_blue.png"   },
-   { "dragon_red"    , "Enemy/dragon_red.png"    },
-   { "dragon_green"  , "Enemy/dragon_green.png"  },
-   { "dragon_komodo" , "Enemy/komodo_dragon.png" },
-   { "effect_fire"   , "Effect/Fire.png"         },
-   { "effect_ice"    , "Effect/Ice.png"          },
-   { "effect_thunder", "Effect/Thunder.png"      },
-   { "effect_slash"  , "Effect/Slash.png"        },
-   { "cursor"        , "cursor.png"              },
+	{ "dragon_blue"   , "Enemy/dragon_blue.png"   },
+	{ "dragon_red"    , "Enemy/dragon_red.png"    },
+	{ "dragon_green"  , "Enemy/dragon_green.png"  },
+	{ "dragon_komodo" , "Enemy/komodo_dragon.png" },
+	{ "effect_fire"   , "Effect/Fire.png"         },
+	{ "effect_ice"    , "Effect/Ice.png"          },
+	{ "effect_thunder", "Effect/Thunder.png"      },
+	{ "effect_slash"  , "Effect/Slash.png"        },
+	{ "cursor"        , "cursor.png"              },
+};
+
+//サウンド登録情報
+SoundMngInfo SoundFile[] = {
+	{ "bgm_battle"       , "Sound/BGM/battle.mp3"    },
+	{ "bgm_clear"        , "Sound/BGM/gameclear.mp3" },
+	{ "bgm_over"         , "Sound/BGM/gameover.mp3"  },
+	{ "se_skill_fire"    , "Sound/SE/fire.mp3"       },
+	{ "se_skill_ice"     , "Sound/SE/ice.mp3"        },
+	{ "se_skill_thunder" , "Sound/SE/thunder.mp3"    },
+	{ "se_skill_slash"   , "Sound/SE/slash.mp3"      },
+	{ "se_select"        , "Sound/SE/select.mp3"     },
+	{ "se_enter"         , "Sound/SE/enter.mp3"      },
+	{ "se_enemyattack"   , "Sound/SE/enemyattack.mp3"},
 };
 
 //エフェクト作成情報
@@ -58,27 +72,54 @@ Animation<10> EffectAnim[] = {
 	},
 };
 
-CPlayer		gPlayer;
-CEnemy		gEnemy;
-bool		gbChangeTurn = false;
-int			gGameState = STATE_GAME;
+CPlayer		gPlayer;					//!<プレイヤー
+CEnemy		gEnemy;						//!<敵
+bool		gbChangeTurn = false;		//!<ターン変更フラグ
+int			gGameState = STATE_GAME;	//!<ゲームの状態
 
-std::string gMessage = "";
+std::string gMessage = "";				//!<メッセージ
 
 namespace DxLibPlus
 {
-	/*************************************************************************//*!
-			@brief			初期化
-			@param			None
-
-			@return			None
-	*//**************************************************************************/
+	// ********************************************************************************
+	/// <summary>
+	/// 初期化
+	/// </summary>
+	/// <created>いのうえ,2020/02/21</created>
+	/// <changed>いのうえ,2020/02/21</changed>
+	// ********************************************************************************
 	void CGameApp::Initialize(void)
 	{
-		//リソースフォルダの設定
-		SetCurrentDirectory("../Resource");
+		//フルパス取得
+		char pass[MAX_PATH + 1];
+		GetCurrentDirectory(MAX_PATH + 1, pass);
+		std::string full = pass;
+		//カレントパスに変換
+		int len = full.length();
+		int lastlen = full.find_last_of("\\");
+		std::string current = full.substr(lastlen + 1, len - lastlen);
+		//現在のファイル位置からリソースフォルダの設定
+		if (current == "CommandBattle")
+		{
+			SetCurrentDirectory("../Resource");
+		}
+		else if (current == "StepUpFestival")
+		{
+			SetCurrentDirectory("Resource");
+		}
+		
 		//画像の読み込み
 		theTextureManager.LoadList(TexFile, TEXKEY_COUNT);
+		
+		//サウンドの読み込み
+		for (int i = 0; i < SOUNDKEY_COUNT; i++)
+		{
+			theSoundManager.Load(SoundFile[i].key, SoundFile[i].file);
+			if (i < SOUNDKEY_BGM_COUNT)
+			{
+				theSoundManager.SetLoop(SoundFile[i].key, true);
+			}
+		}
 
 		//エフェクトの作成
 		for (int i = 0; i < SKILL_COUNT; i++)
@@ -93,13 +134,15 @@ namespace DxLibPlus
 		gEnemy.Load();
 		gPlayer.Initialize();
 		gEnemy.Initialize();
+		theSoundManager.Play(SoundFile[SOUNDKEY_BGM_BATTLE].key);
 	}
-	/*************************************************************************//*!
-			@brief			更新
-			@param			None
-
-			@return			None
-	*//**************************************************************************/
+	// ********************************************************************************
+	/// <summary>
+	/// 更新
+	/// </summary>
+	/// <created>いのうえ,2020/02/21</created>
+	/// <changed>いのうえ,2020/02/21</changed>
+	// ********************************************************************************
 	void CGameApp::Update(void)
 	{
 		//ゲームオーバーかクリアの判定
@@ -109,9 +152,25 @@ namespace DxLibPlus
 		{
 		case STATE_GAMECLEAR:
 			gMessage = "敵を倒した！\nEnterキーでリスタート！";
+			if (theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_BATTLE].key))
+			{
+				theSoundManager.Stop(SoundFile[SOUNDKEY_BGM_BATTLE].key);
+			}
+			if (!theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_CLEAR].key))
+			{
+				theSoundManager.Play(SoundFile[SOUNDKEY_BGM_CLEAR].key);
+			}
 			break;
 		case STATE_GAMEOVER:
 			gMessage = "死んでしまった！\nEnterキーでリスタート！";
+			if (theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_BATTLE].key))
+			{
+				theSoundManager.Stop(SoundFile[SOUNDKEY_BGM_BATTLE].key);
+			}
+			if (!theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_OVER].key))
+			{
+				theSoundManager.Play(SoundFile[SOUNDKEY_BGM_OVER].key);
+			}
 			break;
 		}
 		//リスタートの処理
@@ -123,6 +182,9 @@ namespace DxLibPlus
 				gEnemy.Initialize();
 				gGameState = STATE_GAME;
 				theTurnManager.SetTurn(TURN_PLAYER);
+				theSoundManager.Stop();
+				theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENTER].key);
+				theSoundManager.Play(SoundFile[SOUNDKEY_BGM_BATTLE].key);
 			}
 			return;
 		}
@@ -195,6 +257,7 @@ namespace DxLibPlus
 			if (gEnemy.GetDamageWait() <= 0)
 			{
 				gMessage = "敵の攻撃！";
+				theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENEMYATTACK].key);
 				theTurnManager.SetTurn(TURN_PLAYER);
 			}
 			break;
@@ -247,5 +310,6 @@ namespace DxLibPlus
 		gPlayer.Release();
 		gEnemy.Release();
 		theEffectManager.Release();
+		theSoundManager.Release();
 	}
 }

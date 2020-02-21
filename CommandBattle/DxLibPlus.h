@@ -18,6 +18,12 @@
 #include	"TextureManager.h"
 #include	"TurnManager.h"
 #include	"EffectManager.h"
+#include	"SoundManager.h"
 #include	"KeyInput.h"
+
+namespace DxLibPlus
+{
+	typedef		TexMngInfo		SoundMngInfo;
+}
 
 using namespace DxLibPlus;
