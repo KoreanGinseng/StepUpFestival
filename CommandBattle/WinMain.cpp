@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "GameApp.h"
-
+#include "GameDefine.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -23,7 +23,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	//初期化
 	CGraphicsUtillities::SetDrawScreen(DX_SCREEN_BACK);
-	CGraphicsUtillities::SetFontSize(24);
+	CGraphicsUtillities::SetFontSize(FontSize);
 	gameApp.Initialize();
 
 	//ゲームループ
@@ -31,7 +31,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	{
 		//更新
 		theInput.RefreshKey();
+		//エスケープキーで終了処理
+		if (theInput.IsKeyPush(KEY_INPUT_ESCAPE))
+		{
+			PostQuitMessage(0);
+		}
 		theTurnManager.RefreshTurn();
+		theEffectManager.Update();
 		gameApp.Update();
 
 		//描画

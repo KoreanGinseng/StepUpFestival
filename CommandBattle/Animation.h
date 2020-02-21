@@ -57,6 +57,7 @@ namespace DxLibPlus
 		int				m_NowAnimNo;
 		int				m_MaxAnimCount;
 		Animation<N>*	m_pAnim;
+		bool			m_bShow;
 	public:
 		CAnimation(void) :
 			m_NowFlame(0),
@@ -64,20 +65,31 @@ namespace DxLibPlus
 			m_FlameCount(0),
 			m_NowAnimNo(0),
 			m_MaxAnimCount(0),
-			m_pAnim(nullptr)
+			m_pAnim(nullptr),
+			m_bShow(false)
 		{
 		}
-		~CAnimation(void) {}
+		~CAnimation(void) { Release(); }
 		void ChangeMotion(const int& animNo)
 		{
 			m_NowAnimNo = animNo;
 			m_FlameCount = N;
+			m_NowFlame = 0;
+			m_NowWait = 0;
 		}
 		void Create(Animation<N>* anim, const int& animCount)
 		{
-			m_pAnim = new Animation<N>()[animCount];
-			m_pAnim = *anim;
+			m_pAnim = new Animation<N>[animCount];
+			*m_pAnim = *anim;
 			m_MaxAnimCount = animCount;
+		}
+		void Release(void)
+		{
+			if (m_pAnim)
+			{
+				delete[] m_pAnim;
+				m_pAnim = nullptr;
+			}
 		}
 		void AddTimer(void)
 		{
@@ -90,6 +102,10 @@ namespace DxLibPlus
 				}
 			}
 		}
+		bool IsEndMotion(void) const
+		{
+			return m_pAnim->bLoop ? false : (m_NowFlame >= m_FlameCount);
+		}
 		Rectangle GetSrcRect(void) const
 		{
 			int x = m_pAnim[m_NowAnimNo].offsetX + m_pAnim[m_NowAnimNo].width * m_pAnim[m_NowAnimNo].pattern[m_NowFlame].no;
@@ -100,6 +116,14 @@ namespace DxLibPlus
 				x + m_pAnim[m_NowAnimNo].width,
 				y + m_pAnim[m_NowAnimNo].height
 			);
+		}
+		void SetShow(const bool& b)
+		{
+			m_bShow = b;
+		}
+		bool IsShow(void) const
+		{
+			return m_bShow;
 		}
 	};
 }

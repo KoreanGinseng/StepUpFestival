@@ -8,20 +8,26 @@ namespace DxLibPlus
 		SKILL_FIRE,
 		SKILL_ICE,
 		SKILL_THUNDER,
+		SKILL_SLASH,
+
+		SKILL_COUNT,
 	};
 
 	class CEffectManager
 	{
 	private:
 		std::unordered_map<EffectType, CAnimation<10>>	m_EffectList;
-		CEffectManager(void) = default;
-		~CEffectManager(void) = default;
+		EffectType										m_PlayType;
+		CEffectManager(void);
+		~CEffectManager(void);
 	public:
-		CEffectManager& GetEffectManager(void);
+		static CEffectManager& GetEffectManager(void);
 		void CreateEffect(const EffectType & type, Animation<10>* pAnim, const int& animCount);
-		void Start(void);
-		void SetEffect(const EffectType& type);
+		void Start(const EffectType & type);
 		void Update(void);
+		void Render(void);
+		void Release(void);
 	};
+#define theEffectManager CEffectManager::GetEffectManager()
 }
 
