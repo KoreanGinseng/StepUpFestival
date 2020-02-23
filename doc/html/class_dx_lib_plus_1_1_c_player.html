@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CommandBattle: DxLibPlus::CPlayer クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="dragon_red.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CommandBattle
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">コマンドバトルゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_dx_lib_plus_1_1_c_player.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_dx_lib_plus_1_1_c_player-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">DxLibPlus::CPlayer クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>プレイヤークラス  
+ <a href="class_dx_lib_plus_1_1_c_player.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_player_8h_source.html">Player.h</a>&gt;</code></p>
+<div class="dynheader">
+DxLibPlus::CPlayer の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_dx_lib_plus_1_1_c_player__inherit__graph.png" border="0" usemap="#_dx_lib_plus_1_1_c_player_inherit__map" alt="Inheritance graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+DxLibPlus::CPlayer 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_dx_lib_plus_1_1_c_player__coll__graph.png" border="0" usemap="#_dx_lib_plus_1_1_c_player_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 1 -->
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7264667bfe1ae4e4927720052d54b1f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#a7264667bfe1ae4e4927720052d54b1f6">CPlayer</a> (void)</td></tr>
+<tr class="separator:a7264667bfe1ae4e4927720052d54b1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac15edd51c7e66a0bac9d9b36a8aaa017"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#ac15edd51c7e66a0bac9d9b36a8aaa017">~CPlayer</a> (void)</td></tr>
+<tr class="memdesc:ac15edd51c7e66a0bac9d9b36a8aaa017"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_dx_lib_plus_1_1_c_player.html#ac15edd51c7e66a0bac9d9b36a8aaa017">[詳解]</a><br /></td></tr>
+<tr class="separator:ac15edd51c7e66a0bac9d9b36a8aaa017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a556f0f29d7101bdbde0324e1a362469a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#a556f0f29d7101bdbde0324e1a362469a">Load</a> (void) override</td></tr>
+<tr class="memdesc:a556f0f29d7101bdbde0324e1a362469a"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み込み  <a href="class_dx_lib_plus_1_1_c_player.html#a556f0f29d7101bdbde0324e1a362469a">[詳解]</a><br /></td></tr>
+<tr class="separator:a556f0f29d7101bdbde0324e1a362469a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732861af7a969564f0bb55ceb3b7f0b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#a732861af7a969564f0bb55ceb3b7f0b3">Initialize</a> (void) override</td></tr>
+<tr class="memdesc:a732861af7a969564f0bb55ceb3b7f0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <a href="class_dx_lib_plus_1_1_c_player.html#a732861af7a969564f0bb55ceb3b7f0b3">[詳解]</a><br /></td></tr>
+<tr class="separator:a732861af7a969564f0bb55ceb3b7f0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c58afe3bef52f66e8830ef104f942a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#a0c58afe3bef52f66e8830ef104f942a9">Update</a> (void) override</td></tr>
+<tr class="memdesc:a0c58afe3bef52f66e8830ef104f942a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新  <a href="class_dx_lib_plus_1_1_c_player.html#a0c58afe3bef52f66e8830ef104f942a9">[詳解]</a><br /></td></tr>
+<tr class="separator:a0c58afe3bef52f66e8830ef104f942a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a612e0b1665f73a5a382378156cf64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#a65a612e0b1665f73a5a382378156cf64">Render</a> (void) override</td></tr>
+<tr class="memdesc:a65a612e0b1665f73a5a382378156cf64"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画  <a href="class_dx_lib_plus_1_1_c_player.html#a65a612e0b1665f73a5a382378156cf64">[詳解]</a><br /></td></tr>
+<tr class="separator:a65a612e0b1665f73a5a382378156cf64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776d562f5641f86b5c91aacaa729783f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#a776d562f5641f86b5c91aacaa729783f">RenderStatus</a> (void)</td></tr>
+<tr class="memdesc:a776d562f5641f86b5c91aacaa729783f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータス描画  <a href="class_dx_lib_plus_1_1_c_player.html#a776d562f5641f86b5c91aacaa729783f">[詳解]</a><br /></td></tr>
+<tr class="separator:a776d562f5641f86b5c91aacaa729783f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153fa019060e0e6c3283348808edca84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#a153fa019060e0e6c3283348808edca84">Release</a> (void) override</td></tr>
+<tr class="memdesc:a153fa019060e0e6c3283348808edca84"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放  <a href="class_dx_lib_plus_1_1_c_player.html#a153fa019060e0e6c3283348808edca84">[詳解]</a><br /></td></tr>
+<tr class="separator:a153fa019060e0e6c3283348808edca84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1612434d7161dafd60a8c6bb52a6f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_player.html#abf1612434d7161dafd60a8c6bb52a6f6">TurnStart</a> (void)</td></tr>
+<tr class="memdesc:abf1612434d7161dafd60a8c6bb52a6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">切り替え処理  <a href="class_dx_lib_plus_1_1_c_player.html#abf1612434d7161dafd60a8c6bb52a6f6">[詳解]</a><br /></td></tr>
+<tr class="separator:abf1612434d7161dafd60a8c6bb52a6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_dx_lib_plus_1_1_c_chara"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_dx_lib_plus_1_1_c_chara')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_dx_lib_plus_1_1_c_chara.html">DxLibPlus::CChara</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a466ad8378be52e2e1795c670e83ec477 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a466ad8378be52e2e1795c670e83ec477">CChara</a> (void)</td></tr>
+<tr class="memdesc:a466ad8378be52e2e1795c670e83ec477 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_dx_lib_plus_1_1_c_chara.html#a466ad8378be52e2e1795c670e83ec477">[詳解]</a><br /></td></tr>
+<tr class="separator:a466ad8378be52e2e1795c670e83ec477 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c85a03e0b694e1d68b9b496cd30909e inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a7c85a03e0b694e1d68b9b496cd30909e">~CChara</a> (void)</td></tr>
+<tr class="memdesc:a7c85a03e0b694e1d68b9b496cd30909e inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_dx_lib_plus_1_1_c_chara.html#a7c85a03e0b694e1d68b9b496cd30909e">[詳解]</a><br /></td></tr>
+<tr class="separator:a7c85a03e0b694e1d68b9b496cd30909e inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869b4ce6774b364cba080974d1669b45 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a869b4ce6774b364cba080974d1669b45">Dmg</a> (const int &amp;dmg)</td></tr>
+<tr class="memdesc:a869b4ce6774b364cba080974d1669b45 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダメージ処理  <a href="class_dx_lib_plus_1_1_c_chara.html#a869b4ce6774b364cba080974d1669b45">[詳解]</a><br /></td></tr>
+<tr class="separator:a869b4ce6774b364cba080974d1669b45 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de028acdca5dc31089655440510a05f inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a2de028acdca5dc31089655440510a05f">GetAttack</a> (void) const</td></tr>
+<tr class="memdesc:a2de028acdca5dc31089655440510a05f inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">攻撃力取得  <a href="class_dx_lib_plus_1_1_c_chara.html#a2de028acdca5dc31089655440510a05f">[詳解]</a><br /></td></tr>
+<tr class="separator:a2de028acdca5dc31089655440510a05f inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6cdb0d627d333a37dfae1644ccfdf89 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#ac6cdb0d627d333a37dfae1644ccfdf89">GetHp</a> (void) const</td></tr>
+<tr class="memdesc:ac6cdb0d627d333a37dfae1644ccfdf89 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">体力取得  <a href="class_dx_lib_plus_1_1_c_chara.html#ac6cdb0d627d333a37dfae1644ccfdf89">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6cdb0d627d333a37dfae1644ccfdf89 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c8e208c1b8aa8434c58dde519a8eba inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a94c8e208c1b8aa8434c58dde519a8eba">IsDead</a> (void) const</td></tr>
+<tr class="memdesc:a94c8e208c1b8aa8434c58dde519a8eba inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">死亡フラグの取得  <a href="class_dx_lib_plus_1_1_c_chara.html#a94c8e208c1b8aa8434c58dde519a8eba">[詳解]</a><br /></td></tr>
+<tr class="separator:a94c8e208c1b8aa8434c58dde519a8eba inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add519694bfd30448bbe8f5df035c246c inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#add519694bfd30448bbe8f5df035c246c">GetDamageWait</a> (void) const</td></tr>
+<tr class="memdesc:add519694bfd30448bbe8f5df035c246c inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダメージ待ち時間の取得  <a href="class_dx_lib_plus_1_1_c_chara.html#add519694bfd30448bbe8f5df035c246c">[詳解]</a><br /></td></tr>
+<tr class="separator:add519694bfd30448bbe8f5df035c246c inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a896bc93c803b17880e5a73968e7ee4 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a1a896bc93c803b17880e5a73968e7ee4">RefreshDmg</a> (void)</td></tr>
+<tr class="memdesc:a1a896bc93c803b17880e5a73968e7ee4 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダメージ待ち時間の更新  <a href="class_dx_lib_plus_1_1_c_chara.html#a1a896bc93c803b17880e5a73968e7ee4">[詳解]</a><br /></td></tr>
+<tr class="separator:a1a896bc93c803b17880e5a73968e7ee4 inherit pub_methods_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_dx_lib_plus_1_1_c_game_app_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_dx_lib_plus_1_1_c_game_app_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html">DxLibPlus::CGameAppBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a0158e2ef6562726b9bdfa4a9df254a2a inherit pub_methods_class_dx_lib_plus_1_1_c_game_app_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html#a0158e2ef6562726b9bdfa4a9df254a2a">CGameAppBase</a> (void)</td></tr>
+<tr class="memdesc:a0158e2ef6562726b9bdfa4a9df254a2a inherit pub_methods_class_dx_lib_plus_1_1_c_game_app_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_dx_lib_plus_1_1_c_game_app_base.html#a0158e2ef6562726b9bdfa4a9df254a2a">[詳解]</a><br /></td></tr>
+<tr class="separator:a0158e2ef6562726b9bdfa4a9df254a2a inherit pub_methods_class_dx_lib_plus_1_1_c_game_app_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927525a8a9befb761d3ee5422299faa3 inherit pub_methods_class_dx_lib_plus_1_1_c_game_app_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html#a927525a8a9befb761d3ee5422299faa3">~CGameAppBase</a> (void)</td></tr>
+<tr class="memdesc:a927525a8a9befb761d3ee5422299faa3 inherit pub_methods_class_dx_lib_plus_1_1_c_game_app_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_dx_lib_plus_1_1_c_game_app_base.html#a927525a8a9befb761d3ee5422299faa3">[詳解]</a><br /></td></tr>
+<tr class="separator:a927525a8a9befb761d3ee5422299faa3 inherit pub_methods_class_dx_lib_plus_1_1_c_game_app_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_dx_lib_plus_1_1_c_chara"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_dx_lib_plus_1_1_c_chara')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_dx_lib_plus_1_1_c_chara.html">DxLibPlus::CChara</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a7a8bed0d0494e7d83b49166ecaa299e4 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a7a8bed0d0494e7d83b49166ecaa299e4">m_Status</a></td></tr>
+<tr class="memdesc:a7a8bed0d0494e7d83b49166ecaa299e4 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータス  <a href="class_dx_lib_plus_1_1_c_chara.html#a7a8bed0d0494e7d83b49166ecaa299e4">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a8bed0d0494e7d83b49166ecaa299e4 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac800f8eaa4a0d107306a4a55caad8d72 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#ac800f8eaa4a0d107306a4a55caad8d72">m_AttackRate</a></td></tr>
+<tr class="memdesc:ac800f8eaa4a0d107306a4a55caad8d72 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">攻撃倍率  <a href="class_dx_lib_plus_1_1_c_chara.html#ac800f8eaa4a0d107306a4a55caad8d72">[詳解]</a><br /></td></tr>
+<tr class="separator:ac800f8eaa4a0d107306a4a55caad8d72 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303f3a9f54ab5f8093023c8c8f39e5c4 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a303f3a9f54ab5f8093023c8c8f39e5c4">m_bDead</a></td></tr>
+<tr class="memdesc:a303f3a9f54ab5f8093023c8c8f39e5c4 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">死亡フラグ  <a href="class_dx_lib_plus_1_1_c_chara.html#a303f3a9f54ab5f8093023c8c8f39e5c4">[詳解]</a><br /></td></tr>
+<tr class="separator:a303f3a9f54ab5f8093023c8c8f39e5c4 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6caf716ee1e7eed91cd7572e9a1390 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a7c6caf716ee1e7eed91cd7572e9a1390">m_DamageWait</a></td></tr>
+<tr class="memdesc:a7c6caf716ee1e7eed91cd7572e9a1390 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダメージ待機時間  <a href="class_dx_lib_plus_1_1_c_chara.html#a7c6caf716ee1e7eed91cd7572e9a1390">[詳解]</a><br /></td></tr>
+<tr class="separator:a7c6caf716ee1e7eed91cd7572e9a1390 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9e9c58266ab3c7b2947e3813e7d3656 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#ae9e9c58266ab3c7b2947e3813e7d3656">m_OffsetHp</a></td></tr>
+<tr class="memdesc:ae9e9c58266ab3c7b2947e3813e7d3656 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="mdescLeft">&#160;</td><td class="mdescRight">体力初期値  <a href="class_dx_lib_plus_1_1_c_chara.html#ae9e9c58266ab3c7b2947e3813e7d3656">[詳解]</a><br /></td></tr>
+<tr class="separator:ae9e9c58266ab3c7b2947e3813e7d3656 inherit pro_attribs_class_dx_lib_plus_1_1_c_chara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>プレイヤークラス </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a7264667bfe1ae4e4927720052d54b1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7264667bfe1ae4e4927720052d54b1f6">&#9670;&nbsp;</a></span>CPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DxLibPlus::CPlayer::CPlayer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p></p>
+<p>コンストラクタ</p>
+<p>コンストラクタ</p>
+<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<p>&lt;created&gt;いのうえ,2020/02/19&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/19&lt;/changed&gt;</p>
+<dl class="section return"><dt>戻り値</dt><dd>None</dd></dl>
+<p>&lt;created&gt;いのうえ,2020/02/17&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/17&lt;/changed&gt; </p>
+
+</div>
+</div>
+<a id="ac15edd51c7e66a0bac9d9b36a8aaa017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac15edd51c7e66a0bac9d9b36a8aaa017">&#9670;&nbsp;</a></span>~CPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DxLibPlus::CPlayer::~CPlayer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デストラクタ </p>
+<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<p>&lt;created&gt;いのうえ,2020/02/19&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/19&lt;/changed&gt;</p>
+<dl class="section return"><dt>戻り値</dt><dd>None</dd></dl>
+<p>&lt;created&gt;いのうえ,2020/02/17&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/17&lt;/changed&gt; </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a732861af7a969564f0bb55ceb3b7f0b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732861af7a969564f0bb55ceb3b7f0b3">&#9670;&nbsp;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DxLibPlus::CPlayer::Initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt;</p>
+<p>&lt;created&gt;いのうえ,2020/02/17&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/17&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#ae11413f6654fe1052ba47f6dba10e740">DxLibPlus::CChara</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a556f0f29d7101bdbde0324e1a362469a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a556f0f29d7101bdbde0324e1a362469a">&#9670;&nbsp;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DxLibPlus::CPlayer::Load </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>読み込み </p>
+<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<p>&lt;created&gt;いのうえ,2020/02/19&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/19&lt;/changed&gt;</p>
+<dl class="section return"><dt>戻り値</dt><dd>true 成功</dd></dl>
+<p>false 失敗</p>
+<p>&lt;created&gt;いのうえ,2020/02/17&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/17&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a287bc46e0c6ad4f46461774e24fc959e">DxLibPlus::CChara</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a153fa019060e0e6c3283348808edca84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153fa019060e0e6c3283348808edca84">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DxLibPlus::CPlayer::Release </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解放 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt;</p>
+<p>&lt;created&gt;いのうえ,2020/02/19&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/19&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a42acfeeaf243547811a115390bcffc70">DxLibPlus::CChara</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a65a612e0b1665f73a5a382378156cf64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a612e0b1665f73a5a382378156cf64">&#9670;&nbsp;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DxLibPlus::CPlayer::Render </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt;</p>
+<p>&lt;created&gt;いのうえ,2020/02/19&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/19&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#afcd4e9810b4c8e2ca465b02dd524fabd">DxLibPlus::CChara</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a776d562f5641f86b5c91aacaa729783f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a776d562f5641f86b5c91aacaa729783f">&#9670;&nbsp;</a></span>RenderStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DxLibPlus::CPlayer::RenderStatus </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ステータス描画 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt; </p>
+
+</div>
+</div>
+<a id="abf1612434d7161dafd60a8c6bb52a6f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1612434d7161dafd60a8c6bb52a6f6">&#9670;&nbsp;</a></span>TurnStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DxLibPlus::CPlayer::TurnStart </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>切り替え処理 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt; </p>
+
+</div>
+</div>
+<a id="a0c58afe3bef52f66e8830ef104f942a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c58afe3bef52f66e8830ef104f942a9">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DxLibPlus::CPlayer::Update </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt;</p>
+<p>&lt;created&gt;いのうえ,2020/02/19&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/19&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#ade4bd0ed9699a938a515ad1f1c88af6f">DxLibPlus::CChara</a>を実装しています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/<a class="el" href="_player_8h_source.html">Player.h</a></li>
+<li>C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/<a class="el" href="_player_8cpp.html">Player.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_dx_lib_plus.html">DxLibPlus</a></li><li class="navelem"><a class="el" href="class_dx_lib_plus_1_1_c_player.html">CPlayer</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

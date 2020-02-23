@@ -1,0 +1,120 @@
+\hypertarget{class_dx_lib_plus_1_1_c_effect_manager}{}\doxysection{Dx\+Lib\+Plus\+::C\+Effect\+Manager クラス}
+\label{class_dx_lib_plus_1_1_c_effect_manager}\index{DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}}
+
+
+エフェクトマネージャークラス  
+
+
+
+
+{\ttfamily \#include $<$Effect\+Manager.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_effect_manager_a9f4cc85c4aabbce2b6884dc47f8d40ca}{Create\+Effect}} (const \mbox{\hyperlink{namespace_dx_lib_plus_a33c0f04a7d0bfb8806775ca419b589f4}{Skill\+Type}} \&type, \mbox{\hyperlink{struct_dx_lib_plus_1_1_animation}{Animation}}$<$ 10 $>$ $\ast$p\+Anim, const int \&anim\+Count)
+\begin{DoxyCompactList}\small\item\em エフェクトの作成 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_effect_manager_a4e0491142cc651700c934ef361771c52}{Start}} (const \mbox{\hyperlink{namespace_dx_lib_plus_a33c0f04a7d0bfb8806775ca419b589f4}{Skill\+Type}} \&type)
+\begin{DoxyCompactList}\small\item\em エフェクト開始 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_effect_manager_a01341599e46e02f96a584c03283b4cb9}{Update}} (void)
+\begin{DoxyCompactList}\small\item\em エフェクトの更新 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_effect_manager_a8cc8d4f60ecb7e26e137468443186c62}{Render}} (void)
+\begin{DoxyCompactList}\small\item\em エフェクトの描画 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_effect_manager_a495c8a5acfa062afbc46b568115d9be4}{Release}} (void)
+\begin{DoxyCompactList}\small\item\em 解放 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dx_lib_plus_1_1_c_effect_manager}{C\+Effect\+Manager}} \& \mbox{\hyperlink{class_dx_lib_plus_1_1_c_effect_manager_a5ba1559cec776eede865266abd02eda0}{Get\+Effect\+Manager}} (void)
+\begin{DoxyCompactList}\small\item\em マネージャーの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+エフェクトマネージャークラス 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_effect_manager_a9f4cc85c4aabbce2b6884dc47f8d40ca}\label{class_dx_lib_plus_1_1_c_effect_manager_a9f4cc85c4aabbce2b6884dc47f8d40ca}} 
+\index{DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}!CreateEffect@{CreateEffect}}
+\index{CreateEffect@{CreateEffect}!DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}}
+\doxysubsubsection{\texorpdfstring{CreateEffect()}{CreateEffect()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Effect\+Manager\+::\+Create\+Effect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_dx_lib_plus_a33c0f04a7d0bfb8806775ca419b589f4}{Skill\+Type}} \&}]{type,  }\item[{\mbox{\hyperlink{struct_dx_lib_plus_1_1_animation}{Animation}}$<$ 10 $>$ $\ast$}]{p\+Anim,  }\item[{const int \&}]{anim\+Count }\end{DoxyParamCaption})}
+
+
+
+エフェクトの作成 
+
+
+\begin{DoxyParams}{引数}
+{\em type} & エフェクトのタイプ\\
+\hline
+{\em p\+Anim} & アニメーション構造体\\
+\hline
+{\em anim\+Count} & アニメーション数\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_effect_manager_a5ba1559cec776eede865266abd02eda0}\label{class_dx_lib_plus_1_1_c_effect_manager_a5ba1559cec776eede865266abd02eda0}} 
+\index{DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}!GetEffectManager@{GetEffectManager}}
+\index{GetEffectManager@{GetEffectManager}!DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}}
+\doxysubsubsection{\texorpdfstring{GetEffectManager()}{GetEffectManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dx_lib_plus_1_1_c_effect_manager}{C\+Effect\+Manager}} \& Dx\+Lib\+Plus\+::\+C\+Effect\+Manager\+::\+Get\+Effect\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+マネージャーの取得 
+
+\begin{DoxyReturn}{戻り値}
+マネージャー
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_effect_manager_a495c8a5acfa062afbc46b568115d9be4}\label{class_dx_lib_plus_1_1_c_effect_manager_a495c8a5acfa062afbc46b568115d9be4}} 
+\index{DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}!Release@{Release}}
+\index{Release@{Release}!DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Effect\+Manager\+::\+Release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+解放 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_effect_manager_a8cc8d4f60ecb7e26e137468443186c62}\label{class_dx_lib_plus_1_1_c_effect_manager_a8cc8d4f60ecb7e26e137468443186c62}} 
+\index{DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}!Render@{Render}}
+\index{Render@{Render}!DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Effect\+Manager\+::\+Render (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+エフェクトの描画 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_effect_manager_a4e0491142cc651700c934ef361771c52}\label{class_dx_lib_plus_1_1_c_effect_manager_a4e0491142cc651700c934ef361771c52}} 
+\index{DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}!Start@{Start}}
+\index{Start@{Start}!DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Effect\+Manager\+::\+Start (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_dx_lib_plus_a33c0f04a7d0bfb8806775ca419b589f4}{Skill\+Type}} \&}]{type }\end{DoxyParamCaption})}
+
+
+
+エフェクト開始 
+
+
+\begin{DoxyParams}{引数}
+{\em type} & 開始するエフェクトタイプ\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_effect_manager_a01341599e46e02f96a584c03283b4cb9}\label{class_dx_lib_plus_1_1_c_effect_manager_a01341599e46e02f96a584c03283b4cb9}} 
+\index{DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}!Update@{Update}}
+\index{Update@{Update}!DxLibPlus::CEffectManager@{DxLibPlus::CEffectManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Effect\+Manager\+::\+Update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+エフェクトの更新 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_effect_manager_8h}{Effect\+Manager.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_effect_manager_8cpp}{Effect\+Manager.\+cpp}}\end{DoxyCompactItemize}

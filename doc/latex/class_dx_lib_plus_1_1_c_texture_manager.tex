@@ -1,0 +1,147 @@
+\hypertarget{class_dx_lib_plus_1_1_c_texture_manager}{}\doxysection{Dx\+Lib\+Plus\+::C\+Texture\+Manager クラス}
+\label{class_dx_lib_plus_1_1_c_texture_manager}\index{DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}}
+
+
+テクスチャ管理クラス  
+
+
+
+
+{\ttfamily \#include $<$Texture\+Manager.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_texture_manager_a15bb62e9d97c5b95add8c22c23ba4e10}{Get\+Graph\+Handle}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em 画像ファイルのハンドルを取得する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_texture_manager_a0bdd38e7303014b79d81512d78d75ecc}{Load\+Graph}} (const std\+::string \&name, const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em 画像ファイルの読み込み \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_texture_manager_a7925598f5686f5e9640afa315fe43a0a}{Get\+Width}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em 画像ファイルの横幅を取得する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_texture_manager_a348cb94ab69044db2a70ac899529dbe7}{Get\+Height}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em 画像ファイルの縦幅を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_texture_manager_a18e29bc32090b87d50afbeb11cdbe0ef}{Load\+List}} (\mbox{\hyperlink{namespace_dx_lib_plus_a0ffd96f629746fb1d9459ecc9204e425}{Tex\+Mng\+Info}} $\ast$list, const int \&cnt)
+\begin{DoxyCompactList}\small\item\em 画像ファイルの一括読み込みする \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dx_lib_plus_1_1_c_texture_manager}{C\+Texture\+Manager}} \& \mbox{\hyperlink{class_dx_lib_plus_1_1_c_texture_manager_ae170ecfb1ec232a9a7720b6bae9b22a1}{Get\+Texture\+Manager}} (void)
+\begin{DoxyCompactList}\small\item\em マネージャー呼び出し \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+テクスチャ管理クラス 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_texture_manager_a15bb62e9d97c5b95add8c22c23ba4e10}\label{class_dx_lib_plus_1_1_c_texture_manager_a15bb62e9d97c5b95add8c22c23ba4e10}} 
+\index{DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}!GetGraphHandle@{GetGraphHandle}}
+\index{GetGraphHandle@{GetGraphHandle}!DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}}
+\doxysubsubsection{\texorpdfstring{GetGraphHandle()}{GetGraphHandle()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Texture\+Manager\+::\+Get\+Graph\+Handle (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+画像ファイルのハンドルを取得する 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録キー名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+グラフィックのハンドル
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_texture_manager_a348cb94ab69044db2a70ac899529dbe7}\label{class_dx_lib_plus_1_1_c_texture_manager_a348cb94ab69044db2a70ac899529dbe7}} 
+\index{DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Texture\+Manager\+::\+Get\+Height (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+画像ファイルの縦幅を取得する 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録キー名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+画像高さ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_texture_manager_ae170ecfb1ec232a9a7720b6bae9b22a1}\label{class_dx_lib_plus_1_1_c_texture_manager_ae170ecfb1ec232a9a7720b6bae9b22a1}} 
+\index{DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}!GetTextureManager@{GetTextureManager}}
+\index{GetTextureManager@{GetTextureManager}!DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}}
+\doxysubsubsection{\texorpdfstring{GetTextureManager()}{GetTextureManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dx_lib_plus_1_1_c_texture_manager}{C\+Texture\+Manager}} \& Dx\+Lib\+Plus\+::\+C\+Texture\+Manager\+::\+Get\+Texture\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+マネージャー呼び出し 
+
+\begin{DoxyReturn}{戻り値}
+マネージャー
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_texture_manager_a7925598f5686f5e9640afa315fe43a0a}\label{class_dx_lib_plus_1_1_c_texture_manager_a7925598f5686f5e9640afa315fe43a0a}} 
+\index{DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Texture\+Manager\+::\+Get\+Width (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+画像ファイルの横幅を取得する 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録キー名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+画像幅
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_texture_manager_a0bdd38e7303014b79d81512d78d75ecc}\label{class_dx_lib_plus_1_1_c_texture_manager_a0bdd38e7303014b79d81512d78d75ecc}} 
+\index{DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}!LoadGraph@{LoadGraph}}
+\index{LoadGraph@{LoadGraph}!DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}}
+\doxysubsubsection{\texorpdfstring{LoadGraph()}{LoadGraph()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Texture\+Manager\+::\+Load\+Graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+画像ファイルの読み込み 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録キー名\\
+\hline
+{\em file\+Name} & 画像ファイル名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+グラフィックのハンドル
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_texture_manager_a18e29bc32090b87d50afbeb11cdbe0ef}\label{class_dx_lib_plus_1_1_c_texture_manager_a18e29bc32090b87d50afbeb11cdbe0ef}} 
+\index{DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}!LoadList@{LoadList}}
+\index{LoadList@{LoadList}!DxLibPlus::CTextureManager@{DxLibPlus::CTextureManager}}
+\doxysubsubsection{\texorpdfstring{LoadList()}{LoadList()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Texture\+Manager\+::\+Load\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_dx_lib_plus_a0ffd96f629746fb1d9459ecc9204e425}{Tex\+Mng\+Info}} $\ast$}]{list,  }\item[{const int \&}]{cnt }\end{DoxyParamCaption})}
+
+
+
+画像ファイルの一括読み込みする 
+
+
+\begin{DoxyParams}{引数}
+{\em list} & 読み込みリスト\\
+\hline
+{\em cnt} & リストの配列数\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_texture_manager_8h}{Texture\+Manager.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_texture_manager_8cpp}{Texture\+Manager.\+cpp}}\end{DoxyCompactItemize}

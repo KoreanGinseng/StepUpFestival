@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CommandBattle: C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/Chara.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="dragon_red.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CommandBattle
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">コマンドバトルゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_chara_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Chara.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_chara_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*************************************************************************/</span><span class="comment">/**************************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//ONCE</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//INCLUDE</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_game_app_base_8h.html">GameAppBase.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_game_define_8h.html">GameDefine.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_dx_lib_plus.html">DxLibPlus</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span>    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_chara.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_dx_lib_plus_1_1_c_chara.html">CChara</a> : <span class="keyword">public</span> <a class="code" href="class_dx_lib_plus_1_1_c_game_app_base.html">CGameAppBase</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_chara.html#a7a8bed0d0494e7d83b49166ecaa299e4">   27</a></span>&#160;        <a class="code" href="struct_status.html">Status</a>      <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a7a8bed0d0494e7d83b49166ecaa299e4">m_Status</a>;       </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_chara.html#ac800f8eaa4a0d107306a4a55caad8d72">   28</a></span>&#160;        <span class="keywordtype">float</span>       <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#ac800f8eaa4a0d107306a4a55caad8d72">m_AttackRate</a>;   </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_chara.html#a303f3a9f54ab5f8093023c8c8f39e5c4">   29</a></span>&#160;        <span class="keywordtype">bool</span>        <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a303f3a9f54ab5f8093023c8c8f39e5c4">m_bDead</a>;        </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_chara.html#a7c6caf716ee1e7eed91cd7572e9a1390">   30</a></span>&#160;        <span class="keywordtype">int</span>         <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a7c6caf716ee1e7eed91cd7572e9a1390">m_DamageWait</a>;   </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_chara.html#ae9e9c58266ab3c7b2947e3813e7d3656">   31</a></span>&#160;        <span class="keywordtype">int</span>         <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#ae9e9c58266ab3c7b2947e3813e7d3656">m_OffsetHp</a>;     </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a466ad8378be52e2e1795c670e83ec477">CChara</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a7c85a03e0b694e1d68b9b496cd30909e">~CChara</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a287bc46e0c6ad4f46461774e24fc959e">Load</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#ae11413f6654fe1052ba47f6dba10e740">Initialize</a>(<span class="keywordtype">void</span>) = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#ade4bd0ed9699a938a515ad1f1c88af6f">Update</a>(<span class="keywordtype">void</span>) = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#afcd4e9810b4c8e2ca465b02dd524fabd">Render</a>(<span class="keywordtype">void</span>) = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a42acfeeaf243547811a115390bcffc70">Release</a>(<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a869b4ce6774b364cba080974d1669b45">Dmg</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; dmg);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a2de028acdca5dc31089655440510a05f">GetAttack</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#ac6cdb0d627d333a37dfae1644ccfdf89">GetHp</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a94c8e208c1b8aa8434c58dde519a8eba">IsDead</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#add519694bfd30448bbe8f5df035c246c">GetDamageWait</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html#a1a896bc93c803b17880e5a73968e7ee4">RefreshDmg</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    };</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html">DxLibPlus::CChara</a></div><div class="ttdoc">キャラクター基礎クラス</div><div class="ttdef"><b>Definition:</b> Chara.h:24</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_ade4bd0ed9699a938a515ad1f1c88af6f"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#ade4bd0ed9699a938a515ad1f1c88af6f">DxLibPlus::CChara::Update</a></div><div class="ttdeci">virtual void Update(void)=0</div><div class="ttdoc">更新</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_afcd4e9810b4c8e2ca465b02dd524fabd"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#afcd4e9810b4c8e2ca465b02dd524fabd">DxLibPlus::CChara::Render</a></div><div class="ttdeci">virtual void Render(void)=0</div><div class="ttdoc">描画</div></div>
+<div class="ttc" id="a_game_define_8h_html"><div class="ttname"><a href="_game_define_8h.html">GameDefine.h</a></div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a303f3a9f54ab5f8093023c8c8f39e5c4"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a303f3a9f54ab5f8093023c8c8f39e5c4">DxLibPlus::CChara::m_bDead</a></div><div class="ttdeci">bool m_bDead</div><div class="ttdoc">死亡フラグ</div><div class="ttdef"><b>Definition:</b> Chara.h:29</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a869b4ce6774b364cba080974d1669b45"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a869b4ce6774b364cba080974d1669b45">DxLibPlus::CChara::Dmg</a></div><div class="ttdeci">virtual void Dmg(const int &amp;dmg)</div><div class="ttdoc">ダメージ処理</div><div class="ttdef"><b>Definition:</b> Chara.cpp:73</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a94c8e208c1b8aa8434c58dde519a8eba"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a94c8e208c1b8aa8434c58dde519a8eba">DxLibPlus::CChara::IsDead</a></div><div class="ttdeci">bool IsDead(void) const</div><div class="ttdoc">死亡フラグの取得</div><div class="ttdef"><b>Definition:</b> Chara.cpp:120</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_add519694bfd30448bbe8f5df035c246c"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#add519694bfd30448bbe8f5df035c246c">DxLibPlus::CChara::GetDamageWait</a></div><div class="ttdeci">int GetDamageWait(void) const</div><div class="ttdoc">ダメージ待ち時間の取得</div><div class="ttdef"><b>Definition:</b> Chara.cpp:132</div></div>
+<div class="ttc" id="a_game_app_base_8h_html"><div class="ttname"><a href="_game_app_base_8h.html">GameAppBase.h</a></div><div class="ttdoc">ゲームアプリ基礎クラス</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a7c85a03e0b694e1d68b9b496cd30909e"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a7c85a03e0b694e1d68b9b496cd30909e">DxLibPlus::CChara::~CChara</a></div><div class="ttdeci">virtual ~CChara(void)</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> Chara.cpp:41</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_ae9e9c58266ab3c7b2947e3813e7d3656"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#ae9e9c58266ab3c7b2947e3813e7d3656">DxLibPlus::CChara::m_OffsetHp</a></div><div class="ttdeci">int m_OffsetHp</div><div class="ttdoc">体力初期値</div><div class="ttdef"><b>Definition:</b> Chara.h:31</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a42acfeeaf243547811a115390bcffc70"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a42acfeeaf243547811a115390bcffc70">DxLibPlus::CChara::Release</a></div><div class="ttdeci">virtual void Release(void) override</div><div class="ttdoc">解放</div><div class="ttdef"><b>Definition:</b> Chara.cpp:62</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_game_app_base_html"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_game_app_base.html">DxLibPlus::CGameAppBase</a></div><div class="ttdoc">ゲームアプリ基礎クラス</div><div class="ttdef"><b>Definition:</b> GameAppBase.h:20</div></div>
+<div class="ttc" id="anamespace_dx_lib_plus_html"><div class="ttname"><a href="namespace_dx_lib_plus.html">DxLibPlus</a></div><div class="ttdef"><b>Definition:</b> Animation.h:18</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_ac800f8eaa4a0d107306a4a55caad8d72"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#ac800f8eaa4a0d107306a4a55caad8d72">DxLibPlus::CChara::m_AttackRate</a></div><div class="ttdeci">float m_AttackRate</div><div class="ttdoc">攻撃倍率</div><div class="ttdef"><b>Definition:</b> Chara.h:28</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a466ad8378be52e2e1795c670e83ec477"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a466ad8378be52e2e1795c670e83ec477">DxLibPlus::CChara::CChara</a></div><div class="ttdeci">CChara(void)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> Chara.cpp:23</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_ae11413f6654fe1052ba47f6dba10e740"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#ae11413f6654fe1052ba47f6dba10e740">DxLibPlus::CChara::Initialize</a></div><div class="ttdeci">virtual void Initialize(void)=0</div><div class="ttdoc">初期化</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a7c6caf716ee1e7eed91cd7572e9a1390"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a7c6caf716ee1e7eed91cd7572e9a1390">DxLibPlus::CChara::m_DamageWait</a></div><div class="ttdeci">int m_DamageWait</div><div class="ttdoc">ダメージ待機時間</div><div class="ttdef"><b>Definition:</b> Chara.h:30</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_ac6cdb0d627d333a37dfae1644ccfdf89"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#ac6cdb0d627d333a37dfae1644ccfdf89">DxLibPlus::CChara::GetHp</a></div><div class="ttdeci">int GetHp(void) const</div><div class="ttdoc">体力取得</div><div class="ttdef"><b>Definition:</b> Chara.cpp:108</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a2de028acdca5dc31089655440510a05f"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a2de028acdca5dc31089655440510a05f">DxLibPlus::CChara::GetAttack</a></div><div class="ttdeci">int GetAttack(void) const</div><div class="ttdoc">攻撃力取得</div><div class="ttdef"><b>Definition:</b> Chara.cpp:95</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a1a896bc93c803b17880e5a73968e7ee4"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a1a896bc93c803b17880e5a73968e7ee4">DxLibPlus::CChara::RefreshDmg</a></div><div class="ttdeci">void RefreshDmg(void)</div><div class="ttdoc">ダメージ待ち時間の更新</div><div class="ttdef"><b>Definition:</b> Chara.cpp:143</div></div>
+<div class="ttc" id="astruct_status_html"><div class="ttname"><a href="struct_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> GameDefine.h:51</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a287bc46e0c6ad4f46461774e24fc959e"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a287bc46e0c6ad4f46461774e24fc959e">DxLibPlus::CChara::Load</a></div><div class="ttdeci">virtual bool Load(void)</div><div class="ttdoc">読み込み</div><div class="ttdef"><b>Definition:</b> Chara.cpp:51</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html_a7a8bed0d0494e7d83b49166ecaa299e4"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html#a7a8bed0d0494e7d83b49166ecaa299e4">DxLibPlus::CChara::m_Status</a></div><div class="ttdeci">Status m_Status</div><div class="ttdoc">ステータス</div><div class="ttdef"><b>Definition:</b> Chara.h:27</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e7b200d48aafb02999500d9f0b0e2e7a.html">CommandBattle</a></li><li class="navelem"><a class="el" href="_chara_8h.html">Chara.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

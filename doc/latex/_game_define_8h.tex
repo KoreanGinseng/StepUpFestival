@@ -1,0 +1,332 @@
+\hypertarget{_game_define_8h}{}\doxysection{C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\+Game\+Define.h ファイル}
+\label{_game_define_8h}\index{C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/GameDefine.h@{C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/GameDefine.h}}
+{\ttfamily \#include \char`\"{}Dx\+Lib\+Plus.\+h\char`\"{}}\newline
+Game\+Define.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_status}{Status}}
+\item 
+struct \mbox{\hyperlink{struct_skill}{Skill}}
+\end{DoxyCompactItemize}
+\doxysubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81e}{Texture\+Key}} \{ \newline
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea03c6055da5b3c17dc7563e9d557239d4}{T\+E\+X\+K\+E\+Y\+\_\+\+D\+R\+A\+G\+O\+N\+\_\+\+B\+L\+UE}}, 
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea8621ebba9310addcea9909bda30e21a4}{T\+E\+X\+K\+E\+Y\+\_\+\+D\+R\+A\+G\+O\+N\+\_\+\+R\+ED}}, 
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea5a5026820e2f46271ff8af02844063bf}{T\+E\+X\+K\+E\+Y\+\_\+\+D\+R\+A\+G\+O\+N\+\_\+\+G\+R\+E\+EN}}, 
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81eae037223f2aee174ce539e18f79df3fa7}{T\+E\+X\+K\+E\+Y\+\_\+\+D\+R\+A\+G\+O\+N\+\_\+\+K\+O\+M\+O\+DO}}, 
+\newline
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea96157ad1e52ee93578a3e67a5ee167b2}{T\+E\+X\+K\+E\+Y\+\_\+\+E\+F\+F\+E\+C\+T\+\_\+\+F\+I\+RE}}, 
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea884fa18ecb5051f9077b438dfa263adc}{T\+E\+X\+K\+E\+Y\+\_\+\+E\+F\+F\+E\+C\+T\+\_\+\+I\+CE}}, 
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea4c1893d8232e87aa52270b1cccfcf5aa}{T\+E\+X\+K\+E\+Y\+\_\+\+E\+F\+F\+E\+C\+T\+\_\+\+T\+H\+U\+N\+D\+ER}}, 
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea7168147a18dac0ced19613748331a5dc}{T\+E\+X\+K\+E\+Y\+\_\+\+E\+F\+F\+E\+C\+T\+\_\+\+S\+L\+A\+SH}}, 
+\newline
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81eaa800e06032d5818bdb1e735deee6c222}{T\+E\+X\+K\+E\+Y\+\_\+\+C\+U\+R\+S\+OR}}, 
+\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea3cbe5c1a053114f164454de1b0e27c7a}{T\+E\+X\+K\+E\+Y\+\_\+\+C\+O\+U\+NT}}
+ \}
+\item 
+enum \mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49}{Sound\+Key}} \{ \newline
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a0bf2c23228c611098db865c798f27517}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+B\+A\+T\+T\+LE}}, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ad09d193f286ec8fbf6ff96185e401e84}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+C\+L\+E\+AR}}, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a5e588021a2c7c41f253b6a583ce32850}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+O\+V\+ER}}, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ab23aa74b68a66a41833311b8d250604e}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+C\+O\+U\+NT}}, 
+\newline
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49adac1968d9045d9e7c14f3e2a4a9229e0}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+F\+I\+RE}} = S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+C\+O\+U\+NT, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a94064104ef84eecb042d71a4a417082b}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+I\+CE}}, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a6740be7bd86ee2854848377f2a4ae638}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+T\+H\+U\+N\+D\+ER}}, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac1d06d7c21bf6acb08e1ccbedeccc56d}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+S\+L\+A\+SH}}, 
+\newline
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac0446c70f659957f8f9203badfce8da9}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+S\+E\+L\+E\+CT}}, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a8971cd8e240c8d1fa0cea1b96a2a16e0}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+E\+N\+T\+ER}}, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ae008e3b606658fa969a465a0fc0ded36}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+E\+N\+E\+M\+Y\+A\+T\+T\+A\+CK}}, 
+\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac5da6f277f94236a6b011ac79fd8271d}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+C\+O\+U\+NT}}
+ \}
+\item 
+enum \mbox{\hyperlink{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285}{Game\+State}} \{ \mbox{\hyperlink{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285add58fbaa83b0bc3973bc4adad84a5d88}{S\+T\+A\+T\+E\+\_\+\+G\+A\+ME}} = 0x00000000, 
+\mbox{\hyperlink{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285a499befd644d29b7940f5d95ed90a83c3}{S\+T\+A\+T\+E\+\_\+\+G\+A\+M\+E\+O\+V\+ER}} = 0x00000001, 
+\mbox{\hyperlink{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285aa5772bed852ea1e6ccfaacf0f48a9bc4}{S\+T\+A\+T\+E\+\_\+\+G\+A\+M\+E\+C\+L\+E\+AR}} = 0x00000002, 
+\mbox{\hyperlink{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285ad6464d40945529028c0c36c968bb0e2f}{S\+T\+A\+T\+E\+\_\+\+C\+H\+E\+CK}} = 0x\+F\+F\+F\+F\+F\+F\+FF
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_dx_lib_plus_a0ffd96f629746fb1d9459ecc9204e425}{Tex\+Mng\+Info}} \mbox{\hyperlink{_game_define_8h_ab425b42994d6fa0d9c4211ccd5a4cc98}{Tex\+File}} \mbox{[}\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea3cbe5c1a053114f164454de1b0e27c7a}{T\+E\+X\+K\+E\+Y\+\_\+\+C\+O\+U\+NT}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_dx_lib_plus_a2b50b8d8f4bafb0d1e7692f96ee3a713}{Sound\+Mng\+Info}} \mbox{\hyperlink{_game_define_8h_ae87e52811662e48dccd8481a463e66bc}{Sound\+File}} \mbox{[}\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac5da6f277f94236a6b011ac79fd8271d}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+C\+O\+U\+NT}}\mbox{]}
+\item 
+std\+::string \mbox{\hyperlink{_game_define_8h_a058f232f327ccf9937985e063015298c}{g\+Message}}
+\begin{DoxyCompactList}\small\item\em メッセージ \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_a7101aee14a54655331c75d941a4f8b9a}{Font\+Margin}} = 4
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_a3dd4ac22d27ac171f57df31aab048715}{Font\+Size}} = 24
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_aa3762ee06df16d2ec410abd1742f40e8}{Player\+RectX}} = 0
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_aa5ca3e6e75f7f73057ae8cec37454483}{Player\+RectY}} = 0
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_a08475ffadbb4a7e724c79ad2de4810a9}{Player\+RectW}} = 200
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_aa0393a1c3b1e7ac5aaba722924a62517}{Player\+RectH}} = 150
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_a00063e347678bcf06faa8ac470098963}{Command\+RectX}} = 0
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_a58355a7f9e7ba9789b7a606865d91f2f}{Command\+RectY}} = 568
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_ab43aba9f4dd4d9f37decff3bb755869b}{Command\+RectW}} = 290
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_affdcba6cbea4b5d59cbffa92f30be102}{Command\+RectH}} = 768 -\/ \mbox{\hyperlink{_game_define_8h_a58355a7f9e7ba9789b7a606865d91f2f}{Command\+RectY}}
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_ac4319bbd628de6357347d0b1c795cb1d}{Message\+RectX}} = \mbox{\hyperlink{_game_define_8h_a00063e347678bcf06faa8ac470098963}{Command\+RectX}} + \mbox{\hyperlink{_game_define_8h_ab43aba9f4dd4d9f37decff3bb755869b}{Command\+RectW}}
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_a0bc26f10f2a4dfa75d250bb2936163d5}{Message\+RectY}} = \mbox{\hyperlink{_game_define_8h_a58355a7f9e7ba9789b7a606865d91f2f}{Command\+RectY}}
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_ad0345f560410b9b6e40cd409f392ee7f}{Message\+RectW}} = 1024 -\/ \mbox{\hyperlink{_game_define_8h_ab43aba9f4dd4d9f37decff3bb755869b}{Command\+RectW}}
+\item 
+constexpr int \mbox{\hyperlink{_game_define_8h_a0b01d8207b18714d1538769ef0db74d4}{Message\+RectH}} = \mbox{\hyperlink{_game_define_8h_affdcba6cbea4b5d59cbffa92f30be102}{Command\+RectH}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{列挙型詳解}
+\mbox{\Hypertarget{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285}\label{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285}} 
+\index{GameDefine.h@{GameDefine.h}!GameState@{GameState}}
+\index{GameState@{GameState}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{GameState}{GameState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285}{Game\+State}}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATE\_GAME@{STATE\_GAME}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!STATE\_GAME@{STATE\_GAME}}}\mbox{\Hypertarget{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285add58fbaa83b0bc3973bc4adad84a5d88}\label{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285add58fbaa83b0bc3973bc4adad84a5d88}} 
+S\+T\+A\+T\+E\+\_\+\+G\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATE\_GAMEOVER@{STATE\_GAMEOVER}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!STATE\_GAMEOVER@{STATE\_GAMEOVER}}}\mbox{\Hypertarget{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285a499befd644d29b7940f5d95ed90a83c3}\label{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285a499befd644d29b7940f5d95ed90a83c3}} 
+S\+T\+A\+T\+E\+\_\+\+G\+A\+M\+E\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATE\_GAMECLEAR@{STATE\_GAMECLEAR}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!STATE\_GAMECLEAR@{STATE\_GAMECLEAR}}}\mbox{\Hypertarget{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285aa5772bed852ea1e6ccfaacf0f48a9bc4}\label{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285aa5772bed852ea1e6ccfaacf0f48a9bc4}} 
+S\+T\+A\+T\+E\+\_\+\+G\+A\+M\+E\+C\+L\+E\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATE\_CHECK@{STATE\_CHECK}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!STATE\_CHECK@{STATE\_CHECK}}}\mbox{\Hypertarget{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285ad6464d40945529028c0c36c968bb0e2f}\label{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285ad6464d40945529028c0c36c968bb0e2f}} 
+S\+T\+A\+T\+E\+\_\+\+C\+H\+E\+CK&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49}} 
+\index{GameDefine.h@{GameDefine.h}!SoundKey@{SoundKey}}
+\index{SoundKey@{SoundKey}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{SoundKey}{SoundKey}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49}{Sound\+Key}}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_BGM\_BATTLE@{SOUNDKEY\_BGM\_BATTLE}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_BGM\_BATTLE@{SOUNDKEY\_BGM\_BATTLE}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a0bf2c23228c611098db865c798f27517}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a0bf2c23228c611098db865c798f27517}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+B\+A\+T\+T\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_BGM\_CLEAR@{SOUNDKEY\_BGM\_CLEAR}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_BGM\_CLEAR@{SOUNDKEY\_BGM\_CLEAR}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ad09d193f286ec8fbf6ff96185e401e84}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ad09d193f286ec8fbf6ff96185e401e84}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+C\+L\+E\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_BGM\_OVER@{SOUNDKEY\_BGM\_OVER}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_BGM\_OVER@{SOUNDKEY\_BGM\_OVER}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a5e588021a2c7c41f253b6a583ce32850}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a5e588021a2c7c41f253b6a583ce32850}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_BGM\_COUNT@{SOUNDKEY\_BGM\_COUNT}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_BGM\_COUNT@{SOUNDKEY\_BGM\_COUNT}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ab23aa74b68a66a41833311b8d250604e}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ab23aa74b68a66a41833311b8d250604e}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+B\+G\+M\+\_\+\+C\+O\+U\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_SE\_FIRE@{SOUNDKEY\_SE\_FIRE}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_SE\_FIRE@{SOUNDKEY\_SE\_FIRE}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49adac1968d9045d9e7c14f3e2a4a9229e0}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49adac1968d9045d9e7c14f3e2a4a9229e0}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+F\+I\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_SE\_ICE@{SOUNDKEY\_SE\_ICE}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_SE\_ICE@{SOUNDKEY\_SE\_ICE}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a94064104ef84eecb042d71a4a417082b}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a94064104ef84eecb042d71a4a417082b}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+I\+CE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_SE\_THUNDER@{SOUNDKEY\_SE\_THUNDER}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_SE\_THUNDER@{SOUNDKEY\_SE\_THUNDER}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a6740be7bd86ee2854848377f2a4ae638}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a6740be7bd86ee2854848377f2a4ae638}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+T\+H\+U\+N\+D\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_SE\_SLASH@{SOUNDKEY\_SE\_SLASH}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_SE\_SLASH@{SOUNDKEY\_SE\_SLASH}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac1d06d7c21bf6acb08e1ccbedeccc56d}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac1d06d7c21bf6acb08e1ccbedeccc56d}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+S\+L\+A\+SH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_SE\_SELECT@{SOUNDKEY\_SE\_SELECT}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_SE\_SELECT@{SOUNDKEY\_SE\_SELECT}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac0446c70f659957f8f9203badfce8da9}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac0446c70f659957f8f9203badfce8da9}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+S\+E\+L\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_SE\_ENTER@{SOUNDKEY\_SE\_ENTER}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_SE\_ENTER@{SOUNDKEY\_SE\_ENTER}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a8971cd8e240c8d1fa0cea1b96a2a16e0}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49a8971cd8e240c8d1fa0cea1b96a2a16e0}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+E\+N\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_SE\_ENEMYATTACK@{SOUNDKEY\_SE\_ENEMYATTACK}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_SE\_ENEMYATTACK@{SOUNDKEY\_SE\_ENEMYATTACK}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ae008e3b606658fa969a465a0fc0ded36}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ae008e3b606658fa969a465a0fc0ded36}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+S\+E\+\_\+\+E\+N\+E\+M\+Y\+A\+T\+T\+A\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUNDKEY\_COUNT@{SOUNDKEY\_COUNT}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!SOUNDKEY\_COUNT@{SOUNDKEY\_COUNT}}}\mbox{\Hypertarget{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac5da6f277f94236a6b011ac79fd8271d}\label{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac5da6f277f94236a6b011ac79fd8271d}} 
+S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+C\+O\+U\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81e}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81e}} 
+\index{GameDefine.h@{GameDefine.h}!TextureKey@{TextureKey}}
+\index{TextureKey@{TextureKey}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{TextureKey}{TextureKey}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81e}{Texture\+Key}}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_DRAGON\_BLUE@{TEXKEY\_DRAGON\_BLUE}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_DRAGON\_BLUE@{TEXKEY\_DRAGON\_BLUE}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea03c6055da5b3c17dc7563e9d557239d4}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea03c6055da5b3c17dc7563e9d557239d4}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+D\+R\+A\+G\+O\+N\+\_\+\+B\+L\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_DRAGON\_RED@{TEXKEY\_DRAGON\_RED}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_DRAGON\_RED@{TEXKEY\_DRAGON\_RED}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea8621ebba9310addcea9909bda30e21a4}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea8621ebba9310addcea9909bda30e21a4}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+D\+R\+A\+G\+O\+N\+\_\+\+R\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_DRAGON\_GREEN@{TEXKEY\_DRAGON\_GREEN}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_DRAGON\_GREEN@{TEXKEY\_DRAGON\_GREEN}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea5a5026820e2f46271ff8af02844063bf}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea5a5026820e2f46271ff8af02844063bf}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+D\+R\+A\+G\+O\+N\+\_\+\+G\+R\+E\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_DRAGON\_KOMODO@{TEXKEY\_DRAGON\_KOMODO}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_DRAGON\_KOMODO@{TEXKEY\_DRAGON\_KOMODO}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81eae037223f2aee174ce539e18f79df3fa7}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81eae037223f2aee174ce539e18f79df3fa7}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+D\+R\+A\+G\+O\+N\+\_\+\+K\+O\+M\+O\+DO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_EFFECT\_FIRE@{TEXKEY\_EFFECT\_FIRE}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_EFFECT\_FIRE@{TEXKEY\_EFFECT\_FIRE}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea96157ad1e52ee93578a3e67a5ee167b2}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea96157ad1e52ee93578a3e67a5ee167b2}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+E\+F\+F\+E\+C\+T\+\_\+\+F\+I\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_EFFECT\_ICE@{TEXKEY\_EFFECT\_ICE}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_EFFECT\_ICE@{TEXKEY\_EFFECT\_ICE}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea884fa18ecb5051f9077b438dfa263adc}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea884fa18ecb5051f9077b438dfa263adc}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+E\+F\+F\+E\+C\+T\+\_\+\+I\+CE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_EFFECT\_THUNDER@{TEXKEY\_EFFECT\_THUNDER}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_EFFECT\_THUNDER@{TEXKEY\_EFFECT\_THUNDER}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea4c1893d8232e87aa52270b1cccfcf5aa}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea4c1893d8232e87aa52270b1cccfcf5aa}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+E\+F\+F\+E\+C\+T\+\_\+\+T\+H\+U\+N\+D\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_EFFECT\_SLASH@{TEXKEY\_EFFECT\_SLASH}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_EFFECT\_SLASH@{TEXKEY\_EFFECT\_SLASH}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea7168147a18dac0ced19613748331a5dc}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea7168147a18dac0ced19613748331a5dc}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+E\+F\+F\+E\+C\+T\+\_\+\+S\+L\+A\+SH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_CURSOR@{TEXKEY\_CURSOR}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_CURSOR@{TEXKEY\_CURSOR}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81eaa800e06032d5818bdb1e735deee6c222}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81eaa800e06032d5818bdb1e735deee6c222}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+C\+U\+R\+S\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXKEY\_COUNT@{TEXKEY\_COUNT}!GameDefine.h@{GameDefine.h}}\index{GameDefine.h@{GameDefine.h}!TEXKEY\_COUNT@{TEXKEY\_COUNT}}}\mbox{\Hypertarget{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea3cbe5c1a053114f164454de1b0e27c7a}\label{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea3cbe5c1a053114f164454de1b0e27c7a}} 
+T\+E\+X\+K\+E\+Y\+\_\+\+C\+O\+U\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{_game_define_8h_affdcba6cbea4b5d59cbffa92f30be102}\label{_game_define_8h_affdcba6cbea4b5d59cbffa92f30be102}} 
+\index{GameDefine.h@{GameDefine.h}!CommandRectH@{CommandRectH}}
+\index{CommandRectH@{CommandRectH}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{CommandRectH}{CommandRectH}}
+{\footnotesize\ttfamily constexpr int Command\+RectH = 768 -\/ \mbox{\hyperlink{_game_define_8h_a58355a7f9e7ba9789b7a606865d91f2f}{Command\+RectY}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_ab43aba9f4dd4d9f37decff3bb755869b}\label{_game_define_8h_ab43aba9f4dd4d9f37decff3bb755869b}} 
+\index{GameDefine.h@{GameDefine.h}!CommandRectW@{CommandRectW}}
+\index{CommandRectW@{CommandRectW}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{CommandRectW}{CommandRectW}}
+{\footnotesize\ttfamily constexpr int Command\+RectW = 290\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_a00063e347678bcf06faa8ac470098963}\label{_game_define_8h_a00063e347678bcf06faa8ac470098963}} 
+\index{GameDefine.h@{GameDefine.h}!CommandRectX@{CommandRectX}}
+\index{CommandRectX@{CommandRectX}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{CommandRectX}{CommandRectX}}
+{\footnotesize\ttfamily constexpr int Command\+RectX = 0\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_a58355a7f9e7ba9789b7a606865d91f2f}\label{_game_define_8h_a58355a7f9e7ba9789b7a606865d91f2f}} 
+\index{GameDefine.h@{GameDefine.h}!CommandRectY@{CommandRectY}}
+\index{CommandRectY@{CommandRectY}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{CommandRectY}{CommandRectY}}
+{\footnotesize\ttfamily constexpr int Command\+RectY = 568\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_a7101aee14a54655331c75d941a4f8b9a}\label{_game_define_8h_a7101aee14a54655331c75d941a4f8b9a}} 
+\index{GameDefine.h@{GameDefine.h}!FontMargin@{FontMargin}}
+\index{FontMargin@{FontMargin}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{FontMargin}{FontMargin}}
+{\footnotesize\ttfamily constexpr int Font\+Margin = 4\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_a3dd4ac22d27ac171f57df31aab048715}\label{_game_define_8h_a3dd4ac22d27ac171f57df31aab048715}} 
+\index{GameDefine.h@{GameDefine.h}!FontSize@{FontSize}}
+\index{FontSize@{FontSize}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{FontSize}{FontSize}}
+{\footnotesize\ttfamily constexpr int Font\+Size = 24\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_a058f232f327ccf9937985e063015298c}\label{_game_define_8h_a058f232f327ccf9937985e063015298c}} 
+\index{GameDefine.h@{GameDefine.h}!gMessage@{gMessage}}
+\index{gMessage@{gMessage}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{gMessage}{gMessage}}
+{\footnotesize\ttfamily std\+::string g\+Message}
+
+
+
+メッセージ 
+
+\mbox{\Hypertarget{_game_define_8h_a0b01d8207b18714d1538769ef0db74d4}\label{_game_define_8h_a0b01d8207b18714d1538769ef0db74d4}} 
+\index{GameDefine.h@{GameDefine.h}!MessageRectH@{MessageRectH}}
+\index{MessageRectH@{MessageRectH}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{MessageRectH}{MessageRectH}}
+{\footnotesize\ttfamily constexpr int Message\+RectH = \mbox{\hyperlink{_game_define_8h_affdcba6cbea4b5d59cbffa92f30be102}{Command\+RectH}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_ad0345f560410b9b6e40cd409f392ee7f}\label{_game_define_8h_ad0345f560410b9b6e40cd409f392ee7f}} 
+\index{GameDefine.h@{GameDefine.h}!MessageRectW@{MessageRectW}}
+\index{MessageRectW@{MessageRectW}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{MessageRectW}{MessageRectW}}
+{\footnotesize\ttfamily constexpr int Message\+RectW = 1024 -\/ \mbox{\hyperlink{_game_define_8h_ab43aba9f4dd4d9f37decff3bb755869b}{Command\+RectW}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_ac4319bbd628de6357347d0b1c795cb1d}\label{_game_define_8h_ac4319bbd628de6357347d0b1c795cb1d}} 
+\index{GameDefine.h@{GameDefine.h}!MessageRectX@{MessageRectX}}
+\index{MessageRectX@{MessageRectX}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{MessageRectX}{MessageRectX}}
+{\footnotesize\ttfamily constexpr int Message\+RectX = \mbox{\hyperlink{_game_define_8h_a00063e347678bcf06faa8ac470098963}{Command\+RectX}} + \mbox{\hyperlink{_game_define_8h_ab43aba9f4dd4d9f37decff3bb755869b}{Command\+RectW}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_a0bc26f10f2a4dfa75d250bb2936163d5}\label{_game_define_8h_a0bc26f10f2a4dfa75d250bb2936163d5}} 
+\index{GameDefine.h@{GameDefine.h}!MessageRectY@{MessageRectY}}
+\index{MessageRectY@{MessageRectY}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{MessageRectY}{MessageRectY}}
+{\footnotesize\ttfamily constexpr int Message\+RectY = \mbox{\hyperlink{_game_define_8h_a58355a7f9e7ba9789b7a606865d91f2f}{Command\+RectY}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_aa0393a1c3b1e7ac5aaba722924a62517}\label{_game_define_8h_aa0393a1c3b1e7ac5aaba722924a62517}} 
+\index{GameDefine.h@{GameDefine.h}!PlayerRectH@{PlayerRectH}}
+\index{PlayerRectH@{PlayerRectH}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{PlayerRectH}{PlayerRectH}}
+{\footnotesize\ttfamily constexpr int Player\+RectH = 150\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_a08475ffadbb4a7e724c79ad2de4810a9}\label{_game_define_8h_a08475ffadbb4a7e724c79ad2de4810a9}} 
+\index{GameDefine.h@{GameDefine.h}!PlayerRectW@{PlayerRectW}}
+\index{PlayerRectW@{PlayerRectW}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{PlayerRectW}{PlayerRectW}}
+{\footnotesize\ttfamily constexpr int Player\+RectW = 200\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_aa3762ee06df16d2ec410abd1742f40e8}\label{_game_define_8h_aa3762ee06df16d2ec410abd1742f40e8}} 
+\index{GameDefine.h@{GameDefine.h}!PlayerRectX@{PlayerRectX}}
+\index{PlayerRectX@{PlayerRectX}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{PlayerRectX}{PlayerRectX}}
+{\footnotesize\ttfamily constexpr int Player\+RectX = 0\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_aa5ca3e6e75f7f73057ae8cec37454483}\label{_game_define_8h_aa5ca3e6e75f7f73057ae8cec37454483}} 
+\index{GameDefine.h@{GameDefine.h}!PlayerRectY@{PlayerRectY}}
+\index{PlayerRectY@{PlayerRectY}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{PlayerRectY}{PlayerRectY}}
+{\footnotesize\ttfamily constexpr int Player\+RectY = 0\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{_game_define_8h_ae87e52811662e48dccd8481a463e66bc}\label{_game_define_8h_ae87e52811662e48dccd8481a463e66bc}} 
+\index{GameDefine.h@{GameDefine.h}!SoundFile@{SoundFile}}
+\index{SoundFile@{SoundFile}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{SoundFile}{SoundFile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dx_lib_plus_a2b50b8d8f4bafb0d1e7692f96ee3a713}{Sound\+Mng\+Info}} Sound\+File\mbox{[}\mbox{\hyperlink{_game_define_8h_a708e8690a52cb9e1c0448cd293099c49ac5da6f277f94236a6b011ac79fd8271d}{S\+O\+U\+N\+D\+K\+E\+Y\+\_\+\+C\+O\+U\+NT}}\mbox{]}}
+
+\mbox{\Hypertarget{_game_define_8h_ab425b42994d6fa0d9c4211ccd5a4cc98}\label{_game_define_8h_ab425b42994d6fa0d9c4211ccd5a4cc98}} 
+\index{GameDefine.h@{GameDefine.h}!TexFile@{TexFile}}
+\index{TexFile@{TexFile}!GameDefine.h@{GameDefine.h}}
+\doxysubsubsection{\texorpdfstring{TexFile}{TexFile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dx_lib_plus_a0ffd96f629746fb1d9459ecc9204e425}{Tex\+Mng\+Info}} Tex\+File\mbox{[}\mbox{\hyperlink{_game_define_8h_adf26be8400fb5f1d1adbabf8c779e81ea3cbe5c1a053114f164454de1b0e27c7a}{T\+E\+X\+K\+E\+Y\+\_\+\+C\+O\+U\+NT}}\mbox{]}}
+

@@ -1,0 +1,320 @@
+\hypertarget{class_dx_lib_plus_1_1_c_chara}{}\doxysection{Dx\+Lib\+Plus\+::C\+Chara クラス}
+\label{class_dx_lib_plus_1_1_c_chara}\index{DxLibPlus::CChara@{DxLibPlus::CChara}}
+
+
+キャラクター基礎クラス  
+
+
+
+
+{\ttfamily \#include $<$Chara.\+h$>$}
+
+
+
+Dx\+Lib\+Plus\+::C\+Chara の継承関係図
+% FIG 0
+
+
+Dx\+Lib\+Plus\+::C\+Chara 連携図
+% FIG 1
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a466ad8378be52e2e1795c670e83ec477}{C\+Chara}} (void)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a7c85a03e0b694e1d68b9b496cd30909e}{$\sim$\+C\+Chara}} (void)
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a287bc46e0c6ad4f46461774e24fc959e}{Load}} (void)
+\begin{DoxyCompactList}\small\item\em 読み込み \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_ae11413f6654fe1052ba47f6dba10e740}{Initialize}} (void)=0
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_ade4bd0ed9699a938a515ad1f1c88af6f}{Update}} (void)=0
+\begin{DoxyCompactList}\small\item\em 更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_afcd4e9810b4c8e2ca465b02dd524fabd}{Render}} (void)=0
+\begin{DoxyCompactList}\small\item\em 描画 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a42acfeeaf243547811a115390bcffc70}{Release}} (void) override
+\begin{DoxyCompactList}\small\item\em 解放 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a869b4ce6774b364cba080974d1669b45}{Dmg}} (const int \&dmg)
+\begin{DoxyCompactList}\small\item\em ダメージ処理 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a2de028acdca5dc31089655440510a05f}{Get\+Attack}} (void) const
+\begin{DoxyCompactList}\small\item\em 攻撃力取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_ac6cdb0d627d333a37dfae1644ccfdf89}{Get\+Hp}} (void) const
+\begin{DoxyCompactList}\small\item\em 体力取得 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a94c8e208c1b8aa8434c58dde519a8eba}{Is\+Dead}} (void) const
+\begin{DoxyCompactList}\small\item\em 死亡フラグの取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_add519694bfd30448bbe8f5df035c246c}{Get\+Damage\+Wait}} (void) const
+\begin{DoxyCompactList}\small\item\em ダメージ待ち時間の取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a1a896bc93c803b17880e5a73968e7ee4}{Refresh\+Dmg}} (void)
+\begin{DoxyCompactList}\small\item\em ダメージ待ち時間の更新 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_status}{Status}} \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a7a8bed0d0494e7d83b49166ecaa299e4}{m\+\_\+\+Status}}
+\begin{DoxyCompactList}\small\item\em ステータス \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_ac800f8eaa4a0d107306a4a55caad8d72}{m\+\_\+\+Attack\+Rate}}
+\begin{DoxyCompactList}\small\item\em 攻撃倍率 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a303f3a9f54ab5f8093023c8c8f39e5c4}{m\+\_\+b\+Dead}}
+\begin{DoxyCompactList}\small\item\em 死亡フラグ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_a7c6caf716ee1e7eed91cd7572e9a1390}{m\+\_\+\+Damage\+Wait}}
+\begin{DoxyCompactList}\small\item\em ダメージ待機時間 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_chara_ae9e9c58266ab3c7b2947e3813e7d3656}{m\+\_\+\+Offset\+Hp}}
+\begin{DoxyCompactList}\small\item\em 体力初期値 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+キャラクター基礎クラス 
+
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a466ad8378be52e2e1795c670e83ec477}\label{class_dx_lib_plus_1_1_c_chara_a466ad8378be52e2e1795c670e83ec477}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!CChara@{CChara}}
+\index{CChara@{CChara}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{CChara()}{CChara()}}
+{\footnotesize\ttfamily Dx\+Lib\+Plus\+::\+C\+Chara\+::\+C\+Chara (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+\begin{DoxyReturn}{戻り値}
+None
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a7c85a03e0b694e1d68b9b496cd30909e}\label{class_dx_lib_plus_1_1_c_chara_a7c85a03e0b694e1d68b9b496cd30909e}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!````~CChara@{$\sim$CChara}}
+\index{````~CChara@{$\sim$CChara}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{$\sim$CChara()}{~CChara()}}
+{\footnotesize\ttfamily Dx\+Lib\+Plus\+::\+C\+Chara\+::$\sim$\+C\+Chara (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+デストラクタ 
+
+\begin{DoxyReturn}{戻り値}
+None
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a869b4ce6774b364cba080974d1669b45}\label{class_dx_lib_plus_1_1_c_chara_a869b4ce6774b364cba080974d1669b45}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!Dmg@{Dmg}}
+\index{Dmg@{Dmg}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{Dmg()}{Dmg()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Dmg (\begin{DoxyParamCaption}\item[{const int \&}]{dmg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+ダメージ処理 
+
+
+\begin{DoxyParams}{引数}
+{\em dmg} & ダメージ\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a2de028acdca5dc31089655440510a05f}\label{class_dx_lib_plus_1_1_c_chara_a2de028acdca5dc31089655440510a05f}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!GetAttack@{GetAttack}}
+\index{GetAttack@{GetAttack}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{GetAttack()}{GetAttack()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Get\+Attack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+攻撃力取得 
+
+\begin{DoxyReturn}{戻り値}
+攻撃力
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_add519694bfd30448bbe8f5df035c246c}\label{class_dx_lib_plus_1_1_c_chara_add519694bfd30448bbe8f5df035c246c}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!GetDamageWait@{GetDamageWait}}
+\index{GetDamageWait@{GetDamageWait}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{GetDamageWait()}{GetDamageWait()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Get\+Damage\+Wait (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+ダメージ待ち時間の取得 
+
+\begin{DoxyReturn}{戻り値}
+ダメージ待ち時間
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_ac6cdb0d627d333a37dfae1644ccfdf89}\label{class_dx_lib_plus_1_1_c_chara_ac6cdb0d627d333a37dfae1644ccfdf89}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!GetHp@{GetHp}}
+\index{GetHp@{GetHp}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{GetHp()}{GetHp()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Get\+Hp (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+体力取得 
+
+\begin{DoxyReturn}{戻り値}
+体力
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_ae11413f6654fe1052ba47f6dba10e740}\label{class_dx_lib_plus_1_1_c_chara_ae11413f6654fe1052ba47f6dba10e740}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual void Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+初期化 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_game_app_base_a4f0f54be0d5af97385061fe443f34b6e}{Dx\+Lib\+Plus\+::\+C\+Game\+App\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_enemy_a5cf2ac7d82590b62a7b6a127c3324b3c}{Dx\+Lib\+Plus\+::\+C\+Enemy}}, \mbox{\hyperlink{class_dx_lib_plus_1_1_c_player_a732861af7a969564f0bb55ceb3b7f0b3}{Dx\+Lib\+Plus\+::\+C\+Player}}で実装されています。
+
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a94c8e208c1b8aa8434c58dde519a8eba}\label{class_dx_lib_plus_1_1_c_chara_a94c8e208c1b8aa8434c58dde519a8eba}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!IsDead@{IsDead}}
+\index{IsDead@{IsDead}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{IsDead()}{IsDead()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Is\+Dead (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+死亡フラグの取得 
+
+\begin{DoxyReturn}{戻り値}
+死亡フラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a287bc46e0c6ad4f46461774e24fc959e}\label{class_dx_lib_plus_1_1_c_chara_a287bc46e0c6ad4f46461774e24fc959e}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!Load@{Load}}
+\index{Load@{Load}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Load (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+読み込み 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_enemy_a73559b755aa42fb5aceacfd7e65e8311}{Dx\+Lib\+Plus\+::\+C\+Enemy}}, \mbox{\hyperlink{class_dx_lib_plus_1_1_c_player_a556f0f29d7101bdbde0324e1a362469a}{Dx\+Lib\+Plus\+::\+C\+Player}}で再実装されています。
+
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a1a896bc93c803b17880e5a73968e7ee4}\label{class_dx_lib_plus_1_1_c_chara_a1a896bc93c803b17880e5a73968e7ee4}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!RefreshDmg@{RefreshDmg}}
+\index{RefreshDmg@{RefreshDmg}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{RefreshDmg()}{RefreshDmg()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Refresh\+Dmg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ダメージ待ち時間の更新 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a42acfeeaf243547811a115390bcffc70}\label{class_dx_lib_plus_1_1_c_chara_a42acfeeaf243547811a115390bcffc70}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!Release@{Release}}
+\index{Release@{Release}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+解放 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_game_app_base_a39fcfcbcf3cdbd86a3d6578ba3b1d777}{Dx\+Lib\+Plus\+::\+C\+Game\+App\+Base}}を再実装しています。
+
+
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_player_a153fa019060e0e6c3283348808edca84}{Dx\+Lib\+Plus\+::\+C\+Player}}で再実装されています。
+
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_afcd4e9810b4c8e2ca465b02dd524fabd}\label{class_dx_lib_plus_1_1_c_chara_afcd4e9810b4c8e2ca465b02dd524fabd}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!Render@{Render}}
+\index{Render@{Render}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily virtual void Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Render (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+描画 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_game_app_base_ae5e50b691856d650e8a4ab875e949a76}{Dx\+Lib\+Plus\+::\+C\+Game\+App\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_enemy_ac2490ef8c20d1a7909130809ea0d858e}{Dx\+Lib\+Plus\+::\+C\+Enemy}}, \mbox{\hyperlink{class_dx_lib_plus_1_1_c_player_a65a612e0b1665f73a5a382378156cf64}{Dx\+Lib\+Plus\+::\+C\+Player}}で実装されています。
+
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_ade4bd0ed9699a938a515ad1f1c88af6f}\label{class_dx_lib_plus_1_1_c_chara_ade4bd0ed9699a938a515ad1f1c88af6f}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!Update@{Update}}
+\index{Update@{Update}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Dx\+Lib\+Plus\+::\+C\+Chara\+::\+Update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+更新 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_game_app_base_ab0f27ad7c672777e9b07a8685fbebde1}{Dx\+Lib\+Plus\+::\+C\+Game\+App\+Base}}を実装しています。
+
+
+
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_enemy_adbf8cea2d123e57a82aefebe49650d4a}{Dx\+Lib\+Plus\+::\+C\+Enemy}}, \mbox{\hyperlink{class_dx_lib_plus_1_1_c_player_a0c58afe3bef52f66e8830ef104f942a9}{Dx\+Lib\+Plus\+::\+C\+Player}}で実装されています。
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_ac800f8eaa4a0d107306a4a55caad8d72}\label{class_dx_lib_plus_1_1_c_chara_ac800f8eaa4a0d107306a4a55caad8d72}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!m\_AttackRate@{m\_AttackRate}}
+\index{m\_AttackRate@{m\_AttackRate}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{m\_AttackRate}{m\_AttackRate}}
+{\footnotesize\ttfamily float Dx\+Lib\+Plus\+::\+C\+Chara\+::m\+\_\+\+Attack\+Rate\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+攻撃倍率 
+
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a303f3a9f54ab5f8093023c8c8f39e5c4}\label{class_dx_lib_plus_1_1_c_chara_a303f3a9f54ab5f8093023c8c8f39e5c4}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!m\_bDead@{m\_bDead}}
+\index{m\_bDead@{m\_bDead}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{m\_bDead}{m\_bDead}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Chara\+::m\+\_\+b\+Dead\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+死亡フラグ 
+
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a7c6caf716ee1e7eed91cd7572e9a1390}\label{class_dx_lib_plus_1_1_c_chara_a7c6caf716ee1e7eed91cd7572e9a1390}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!m\_DamageWait@{m\_DamageWait}}
+\index{m\_DamageWait@{m\_DamageWait}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{m\_DamageWait}{m\_DamageWait}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Chara\+::m\+\_\+\+Damage\+Wait\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ダメージ待機時間 
+
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_ae9e9c58266ab3c7b2947e3813e7d3656}\label{class_dx_lib_plus_1_1_c_chara_ae9e9c58266ab3c7b2947e3813e7d3656}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!m\_OffsetHp@{m\_OffsetHp}}
+\index{m\_OffsetHp@{m\_OffsetHp}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{m\_OffsetHp}{m\_OffsetHp}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Chara\+::m\+\_\+\+Offset\+Hp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+体力初期値 
+
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_chara_a7a8bed0d0494e7d83b49166ecaa299e4}\label{class_dx_lib_plus_1_1_c_chara_a7a8bed0d0494e7d83b49166ecaa299e4}} 
+\index{DxLibPlus::CChara@{DxLibPlus::CChara}!m\_Status@{m\_Status}}
+\index{m\_Status@{m\_Status}!DxLibPlus::CChara@{DxLibPlus::CChara}}
+\doxysubsubsection{\texorpdfstring{m\_Status}{m\_Status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_status}{Status}} Dx\+Lib\+Plus\+::\+C\+Chara\+::m\+\_\+\+Status\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ステータス 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_chara_8h}{Chara.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_chara_8cpp}{Chara.\+cpp}}\end{DoxyCompactItemize}

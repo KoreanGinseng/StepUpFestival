@@ -1,0 +1,6 @@
+<map id="DxLibPlus::CChara" name="DxLibPlus::CChara">
+<area shape="rect" id="node1" title="キャラクター基礎クラス" alt="" coords="89,80,221,107"/>
+<area shape="rect" id="node3" href="$class_dx_lib_plus_1_1_c_enemy.html" title="敵クラス" alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node4" href="$class_dx_lib_plus_1_1_c_player.html" title="プレイヤークラス" alt="" coords="169,155,303,181"/>
+<area shape="rect" id="node2" href="$class_dx_lib_plus_1_1_c_game_app_base.html" title="ゲームアプリ基礎クラス" alt="" coords="61,5,248,32"/>
+</map>

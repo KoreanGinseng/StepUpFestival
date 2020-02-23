@@ -1,0 +1,105 @@
+\hypertarget{class_dx_lib_plus_1_1_c_turn_manager}{}\doxysection{Dx\+Lib\+Plus\+::C\+Turn\+Manager クラス}
+\label{class_dx_lib_plus_1_1_c_turn_manager}\index{DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}}
+
+
+ターン管理クラス  
+
+
+
+
+{\ttfamily \#include $<$Turn\+Manager.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_turn_manager_a865129c783182de6a43fd94aa3e74d78}{Refresh\+Turn}} (void)
+\begin{DoxyCompactList}\small\item\em ターンの更新 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_turn_manager_a43847e7f079239187c04b687eadc1f48}{Set\+Turn}} (const \mbox{\hyperlink{namespace_dx_lib_plus_a1c4af98ee1581cf9f8f5ac845e60e5fc}{Turn}} \&turn)
+\begin{DoxyCompactList}\small\item\em ターンのセット \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_dx_lib_plus_a1c4af98ee1581cf9f8f5ac845e60e5fc}{Turn}} \mbox{\hyperlink{class_dx_lib_plus_1_1_c_turn_manager_a2857d5e7bc5ff54ab611d7d1f8ea6524}{Get\+Turn}} (void) const
+\begin{DoxyCompactList}\small\item\em ターンの取得 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_turn_manager_a19d88f6d9bb06dc20e121ec6523e5da9}{Is\+Changed}} (void) const
+\begin{DoxyCompactList}\small\item\em ターン変更フラグ取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dx_lib_plus_1_1_c_turn_manager}{C\+Turn\+Manager}} \& \mbox{\hyperlink{class_dx_lib_plus_1_1_c_turn_manager_a15cbc4108dcddcf880cd86d7fac161d6}{Get\+Turn\+Manager}} (void)
+\begin{DoxyCompactList}\small\item\em マネージャ取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ターン管理クラス 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_turn_manager_a2857d5e7bc5ff54ab611d7d1f8ea6524}\label{class_dx_lib_plus_1_1_c_turn_manager_a2857d5e7bc5ff54ab611d7d1f8ea6524}} 
+\index{DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}!GetTurn@{GetTurn}}
+\index{GetTurn@{GetTurn}!DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}}
+\doxysubsubsection{\texorpdfstring{GetTurn()}{GetTurn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dx_lib_plus_a1c4af98ee1581cf9f8f5ac845e60e5fc}{Turn}} Dx\+Lib\+Plus\+::\+C\+Turn\+Manager\+::\+Get\+Turn (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+ターンの取得 
+
+\begin{DoxyReturn}{戻り値}
+現在のターン
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_turn_manager_a15cbc4108dcddcf880cd86d7fac161d6}\label{class_dx_lib_plus_1_1_c_turn_manager_a15cbc4108dcddcf880cd86d7fac161d6}} 
+\index{DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}!GetTurnManager@{GetTurnManager}}
+\index{GetTurnManager@{GetTurnManager}!DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}}
+\doxysubsubsection{\texorpdfstring{GetTurnManager()}{GetTurnManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dx_lib_plus_1_1_c_turn_manager}{C\+Turn\+Manager}} \& Dx\+Lib\+Plus\+::\+C\+Turn\+Manager\+::\+Get\+Turn\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+マネージャ取得 
+
+\begin{DoxyReturn}{戻り値}
+マネージャ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_turn_manager_a19d88f6d9bb06dc20e121ec6523e5da9}\label{class_dx_lib_plus_1_1_c_turn_manager_a19d88f6d9bb06dc20e121ec6523e5da9}} 
+\index{DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}!IsChanged@{IsChanged}}
+\index{IsChanged@{IsChanged}!DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}}
+\doxysubsubsection{\texorpdfstring{IsChanged()}{IsChanged()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Turn\+Manager\+::\+Is\+Changed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+ターン変更フラグ取得 
+
+\begin{DoxyReturn}{戻り値}
+ターン変更フラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_turn_manager_a865129c783182de6a43fd94aa3e74d78}\label{class_dx_lib_plus_1_1_c_turn_manager_a865129c783182de6a43fd94aa3e74d78}} 
+\index{DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}!RefreshTurn@{RefreshTurn}}
+\index{RefreshTurn@{RefreshTurn}!DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}}
+\doxysubsubsection{\texorpdfstring{RefreshTurn()}{RefreshTurn()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Turn\+Manager\+::\+Refresh\+Turn (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ターンの更新 
+
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_turn_manager_a43847e7f079239187c04b687eadc1f48}\label{class_dx_lib_plus_1_1_c_turn_manager_a43847e7f079239187c04b687eadc1f48}} 
+\index{DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}!SetTurn@{SetTurn}}
+\index{SetTurn@{SetTurn}!DxLibPlus::CTurnManager@{DxLibPlus::CTurnManager}}
+\doxysubsubsection{\texorpdfstring{SetTurn()}{SetTurn()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Turn\+Manager\+::\+Set\+Turn (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_dx_lib_plus_a1c4af98ee1581cf9f8f5ac845e60e5fc}{Turn}} \&}]{turn }\end{DoxyParamCaption})}
+
+
+
+ターンのセット 
+
+
+\begin{DoxyParams}{引数}
+{\em turn} & ターン\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_turn_manager_8h}{Turn\+Manager.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_turn_manager_8cpp}{Turn\+Manager.\+cpp}}\end{DoxyCompactItemize}

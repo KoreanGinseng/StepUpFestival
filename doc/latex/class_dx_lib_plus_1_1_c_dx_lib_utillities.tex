@@ -1,0 +1,252 @@
+\hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities}{}\doxysection{Dx\+Lib\+Plus\+::C\+Dx\+Lib\+Utillities クラス}
+\label{class_dx_lib_plus_1_1_c_dx_lib_utillities}\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+
+
+Dx\+Libユーティリティクラス  
+
+
+
+
+{\ttfamily \#include $<$Dx\+Lib\+Utillities.\+h$>$}
+
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a5677d9a67ba93b61688704224691eec8}{Dx\+Lib\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em ライブラリの初期化 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a8f40d7a229310dfd8aecf74aad8c178a}{Dx\+Lib\+End}} (void)
+\begin{DoxyCompactList}\small\item\em ライブラリ使用の終了 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_af918880a31672c906f4340081bd587fd}{Process\+Message}} (void)
+\begin{DoxyCompactList}\small\item\em ウィンドウのメッセージを処理する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_aa40421abcdd7c2473f4bdbaec7a29c6e}{Wait\+Timer}} (const int \&t)
+\begin{DoxyCompactList}\small\item\em 指定の時間だけ処理を止める \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a0c09d4371a592ddf7427ae15b80e03a4}{Random}} (const int \&max)
+\begin{DoxyCompactList}\small\item\em 乱数を取得する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a86fc5243442a18cb5a1a789f7720d1c4}{Random}} (const int \&min, const int \&max)
+\begin{DoxyCompactList}\small\item\em 乱数を取得する \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a0cb6ddd8a062eff0086bd8987facd8f7}{Random\+Float}} (void)
+\begin{DoxyCompactList}\small\item\em 乱数を取得する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a3b890c8454d66c6696149f9a77def593}{Set\+Random}} (const int \&seed)
+\begin{DoxyCompactList}\small\item\em 乱数の初期値を設定する \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_aeb471a8baae0981e7cab2d1a5130dbcc}{W\+String\+To\+String}} (std\+::wstring o\+W\+String)
+\begin{DoxyCompactList}\small\item\em wstringをstringへ変換 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Dx\+Libユーティリティクラス 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_a8f40d7a229310dfd8aecf74aad8c178a}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_a8f40d7a229310dfd8aecf74aad8c178a}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!DxLibEnd@{DxLibEnd}}
+\index{DxLibEnd@{DxLibEnd}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{DxLibEnd()}{DxLibEnd()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Dx\+Lib\+End (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ライブラリ使用の終了 
+
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$
+
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_a5677d9a67ba93b61688704224691eec8}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_a5677d9a67ba93b61688704224691eec8}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!DxLibInit@{DxLibInit}}
+\index{DxLibInit@{DxLibInit}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{DxLibInit()}{DxLibInit()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Dx\+Lib\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ライブラリの初期化 
+
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$
+
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_af918880a31672c906f4340081bd587fd}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_af918880a31672c906f4340081bd587fd}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!ProcessMessage@{ProcessMessage}}
+\index{ProcessMessage@{ProcessMessage}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{ProcessMessage()}{ProcessMessage()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Process\+Message (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ウィンドウのメッセージを処理する 
+
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$
+
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_a0c09d4371a592ddf7427ae15b80e03a4}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_a0c09d4371a592ddf7427ae15b80e03a4}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!Random@{Random}}
+\index{Random@{Random}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{Random()}{Random()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Random (\begin{DoxyParamCaption}\item[{const int \&}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+乱数を取得する 
+
+
+\begin{DoxyParams}{引数}
+{\em max} & 取得する乱数の最大値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+0$\sim$最大値までの乱数
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$
+
+
+\begin{DoxyParams}{引数}
+{\em max} & 取得する乱数の最大値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+0$\sim$最大値までの乱数
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_a86fc5243442a18cb5a1a789f7720d1c4}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_a86fc5243442a18cb5a1a789f7720d1c4}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!Random@{Random}}
+\index{Random@{Random}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{Random()}{Random()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Random (\begin{DoxyParamCaption}\item[{const int \&}]{min,  }\item[{const int \&}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+乱数を取得する 
+
+
+\begin{DoxyParams}{引数}
+{\em min} & 取得する乱数の最小値\\
+\hline
+{\em max} & 取得する乱数の最大値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+最小値$\sim$最大値までの乱数
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$
+
+
+\begin{DoxyParams}{引数}
+{\em min} & 取得する乱数の最小値\\
+\hline
+{\em max} & 取得する乱数の最大値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+最小値$\sim$最大値までの乱数
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_a0cb6ddd8a062eff0086bd8987facd8f7}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_a0cb6ddd8a062eff0086bd8987facd8f7}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!RandomFloat@{RandomFloat}}
+\index{RandomFloat@{RandomFloat}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{RandomFloat()}{RandomFloat()}}
+{\footnotesize\ttfamily float Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Random\+Float (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+乱数を取得する 
+
+\begin{DoxyReturn}{戻り値}
+0.\+0f$\sim$1.0fまでの乱数(下二桁まで)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$
+
+\begin{DoxyReturn}{戻り値}
+0.\+0f$\sim$1.0fまでの乱数(下二桁まで)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_a3b890c8454d66c6696149f9a77def593}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_a3b890c8454d66c6696149f9a77def593}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!SetRandom@{SetRandom}}
+\index{SetRandom@{SetRandom}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{SetRandom()}{SetRandom()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Set\+Random (\begin{DoxyParamCaption}\item[{const int \&}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+乱数の初期値を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em seed} & 乱数の初期値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$
+
+
+\begin{DoxyParams}{引数}
+{\em seed} & 乱数の初期値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_aa40421abcdd7c2473f4bdbaec7a29c6e}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_aa40421abcdd7c2473f4bdbaec7a29c6e}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!WaitTimer@{WaitTimer}}
+\index{WaitTimer@{WaitTimer}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{WaitTimer()}{WaitTimer()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Wait\+Timer (\begin{DoxyParamCaption}\item[{const int \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+指定の時間だけ処理を止める 
+
+
+\begin{DoxyParams}{引数}
+{\em t} & 止める時間(ミリ秒単位)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$
+
+
+\begin{DoxyParams}{引数}
+{\em t} & 止める時間(ミリ秒単位)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_aeb471a8baae0981e7cab2d1a5130dbcc}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_aeb471a8baae0981e7cab2d1a5130dbcc}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!WStringToString@{WStringToString}}
+\index{WStringToString@{WStringToString}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{WStringToString()}{WStringToString()}}
+{\footnotesize\ttfamily std\+::string Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+W\+String\+To\+String (\begin{DoxyParamCaption}\item[{std\+::wstring}]{o\+W\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+wstringをstringへ変換 
+
+
+\begin{DoxyParams}{引数}
+{\em o\+W\+String} & ワイド文字列\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+マルチバイト文字列
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/19$<$/created$>$ $<$changed$>$いのうえ,2020/02/19$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_dx_lib_utillities_8h}{Dx\+Lib\+Utillities.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_dx_lib_utillities_8cpp}{Dx\+Lib\+Utillities.\+cpp}}\end{DoxyCompactItemize}

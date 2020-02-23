@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CommandBattle: C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/Player.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="dragon_red.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CommandBattle
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">コマンドバトルゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_player_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Player.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*************************************************************************/</span><span class="comment">/**************************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//ONCE</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//INCLUDE</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_chara_8h.html">Chara.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;codecvt&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_dx_lib_plus.html">DxLibPlus</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//行最大数</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespace_dx_lib_plus.html#aebb7232810f6eec9e75ddec99e910be5">   22</a></span>&#160;    constexpr <span class="keywordtype">int</span> <a class="code" href="namespace_dx_lib_plus.html#aebb7232810f6eec9e75ddec99e910be5">LineMax</a> = (<a class="code" href="_game_define_8h.html#affdcba6cbea4b5d59cbffa92f30be102">CommandRectH</a> / (<a class="code" href="_game_define_8h.html#a3dd4ac22d27ac171f57df31aab048715">FontSize</a> + <a class="code" href="_game_define_8h.html#a7101aee14a54655331c75d941a4f8b9a">FontMargin</a> * 2)) + ((<a class="code" href="_game_define_8h.html#affdcba6cbea4b5d59cbffa92f30be102">CommandRectH</a> % (<a class="code" href="_game_define_8h.html#a3dd4ac22d27ac171f57df31aab048715">FontSize</a> + <a class="code" href="_game_define_8h.html#a7101aee14a54655331c75d941a4f8b9a">FontMargin</a> * 2)) ? 1 : 0);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span>    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_player.html">   29</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_dx_lib_plus_1_1_c_player.html">CPlayer</a> : <span class="keyword">public</span> <a class="code" href="class_dx_lib_plus_1_1_c_chara.html">CChara</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">enum</span> CommandState {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            COMMAND_WAIT,                               </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            COMMAND_ATTACK,                             </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            COMMAND_SKILL,                              </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            COMMAND_EXIT,                               </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        } m_State;                                      </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">int</span>                         m_Cursor;           </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::vector&lt;Skill&gt;          m_SkillList;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_dx_lib_plus_1_1_c_player.html#a7264667bfe1ae4e4927720052d54b1f6">CPlayer</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_dx_lib_plus_1_1_c_player.html#ac15edd51c7e66a0bac9d9b36a8aaa017">~CPlayer</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_dx_lib_plus_1_1_c_player.html#a556f0f29d7101bdbde0324e1a362469a">Load</a>(<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_player.html#a732861af7a969564f0bb55ceb3b7f0b3">Initialize</a>(<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_player.html#a0c58afe3bef52f66e8830ef104f942a9">Update</a>(<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_player.html#a65a612e0b1665f73a5a382378156cf64">Render</a>(<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_player.html#a776d562f5641f86b5c91aacaa729783f">RenderStatus</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_player.html#a153fa019060e0e6c3283348808edca84">Release</a>(<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_player.html#abf1612434d7161dafd60a8c6bb52a6f6">TurnStart</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> CursorMove(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> CursorOver(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> EnterWait(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">void</span> EnterSkill(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    };</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_a7264667bfe1ae4e4927720052d54b1f6"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#a7264667bfe1ae4e4927720052d54b1f6">DxLibPlus::CPlayer::CPlayer</a></div><div class="ttdeci">CPlayer(void)</div><div class="ttdef"><b>Definition:</b> Player.cpp:30</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_a153fa019060e0e6c3283348808edca84"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#a153fa019060e0e6c3283348808edca84">DxLibPlus::CPlayer::Release</a></div><div class="ttdeci">virtual void Release(void) override</div><div class="ttdoc">解放</div><div class="ttdef"><b>Definition:</b> Player.cpp:257</div></div>
+<div class="ttc" id="anamespace_dx_lib_plus_html_aebb7232810f6eec9e75ddec99e910be5"><div class="ttname"><a href="namespace_dx_lib_plus.html#aebb7232810f6eec9e75ddec99e910be5">DxLibPlus::LineMax</a></div><div class="ttdeci">constexpr int LineMax</div><div class="ttdef"><b>Definition:</b> Player.h:22</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_a0c58afe3bef52f66e8830ef104f942a9"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#a0c58afe3bef52f66e8830ef104f942a9">DxLibPlus::CPlayer::Update</a></div><div class="ttdeci">virtual void Update(void) override</div><div class="ttdoc">更新</div><div class="ttdef"><b>Definition:</b> Player.cpp:152</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_a776d562f5641f86b5c91aacaa729783f"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#a776d562f5641f86b5c91aacaa729783f">DxLibPlus::CPlayer::RenderStatus</a></div><div class="ttdeci">virtual void RenderStatus(void)</div><div class="ttdoc">ステータス描画</div><div class="ttdef"><b>Definition:</b> Player.cpp:237</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_chara_html"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_chara.html">DxLibPlus::CChara</a></div><div class="ttdoc">キャラクター基礎クラス</div><div class="ttdef"><b>Definition:</b> Chara.h:24</div></div>
+<div class="ttc" id="a_game_define_8h_html_a7101aee14a54655331c75d941a4f8b9a"><div class="ttname"><a href="_game_define_8h.html#a7101aee14a54655331c75d941a4f8b9a">FontMargin</a></div><div class="ttdeci">constexpr int FontMargin</div><div class="ttdef"><b>Definition:</b> GameDefine.h:62</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_abf1612434d7161dafd60a8c6bb52a6f6"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#abf1612434d7161dafd60a8c6bb52a6f6">DxLibPlus::CPlayer::TurnStart</a></div><div class="ttdeci">void TurnStart(void)</div><div class="ttdoc">切り替え処理</div><div class="ttdef"><b>Definition:</b> Player.cpp:268</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_ac15edd51c7e66a0bac9d9b36a8aaa017"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#ac15edd51c7e66a0bac9d9b36a8aaa017">DxLibPlus::CPlayer::~CPlayer</a></div><div class="ttdeci">virtual ~CPlayer(void)</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> Player.cpp:45</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_a732861af7a969564f0bb55ceb3b7f0b3"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#a732861af7a969564f0bb55ceb3b7f0b3">DxLibPlus::CPlayer::Initialize</a></div><div class="ttdeci">virtual void Initialize(void) override</div><div class="ttdoc">初期化</div><div class="ttdef"><b>Definition:</b> Player.cpp:135</div></div>
+<div class="ttc" id="anamespace_dx_lib_plus_html"><div class="ttname"><a href="namespace_dx_lib_plus.html">DxLibPlus</a></div><div class="ttdef"><b>Definition:</b> Animation.h:18</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_a556f0f29d7101bdbde0324e1a362469a"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#a556f0f29d7101bdbde0324e1a362469a">DxLibPlus::CPlayer::Load</a></div><div class="ttdeci">virtual bool Load(void) override</div><div class="ttdoc">読み込み</div><div class="ttdef"><b>Definition:</b> Player.cpp:58</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html">DxLibPlus::CPlayer</a></div><div class="ttdoc">プレイヤークラス</div><div class="ttdef"><b>Definition:</b> Player.h:29</div></div>
+<div class="ttc" id="a_game_define_8h_html_a3dd4ac22d27ac171f57df31aab048715"><div class="ttname"><a href="_game_define_8h.html#a3dd4ac22d27ac171f57df31aab048715">FontSize</a></div><div class="ttdeci">constexpr int FontSize</div><div class="ttdef"><b>Definition:</b> GameDefine.h:63</div></div>
+<div class="ttc" id="a_chara_8h_html"><div class="ttname"><a href="_chara_8h.html">Chara.h</a></div><div class="ttdoc">キャラクタ基底クラス</div></div>
+<div class="ttc" id="a_game_define_8h_html_affdcba6cbea4b5d59cbffa92f30be102"><div class="ttname"><a href="_game_define_8h.html#affdcba6cbea4b5d59cbffa92f30be102">CommandRectH</a></div><div class="ttdeci">constexpr int CommandRectH</div><div class="ttdef"><b>Definition:</b> GameDefine.h:73</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_player_html_a65a612e0b1665f73a5a382378156cf64"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_player.html#a65a612e0b1665f73a5a382378156cf64">DxLibPlus::CPlayer::Render</a></div><div class="ttdeci">virtual void Render(void) override</div><div class="ttdoc">描画</div><div class="ttdef"><b>Definition:</b> Player.cpp:184</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e7b200d48aafb02999500d9f0b0e2e7a.html">CommandBattle</a></li><li class="navelem"><a class="el" href="_player_8h.html">Player.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

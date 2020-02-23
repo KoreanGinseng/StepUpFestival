@@ -301,7 +301,7 @@ namespace DxLibPlus
 		{
 			SetCurrentDirectory("../Resource");
 		}
-		else if (current == "StepUpFestival")
+		else
 		{
 			SetCurrentDirectory("Resource");
 		}

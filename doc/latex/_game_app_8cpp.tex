@@ -1,0 +1,181 @@
+\hypertarget{_game_app_8cpp}{}\doxysection{C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\+Game\+App.cpp ファイル}
+\label{_game_app_8cpp}\index{C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/GameApp.cpp@{C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/GameApp.cpp}}
+
+
+ゲームアプリクラス  
+
+
+{\ttfamily \#include \char`\"{}Game\+App.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+Define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Enemy.\+h\char`\"{}}\newline
+Game\+App.\+cpp の依存先関係図\+:
+% FIG 0
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_dx_lib_plus}{Dx\+Lib\+Plus}}
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_dx_lib_plus_a0ffd96f629746fb1d9459ecc9204e425}{Tex\+Mng\+Info}} \mbox{\hyperlink{_game_app_8cpp_a699d9a472ded2eeb3b3546315323866c}{Tex\+File}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_dx_lib_plus_a2b50b8d8f4bafb0d1e7692f96ee3a713}{Sound\+Mng\+Info}} \mbox{\hyperlink{_game_app_8cpp_ae8cfab1decdd058ea559393c2aaf4605}{Sound\+File}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_dx_lib_plus_1_1_animation}{Animation}}$<$ 10 $>$ \mbox{\hyperlink{_game_app_8cpp_a76bca9c8adce42822f36953ad5d75378}{Effect\+Anim}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_player}{C\+Player}} \mbox{\hyperlink{_game_app_8cpp_a3830ba895bdd8854d695c2d96833eb1e}{g\+Player}}
+\begin{DoxyCompactList}\small\item\em プレイヤー \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_enemy}{C\+Enemy}} \mbox{\hyperlink{_game_app_8cpp_a7549150007836ff1726b7997e4e034f5}{g\+Enemy}}
+\begin{DoxyCompactList}\small\item\em 敵 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_game_app_8cpp_a26c20d26aeb44f477a6c0cade2bf7633}{gb\+Change\+Turn}} = false
+\begin{DoxyCompactList}\small\item\em ターン変更フラグ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_game_app_8cpp_a4d9e103a9bad93da47425a65a6f797ec}{g\+Game\+State}} = \mbox{\hyperlink{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285add58fbaa83b0bc3973bc4adad84a5d88}{S\+T\+A\+T\+E\+\_\+\+G\+A\+ME}}
+\begin{DoxyCompactList}\small\item\em ゲームの状態 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{_game_app_8cpp_a058f232f327ccf9937985e063015298c}{g\+Message}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em メッセージ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ゲームアプリクラス 
+
+\begin{DoxyVerb}                                    @author いのうえ
+                                    @date   2020.02.14
+\end{DoxyVerb}
+ 
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{_game_app_8cpp_a76bca9c8adce42822f36953ad5d75378}\label{_game_app_8cpp_a76bca9c8adce42822f36953ad5d75378}} 
+\index{GameApp.cpp@{GameApp.cpp}!EffectAnim@{EffectAnim}}
+\index{EffectAnim@{EffectAnim}!GameApp.cpp@{GameApp.cpp}}
+\doxysubsubsection{\texorpdfstring{EffectAnim}{EffectAnim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_dx_lib_plus_1_1_animation}{Animation}}$<$10$>$ Effect\+Anim\mbox{[}$\,$\mbox{]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"FIRE"}, 0, 0, 192, 192, \textcolor{keyword}{false},}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \{ 5, 0, 0 \}, \{ 5, 1, 0 \},\{ 5, 2, 0 \}, \{ 5, 3, 0 \}, \{ 5, 4, 0 \},}
+\DoxyCodeLine{            \{ 5, 0, 1 \}, \{ 5, 1, 1 \},\{ 5, 2, 1 \}, \{ 5, 3, 1 \}, \{ 5, 4, 1 \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"ICE"}, 0, 0, 192, 192, \textcolor{keyword}{false},}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \{ 5, 0, 0 \}, \{ 5, 1, 0 \},\{ 5, 2, 0 \}, \{ 5, 3, 0 \}, \{ 5, 4, 0 \},}
+\DoxyCodeLine{            \{ 5, 0, 1 \}, \{ 5, 1, 1 \},\{ 5, 2, 1 \}, \{ 5, 3, 1 \}, \{ 5, 4, 1 \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"THUNDER"}, 0, 0, 192, 192, \textcolor{keyword}{false},}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \{ 5, 0, 0 \}, \{ 5, 1, 0 \},\{ 5, 2, 0 \}, \{ 5, 3, 0 \}, \{ 5, 4, 0 \},}
+\DoxyCodeLine{            \{ 5, 0, 1 \}, \{ 5, 1, 1 \},\{ 5, 2, 1 \}, \{ 5, 3, 1 \}, \{ 5, 4, 1 \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"SLASH"}, 0, 0, 192, 192, \textcolor{keyword}{false},}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \{ 5, 0, 0 \}, \{ 5, 1, 0 \},\{ 5, 2, 0 \}, \{ 5, 3, 0 \}, \{ 5, 4, 0 \},}
+\DoxyCodeLine{            \{ 5, 0, 1 \}, \{ 5, 1, 1 \},\{ 5, 2, 1 \}, \{ 5, 3, 1 \}, \{ 5, 4, 1 \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_game_app_8cpp_a26c20d26aeb44f477a6c0cade2bf7633}\label{_game_app_8cpp_a26c20d26aeb44f477a6c0cade2bf7633}} 
+\index{GameApp.cpp@{GameApp.cpp}!gbChangeTurn@{gbChangeTurn}}
+\index{gbChangeTurn@{gbChangeTurn}!GameApp.cpp@{GameApp.cpp}}
+\doxysubsubsection{\texorpdfstring{gbChangeTurn}{gbChangeTurn}}
+{\footnotesize\ttfamily bool gb\+Change\+Turn = false}
+
+
+
+ターン変更フラグ 
+
+\mbox{\Hypertarget{_game_app_8cpp_a7549150007836ff1726b7997e4e034f5}\label{_game_app_8cpp_a7549150007836ff1726b7997e4e034f5}} 
+\index{GameApp.cpp@{GameApp.cpp}!gEnemy@{gEnemy}}
+\index{gEnemy@{gEnemy}!GameApp.cpp@{GameApp.cpp}}
+\doxysubsubsection{\texorpdfstring{gEnemy}{gEnemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dx_lib_plus_1_1_c_enemy}{C\+Enemy}} g\+Enemy}
+
+
+
+敵 
+
+\mbox{\Hypertarget{_game_app_8cpp_a4d9e103a9bad93da47425a65a6f797ec}\label{_game_app_8cpp_a4d9e103a9bad93da47425a65a6f797ec}} 
+\index{GameApp.cpp@{GameApp.cpp}!gGameState@{gGameState}}
+\index{gGameState@{gGameState}!GameApp.cpp@{GameApp.cpp}}
+\doxysubsubsection{\texorpdfstring{gGameState}{gGameState}}
+{\footnotesize\ttfamily int g\+Game\+State = \mbox{\hyperlink{_game_define_8h_a7899b65f1ea0f655e4bbf8d2a5714285add58fbaa83b0bc3973bc4adad84a5d88}{S\+T\+A\+T\+E\+\_\+\+G\+A\+ME}}}
+
+
+
+ゲームの状態 
+
+\mbox{\Hypertarget{_game_app_8cpp_a058f232f327ccf9937985e063015298c}\label{_game_app_8cpp_a058f232f327ccf9937985e063015298c}} 
+\index{GameApp.cpp@{GameApp.cpp}!gMessage@{gMessage}}
+\index{gMessage@{gMessage}!GameApp.cpp@{GameApp.cpp}}
+\doxysubsubsection{\texorpdfstring{gMessage}{gMessage}}
+{\footnotesize\ttfamily std\+::string g\+Message = \char`\"{}\char`\"{}}
+
+
+
+メッセージ 
+
+\mbox{\Hypertarget{_game_app_8cpp_a3830ba895bdd8854d695c2d96833eb1e}\label{_game_app_8cpp_a3830ba895bdd8854d695c2d96833eb1e}} 
+\index{GameApp.cpp@{GameApp.cpp}!gPlayer@{gPlayer}}
+\index{gPlayer@{gPlayer}!GameApp.cpp@{GameApp.cpp}}
+\doxysubsubsection{\texorpdfstring{gPlayer}{gPlayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dx_lib_plus_1_1_c_player}{C\+Player}} g\+Player}
+
+
+
+プレイヤー 
+
+\mbox{\Hypertarget{_game_app_8cpp_ae8cfab1decdd058ea559393c2aaf4605}\label{_game_app_8cpp_ae8cfab1decdd058ea559393c2aaf4605}} 
+\index{GameApp.cpp@{GameApp.cpp}!SoundFile@{SoundFile}}
+\index{SoundFile@{SoundFile}!GameApp.cpp@{GameApp.cpp}}
+\doxysubsubsection{\texorpdfstring{SoundFile}{SoundFile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dx_lib_plus_a2b50b8d8f4bafb0d1e7692f96ee3a713}{Sound\+Mng\+Info}} Sound\+File\mbox{[}$\,$\mbox{]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"bgm\_battle"}       , \textcolor{stringliteral}{"Sound/BGM/battle.mp3"}    \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"bgm\_clear"}        , \textcolor{stringliteral}{"Sound/BGM/gameclear.mp3"} \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"bgm\_over"}         , \textcolor{stringliteral}{"Sound/BGM/gameover.mp3"}  \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"se\_skill\_fire"}    , \textcolor{stringliteral}{"Sound/SE/fire.mp3"}       \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"se\_skill\_ice"}     , \textcolor{stringliteral}{"Sound/SE/ice.mp3"}        \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"se\_skill\_thunder"} , \textcolor{stringliteral}{"Sound/SE/thunder.mp3"}    \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"se\_skill\_slash"}   , \textcolor{stringliteral}{"Sound/SE/slash.mp3"}      \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"se\_select"}        , \textcolor{stringliteral}{"Sound/SE/select.mp3"}     \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"se\_enter"}         , \textcolor{stringliteral}{"Sound/SE/enter.mp3"}      \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"se\_enemyattack"}   , \textcolor{stringliteral}{"Sound/SE/enemyattack.mp3"}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_game_app_8cpp_a699d9a472ded2eeb3b3546315323866c}\label{_game_app_8cpp_a699d9a472ded2eeb3b3546315323866c}} 
+\index{GameApp.cpp@{GameApp.cpp}!TexFile@{TexFile}}
+\index{TexFile@{TexFile}!GameApp.cpp@{GameApp.cpp}}
+\doxysubsubsection{\texorpdfstring{TexFile}{TexFile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dx_lib_plus_a0ffd96f629746fb1d9459ecc9204e425}{Tex\+Mng\+Info}} Tex\+File\mbox{[}$\,$\mbox{]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"dragon\_blue"}   , \textcolor{stringliteral}{"Enemy/dragon\_blue.png"}   \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"dragon\_red"}    , \textcolor{stringliteral}{"Enemy/dragon\_red.png"}    \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"dragon\_green"}  , \textcolor{stringliteral}{"Enemy/dragon\_green.png"}  \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"dragon\_komodo"} , \textcolor{stringliteral}{"Enemy/komodo\_dragon.png"} \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"effect\_fire"}   , \textcolor{stringliteral}{"Effect/Fire.png"}         \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"effect\_ice"}    , \textcolor{stringliteral}{"Effect/Ice.png"}          \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"effect\_thunder"}, \textcolor{stringliteral}{"Effect/Thunder.png"}      \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"effect\_slash"}  , \textcolor{stringliteral}{"Effect/Slash.png"}        \},}
+\DoxyCodeLine{    \{ \textcolor{stringliteral}{"cursor"}        , \textcolor{stringliteral}{"cursor.png"}              \},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

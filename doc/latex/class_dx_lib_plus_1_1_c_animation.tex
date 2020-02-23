@@ -1,0 +1,195 @@
+\hypertarget{class_dx_lib_plus_1_1_c_animation}{}\doxysection{Dx\+Lib\+Plus\+::C\+Animation$<$ N $>$ クラステンプレート}
+\label{class_dx_lib_plus_1_1_c_animation}\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+
+
+アニメーションクラス  
+
+
+
+
+{\ttfamily \#include $<$Animation.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a9e3a006f51b9c350aefb3159752e0bfe}{C\+Animation}} (void)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a743874d88d6e8c56d361da798db6abce}{$\sim$\+C\+Animation}} (void)
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a8cee36e871f229cae7c2e366ce39c234}{Change\+Motion}} (const int \&anim\+No)
+\begin{DoxyCompactList}\small\item\em アニメーション変更 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a1cfe382ee0944df1d7e1007e5cee8964}{Create}} (\mbox{\hyperlink{struct_dx_lib_plus_1_1_animation}{Animation}}$<$ N $>$ $\ast$anim, const int \&anim\+Count)
+\begin{DoxyCompactList}\small\item\em アニメーションの作成 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a004143043e2124fa24690f2140691fcc}{Release}} (void)
+\begin{DoxyCompactList}\small\item\em 解放 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a4556b4946428aabed319d2226c1023a5}{Add\+Timer}} (void)
+\begin{DoxyCompactList}\small\item\em アニメーションを進める \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a0acc2971d8eb988f1343c462d5866b9c}{Is\+End\+Motion}} (void) const
+\begin{DoxyCompactList}\small\item\em モーション終了フラグ取得 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dx_lib_plus_1_1_rectangle}{Rectangle}} \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a85bb330c1690fd7243ab380d56fe6ff7}{Get\+Src\+Rect}} (void) const
+\begin{DoxyCompactList}\small\item\em アニメーションの矩形取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a636401f0a2b30369b4570c18e1208934}{Set\+Show}} (const bool \&b)
+\begin{DoxyCompactList}\small\item\em 表示フラグの設定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation_a9a4add591e7ec4f2c33995547ecdf8c5}{Is\+Show}} (void) const
+\begin{DoxyCompactList}\small\item\em 表示フラグの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\subsubsection*{template$<$int N$>$\newline
+class Dx\+Lib\+Plus\+::\+C\+Animation$<$ N $>$}
+
+アニメーションクラス 
+
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a9e3a006f51b9c350aefb3159752e0bfe}\label{class_dx_lib_plus_1_1_c_animation_a9e3a006f51b9c350aefb3159752e0bfe}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!CAnimation@{CAnimation}}
+\index{CAnimation@{CAnimation}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{CAnimation()}{CAnimation()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::\mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{C\+Animation}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンストラクタ 
+
+\begin{DoxyReturn}{戻り値}
+None
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a743874d88d6e8c56d361da798db6abce}\label{class_dx_lib_plus_1_1_c_animation_a743874d88d6e8c56d361da798db6abce}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!````~CAnimation@{$\sim$CAnimation}}
+\index{````~CAnimation@{$\sim$CAnimation}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CAnimation()}{~CAnimation()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::$\sim$\mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{C\+Animation}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+デストラクタ 
+
+\begin{DoxyReturn}{戻り値}
+None
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a4556b4946428aabed319d2226c1023a5}\label{class_dx_lib_plus_1_1_c_animation_a4556b4946428aabed319d2226c1023a5}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!AddTimer@{AddTimer}}
+\index{AddTimer@{AddTimer}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{AddTimer()}{AddTimer()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::Add\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アニメーションを進める 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a8cee36e871f229cae7c2e366ce39c234}\label{class_dx_lib_plus_1_1_c_animation_a8cee36e871f229cae7c2e366ce39c234}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!ChangeMotion@{ChangeMotion}}
+\index{ChangeMotion@{ChangeMotion}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{ChangeMotion()}{ChangeMotion()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::Change\+Motion (\begin{DoxyParamCaption}\item[{const int \&}]{anim\+No }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アニメーション変更 
+
+
+\begin{DoxyParams}{引数}
+{\em anim\+No} & 変更する番号\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a1cfe382ee0944df1d7e1007e5cee8964}\label{class_dx_lib_plus_1_1_c_animation_a1cfe382ee0944df1d7e1007e5cee8964}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!Create@{Create}}
+\index{Create@{Create}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dx_lib_plus_1_1_animation}{Animation}}$<$ N $>$ $\ast$}]{anim,  }\item[{const int \&}]{anim\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アニメーションの作成 
+
+
+\begin{DoxyParams}{引数}
+{\em anim} & 作成する構造体\\
+\hline
+{\em anim\+Count} & アニメーションの数\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a85bb330c1690fd7243ab380d56fe6ff7}\label{class_dx_lib_plus_1_1_c_animation_a85bb330c1690fd7243ab380d56fe6ff7}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!GetSrcRect@{GetSrcRect}}
+\index{GetSrcRect@{GetSrcRect}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{GetSrcRect()}{GetSrcRect()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+\mbox{\hyperlink{struct_dx_lib_plus_1_1_rectangle}{Rectangle}} \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::Get\+Src\+Rect (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アニメーションの矩形取得 
+
+\begin{DoxyReturn}{戻り値}
+アニメーション矩形
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a0acc2971d8eb988f1343c462d5866b9c}\label{class_dx_lib_plus_1_1_c_animation_a0acc2971d8eb988f1343c462d5866b9c}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!IsEndMotion@{IsEndMotion}}
+\index{IsEndMotion@{IsEndMotion}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{IsEndMotion()}{IsEndMotion()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::Is\+End\+Motion (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+モーション終了フラグ取得 
+
+\begin{DoxyReturn}{戻り値}
+終了フラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a9a4add591e7ec4f2c33995547ecdf8c5}\label{class_dx_lib_plus_1_1_c_animation_a9a4add591e7ec4f2c33995547ecdf8c5}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!IsShow@{IsShow}}
+\index{IsShow@{IsShow}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{IsShow()}{IsShow()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::Is\+Show (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+表示フラグの取得 
+
+\begin{DoxyReturn}{戻り値}
+表示フラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a004143043e2124fa24690f2140691fcc}\label{class_dx_lib_plus_1_1_c_animation_a004143043e2124fa24690f2140691fcc}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!Release@{Release}}
+\index{Release@{Release}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::Release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+解放 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_animation_a636401f0a2b30369b4570c18e1208934}\label{class_dx_lib_plus_1_1_c_animation_a636401f0a2b30369b4570c18e1208934}} 
+\index{DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}!SetShow@{SetShow}}
+\index{SetShow@{SetShow}!DxLibPlus::CAnimation$<$ N $>$@{DxLibPlus::CAnimation$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{SetShow()}{SetShow()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_animation}{Dx\+Lib\+Plus\+::\+C\+Animation}}$<$ N $>$\+::Set\+Show (\begin{DoxyParamCaption}\item[{const bool \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+表示フラグの設定 
+
+
+\begin{DoxyParams}{引数}
+{\em b} & 表示フラグ\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_animation_8h}{Animation.\+h}}\end{DoxyCompactItemize}

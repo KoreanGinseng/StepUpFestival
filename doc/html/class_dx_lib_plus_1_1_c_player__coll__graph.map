@@ -1,0 +1,6 @@
+<map id="DxLibPlus::CPlayer" name="DxLibPlus::CPlayer">
+<area shape="rect" id="node1" title="プレイヤークラス" alt="" coords="105,171,239,197"/>
+<area shape="rect" id="node2" href="$class_dx_lib_plus_1_1_c_chara.html" title="キャラクター基礎クラス" alt="" coords="106,95,238,121"/>
+<area shape="rect" id="node3" href="$class_dx_lib_plus_1_1_c_game_app_base.html" title="ゲームアプリ基礎クラス" alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node4" href="$struct_status.html" title=" " alt="" coords="217,5,277,32"/>
+</map>

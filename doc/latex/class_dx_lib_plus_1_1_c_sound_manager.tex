@@ -1,0 +1,167 @@
+\hypertarget{class_dx_lib_plus_1_1_c_sound_manager}{}\doxysection{Dx\+Lib\+Plus\+::C\+Sound\+Manager クラス}
+\label{class_dx_lib_plus_1_1_c_sound_manager}\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+
+
+サウンド管理クラス  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Manager.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager_afdd494a1e617a3d995f7cee540ca1be5}{Load}} (const std\+::string \&key, const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em 読み込み \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager_a9be439a9ff19af8f089649a4957fc7ee}{Play}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em 再生する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager_acfd370a6253247898dac22deef201d39}{Is\+Play}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em 再生中かどうかチェックする \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager_a0e27daed93e8591849159adce256d80f}{Stop}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em 止める \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager_a63a7f713b00f459c2f591d8831ae3500}{Stop}} (void)
+\begin{DoxyCompactList}\small\item\em すべての音を止める \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager_a17dd778009f164f98303d5b748bdb1f0}{Set\+Loop}} (const std\+::string \&key, const bool \&b, const int \&time=0)
+\begin{DoxyCompactList}\small\item\em ループ設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager_a2394250a4f8e43af0aa592eed3d20dd9}{Release}} (void)
+\begin{DoxyCompactList}\small\item\em 解放 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager}{C\+Sound\+Manager}} \& \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager_adc626d163aa67eadb454c958973dac3b}{Get\+Sound\+Manager}} (void)
+\begin{DoxyCompactList}\small\item\em マネージャ取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+サウンド管理クラス 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_manager_adc626d163aa67eadb454c958973dac3b}\label{class_dx_lib_plus_1_1_c_sound_manager_adc626d163aa67eadb454c958973dac3b}} 
+\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}!GetSoundManager@{GetSoundManager}}
+\index{GetSoundManager@{GetSoundManager}!DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+\doxysubsubsection{\texorpdfstring{GetSoundManager()}{GetSoundManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_manager}{C\+Sound\+Manager}} \& Dx\+Lib\+Plus\+::\+C\+Sound\+Manager\+::\+Get\+Sound\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+マネージャ取得 
+
+\begin{DoxyReturn}{戻り値}
+マネージャ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_manager_acfd370a6253247898dac22deef201d39}\label{class_dx_lib_plus_1_1_c_sound_manager_acfd370a6253247898dac22deef201d39}} 
+\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}!IsPlay@{IsPlay}}
+\index{IsPlay@{IsPlay}!DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+\doxysubsubsection{\texorpdfstring{IsPlay()}{IsPlay()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Sound\+Manager\+::\+Is\+Play (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+再生中かどうかチェックする 
+
+
+\begin{DoxyParams}{引数}
+{\em key} & 呼び出し用キー\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+再生中かどうかのフラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_manager_afdd494a1e617a3d995f7cee540ca1be5}\label{class_dx_lib_plus_1_1_c_sound_manager_afdd494a1e617a3d995f7cee540ca1be5}} 
+\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}!Load@{Load}}
+\index{Load@{Load}!DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Sound\+Manager\+::\+Load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{file }\end{DoxyParamCaption})}
+
+
+
+読み込み 
+
+
+\begin{DoxyParams}{引数}
+{\em key} & 呼び出し用キー\\
+\hline
+{\em file} & ファイル名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)か失敗(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_manager_a9be439a9ff19af8f089649a4957fc7ee}\label{class_dx_lib_plus_1_1_c_sound_manager_a9be439a9ff19af8f089649a4957fc7ee}} 
+\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}!Play@{Play}}
+\index{Play@{Play}!DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+Manager\+::\+Play (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+再生する 
+
+
+\begin{DoxyParams}{引数}
+{\em key} & 呼び出し用キー\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_manager_a2394250a4f8e43af0aa592eed3d20dd9}\label{class_dx_lib_plus_1_1_c_sound_manager_a2394250a4f8e43af0aa592eed3d20dd9}} 
+\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}!Release@{Release}}
+\index{Release@{Release}!DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+Manager\+::\+Release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+解放 
+
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_manager_a17dd778009f164f98303d5b748bdb1f0}\label{class_dx_lib_plus_1_1_c_sound_manager_a17dd778009f164f98303d5b748bdb1f0}} 
+\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}!SetLoop@{SetLoop}}
+\index{SetLoop@{SetLoop}!DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+\doxysubsubsection{\texorpdfstring{SetLoop()}{SetLoop()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+Manager\+::\+Set\+Loop (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const bool \&}]{b,  }\item[{const int \&}]{time = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+ループ設定 
+
+
+\begin{DoxyParams}{引数}
+{\em key} & 呼び出し用キー\\
+\hline
+{\em b} & ループフラグ\\
+\hline
+{\em time} & ループする開始時間(ミリ秒)\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_manager_a0e27daed93e8591849159adce256d80f}\label{class_dx_lib_plus_1_1_c_sound_manager_a0e27daed93e8591849159adce256d80f}} 
+\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}!Stop@{Stop}}
+\index{Stop@{Stop}!DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+Manager\+::\+Stop (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+止める 
+
+
+\begin{DoxyParams}{引数}
+{\em key} & 呼び出し用キー\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_manager_a63a7f713b00f459c2f591d8831ae3500}\label{class_dx_lib_plus_1_1_c_sound_manager_a63a7f713b00f459c2f591d8831ae3500}} 
+\index{DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}!Stop@{Stop}}
+\index{Stop@{Stop}!DxLibPlus::CSoundManager@{DxLibPlus::CSoundManager}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+Manager\+::\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+すべての音を止める 
+
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_sound_manager_8h}{Sound\+Manager.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_sound_manager_8cpp}{Sound\+Manager.\+cpp}}\end{DoxyCompactItemize}
