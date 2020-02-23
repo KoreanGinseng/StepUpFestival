@@ -242,8 +242,8 @@ namespace DxLibPlus
 			Color = DxLib::GetColor(192, 64, 64);
 		}
 		DxLib::DrawFormatString(PlayerRectX + static_cast<int>((PlayerRectW - FontSize * 5) * 0.5f), PlayerRectY, Color, "ステータス");
-		DxLib::DrawFormatString(PlayerRectX + FontSize, PlayerRectY + (FontSize + FontMargin) * 1, Color, "HP  : %d", m_Status.hp);
-		DxLib::DrawFormatString(PlayerRectX + FontSize, PlayerRectY + (FontSize + FontMargin) * 2, Color, "ATK : %d", m_Status.attack);
+		DxLib::DrawFormatString(PlayerRectX + static_cast<int>((PlayerRectW - FontSize * 5) * 0.5f), PlayerRectY + (FontSize + FontMargin) * 1, Color, "HP  : %4d", (m_Status.hp <= 9999) ? m_Status.hp : 9999);
+		DxLib::DrawFormatString(PlayerRectX + static_cast<int>((PlayerRectW - FontSize * 5) * 0.5f), PlayerRectY + (FontSize + FontMargin) * 2, Color, "ATK : %4d", (m_Status.attack <= 9999) ? m_Status.attack : 9999);
 		DxLib::DrawFormatString(PlayerRectX + static_cast<int>((PlayerRectW - FontSize * 3.5f) * 0.5f), PlayerRectY + 28 * 4, Color, "PLAYER1");
 	}
 
@@ -272,6 +272,13 @@ namespace DxLibPlus
 		gMessage = "どうする？";
 
 	}
+	// ********************************************************************************
+	/// <summary>
+	/// カーソル移動処理
+	/// </summary>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
 	void CPlayer::CursorMove(void)
 	{
 		//上キーを押したら選択を上にする
@@ -299,6 +306,13 @@ namespace DxLibPlus
 			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SELECT].key);
 		}
 	}
+	// ********************************************************************************
+	/// <summary>
+	/// カーソルをリスト数以上超えないようにする処理
+	/// </summary>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
 	void CPlayer::CursorOver(void)
 	{
 		//選択できる最大
@@ -326,6 +340,13 @@ namespace DxLibPlus
 			m_Cursor = 0;
 		}
 	}
+	// ********************************************************************************
+	/// <summary>
+	/// 決定ボタンを押したとき選んだコマンドによって状態を変化させる処理
+	/// </summary>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
 	void CPlayer::EnterWait(void)
 	{
 		m_State = static_cast<CommandState>(m_Cursor + 1);
@@ -346,6 +367,13 @@ namespace DxLibPlus
 			m_Cursor = 0;
 		}
 	}
+	// ********************************************************************************
+	/// <summary>
+	/// スキルを決めたときの処理
+	/// </summary>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
 	void CPlayer::EnterSkill(void)
 	{
 		//スキルの一番最後(戻るコマンド)なら一つ戻る

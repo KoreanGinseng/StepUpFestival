@@ -87,8 +87,11 @@ namespace DxLibPlus
 	// ********************************************************************************
 	int CGraphicsUtillities::GetTargetWidth(void)
 	{
+		//横幅
 		int width;
+		//縦幅
 		int height;
+		//カラービット
 		int bit;
 		DxLib::GetScreenState(&width, &height, &bit);
 		return width;
@@ -103,8 +106,11 @@ namespace DxLibPlus
 	// ********************************************************************************
 	int CGraphicsUtillities::GetTargetHeight(void)
 	{
+		//横幅
 		int width;
+		//縦幅
 		int height;
+		//カラービット
 		int bit;
 		DxLib::GetScreenState(&width, &height, &bit);
 		return height;

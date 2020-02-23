@@ -210,9 +210,12 @@ namespace DxLibPlus
 			gEnemy.Update();
 			if (gEnemy.GetDamageWait() <= 0)
 			{
-				gMessage = "“G‚ÌUŒ‚I";
-				theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENEMYATTACK].key);
 				theTurnManager.SetTurn(TURN_PLAYER);
+				gMessage = "“G‚ÌUŒ‚I";
+				if (!gEnemy.IsDead())
+				{
+					theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENEMYATTACK].key);
+				}
 			}
 			break;
 		}

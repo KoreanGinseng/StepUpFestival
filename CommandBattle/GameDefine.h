@@ -64,7 +64,7 @@ constexpr	int		FontSize   = 24;
 
 constexpr	int		PlayerRectX = 0;
 constexpr	int		PlayerRectY = 0;
-constexpr	int		PlayerRectW = 150;
+constexpr	int		PlayerRectW = 200;
 constexpr	int		PlayerRectH = 150;
 
 constexpr	int		CommandRectX = 0;

@@ -148,7 +148,7 @@ namespace DxLibPlus
 		//•\Ž¦ˆÊ’uŒvŽZ(’†‰›Šñ‚¹)
 		float x = (CGraphicsUtillities::GetTargetWidth() - theTextureManager.GetWidth(TexFile[m_TexKey].key)) * 0.5f;
 		//ƒhƒ‰ƒSƒ“‚Ì•`‰æ
-		DxLib::DrawGraph(static_cast<int>(x), PlayerRectW, m_GraphHandle, true);
+		DxLib::DrawGraph(static_cast<int>(x), PlayerRectH, m_GraphHandle, true);
 	}
 }
 
