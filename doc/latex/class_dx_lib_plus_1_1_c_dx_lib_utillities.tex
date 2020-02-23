@@ -29,7 +29,9 @@ static float \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a0cb6ddd
 static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a3b890c8454d66c6696149f9a77def593}{Set\+Random}} (const int \&seed)
 \begin{DoxyCompactList}\small\item\em 乱数の初期値を設定する \end{DoxyCompactList}\item 
 static std\+::string \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_aeb471a8baae0981e7cab2d1a5130dbcc}{W\+String\+To\+String}} (std\+::wstring o\+W\+String)
-\begin{DoxyCompactList}\small\item\em wstringをstringへ変換 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em wstringをstringへ変換 \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_dx_lib_plus_1_1_c_dx_lib_utillities_a4e7061fae82e05e9dae22f9b006ba1a8}{Get\+Spalate\+String}} (const std\+::string \&buff, const std\+::string \&spa, int \&outstrlen, int \&outindent)
+\begin{DoxyCompactList}\small\item\em 文字列分割 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{詳解}
@@ -73,6 +75,30 @@ $<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,202
 
 \begin{DoxyReturn}{戻り値}
 成功(0)かエラー(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_a4e7061fae82e05e9dae22f9b006ba1a8}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_a4e7061fae82e05e9dae22f9b006ba1a8}} 
+\index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!GetSpalateString@{GetSpalateString}}
+\index{GetSpalateString@{GetSpalateString}!DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}}
+\doxysubsubsection{\texorpdfstring{GetSpalateString()}{GetSpalateString()}}
+{\footnotesize\ttfamily std\+::string Dx\+Lib\+Plus\+::\+C\+Dx\+Lib\+Utillities\+::\+Get\+Spalate\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{buff,  }\item[{const std\+::string \&}]{spa,  }\item[{int \&}]{outstrlen,  }\item[{int \&}]{outindent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+文字列分割 
+
+
+\begin{DoxyParams}{引数}
+{\em buff} & 分割する文字列\\
+\hline
+{\em spa} & 分割するキー\\
+\hline
+{\em outstrlen} & 長さ出力\\
+\hline
+{\em outindent} & 文字列インデント出力\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+分割後文字列
 \end{DoxyReturn}
 $<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_dx_lib_utillities_af918880a31672c906f4340081bd587fd}\label{class_dx_lib_plus_1_1_c_dx_lib_utillities_af918880a31672c906f4340081bd587fd}} 
 \index{DxLibPlus::CDxLibUtillities@{DxLibPlus::CDxLibUtillities}!ProcessMessage@{ProcessMessage}}

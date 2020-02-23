@@ -126,6 +126,9 @@ $(document).ready(function(){initNavTree('class_dx_lib_plus_1_1_c_dx_lib_utillit
 <tr class="memitem:aeb471a8baae0981e7cab2d1a5130dbcc"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_dx_lib_utillities.html#aeb471a8baae0981e7cab2d1a5130dbcc">WStringToString</a> (std::wstring oWString)</td></tr>
 <tr class="memdesc:aeb471a8baae0981e7cab2d1a5130dbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">wstringをstringへ変換  <a href="class_dx_lib_plus_1_1_c_dx_lib_utillities.html#aeb471a8baae0981e7cab2d1a5130dbcc">[詳解]</a><br /></td></tr>
 <tr class="separator:aeb471a8baae0981e7cab2d1a5130dbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e7061fae82e05e9dae22f9b006ba1a8"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_dx_lib_utillities.html#a4e7061fae82e05e9dae22f9b006ba1a8">GetSpalateString</a> (const std::string &amp;buff, const std::string &amp;spa, int &amp;outstrlen, int &amp;outindent)</td></tr>
+<tr class="memdesc:a4e7061fae82e05e9dae22f9b006ba1a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列分割  <a href="class_dx_lib_plus_1_1_c_dx_lib_utillities.html#a4e7061fae82e05e9dae22f9b006ba1a8">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e7061fae82e05e9dae22f9b006ba1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>DxLibユーティリティクラス </p>
@@ -190,6 +193,67 @@ $(document).ready(function(){initNavTree('class_dx_lib_plus_1_1_c_dx_lib_utillit
 <dl class="section return"><dt>戻り値</dt><dd>成功(0)かエラー(-1)</dd></dl>
 <p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt;</p>
 <dl class="section return"><dt>戻り値</dt><dd>成功(0)かエラー(-1)</dd></dl>
+<p>&lt;created&gt;いのうえ,2020/02/23&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/23&lt;/changed&gt; </p>
+
+</div>
+</div>
+<a id="a4e7061fae82e05e9dae22f9b006ba1a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e7061fae82e05e9dae22f9b006ba1a8">&#9670;&nbsp;</a></span>GetSpalateString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DxLibPlus::CDxLibUtillities::GetSpalateString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>spa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>outstrlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>outindent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列分割 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buff</td><td>分割する文字列</td></tr>
+    <tr><td class="paramname">spa</td><td>分割するキー</td></tr>
+    <tr><td class="paramname">outstrlen</td><td>長さ出力</td></tr>
+    <tr><td class="paramname">outindent</td><td>文字列インデント出力</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>分割後文字列</dd></dl>
 <p>&lt;created&gt;いのうえ,2020/02/23&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/23&lt;/changed&gt; </p>
 
 </div>
