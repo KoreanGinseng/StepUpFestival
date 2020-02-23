@@ -130,7 +130,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
-      <AdditionalIncludeDirectories>../../DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../DxLibNoneModel_NoneSoftDrawCode_VC;../../../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
     </ClCompile>
@@ -139,7 +139,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>../../GitHub\DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../DxLibNoneModel_NoneSoftDrawCode_VC;../../../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>USERNAME=$(USERNAME);</PreprocessorDefinitions>
