@@ -63,22 +63,16 @@ namespace DxLibPlus
 		while (length > indentCnt && strlen >= 0)
 		{
 			//改行区切りで文字列取得
-			strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-			str = buff.substr(indentCnt, strlen);
-			indentCnt += strlen + 1;
+			str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 			//ステータスコマンドの場合
 			if (str == "status")
 			{
 				//HPの取得
-				strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-				str = buff.substr(indentCnt, strlen);
-				indentCnt += strlen + 1;
+				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				m_Status.hp = std::atoi(str.c_str());
 				m_OffsetHp = m_Status.hp;
 				//ATTACKの取得
-				strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-				str = buff.substr(indentCnt, strlen);
-				indentCnt += strlen + 1;
+				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				m_Status.attack = std::atoi(str.c_str());
 			}
 		}
@@ -130,6 +124,22 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CEnemy::Update(void)
 	{
+		//ダメージ待ち時間がなければ攻撃する
+		if (m_DamageWait > 0)
+		{
+			return;
+		}
+		//プレイヤーのターンにする
+		theTurnManager.SetTurn(TURN_PLAYER);
+		//死んでいれば攻撃しない
+		if (m_bDead)
+		{
+			return;
+		}
+		//メッセージの変更
+		gMessage = "敵の攻撃！";
+		//攻撃音を鳴らす
+		theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENEMYATTACK].key);
 	}
 	// ********************************************************************************
 	/// <summary>

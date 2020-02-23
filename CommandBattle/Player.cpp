@@ -75,22 +75,16 @@ namespace DxLibPlus
 		while (length > indentCnt && strlen >= 0)
 		{
 			//改行区切りで文字列取得
-			strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-			str = buff.substr(indentCnt, strlen);
-			indentCnt += strlen + 1;
+			str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 			//ステータスコマンドの場合
 			if (str == "status")
 			{
 				//HPの取得
-				strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-				str = buff.substr(indentCnt, strlen);
-				indentCnt += strlen + 1;
+				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				m_Status.hp = std::atoi(str.c_str());
 				m_OffsetHp = m_Status.hp;
 				//ATTACKの取得
-				strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-				str = buff.substr(indentCnt, strlen);
-				indentCnt += strlen + 1;
+				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				m_Status.attack = std::atoi(str.c_str());
 			}
 			//スキルコマンドの場合
@@ -98,19 +92,13 @@ namespace DxLibPlus
 			{
 				Skill addData;
 				//スキル名取得
-				strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-				str = buff.substr(indentCnt, strlen);
-				indentCnt += strlen + 1;
+				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				addData.name = str;
 				//スキル攻撃倍率取得
-				strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-				str = buff.substr(indentCnt, strlen);
-				indentCnt += strlen + 1;
+				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				addData.rate = static_cast<float>(std::atof(str.c_str()));
 				//エフェクトの種類取得
-				strlen = buff.find_first_of("\n", indentCnt) - indentCnt;
-				str = buff.substr(indentCnt, strlen);
-				indentCnt += strlen + 1;
+				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				addData.effect = (str == "FIRE") ? SKILL_FIRE : (str == "ICE") ? SKILL_ICE : (str == "THUNDER") ? SKILL_THUNDER : SKILL_SLASH;
 				//スキルの登録
 				m_SkillList.push_back(addData);
@@ -267,8 +255,11 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CPlayer::TurnStart(void)
 	{
+		//カーソルを一番上にセットする
 		m_Cursor = 0;
+		//待機状態
 		m_State = COMMAND_WAIT;
+		//メッセージ変更
 		gMessage = "どうする？";
 
 	}
@@ -349,19 +340,29 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CPlayer::EnterWait(void)
 	{
+		//状態取得
 		m_State = static_cast<CommandState>(m_Cursor + 1);
+		//通常攻撃の場合
 		if (m_State == COMMAND_ATTACK)
 		{
+			//攻撃倍率1倍
 			m_AttackRate = 1.0f;
+			//斬撃エフェクト開始
 			theEffectManager.Start(SKILL_SLASH);
+			//斬撃音を鳴らす
 			theSoundManager.Play(SoundFile[SOUNDKEY_SE_SLASH].key);
+			//行動終了なので敵のターンへ移行する
 			theTurnManager.SetTurn(TURN_ENEMY);
+			//メッセージを変更
 			gMessage = "プレイヤーの攻撃！";
 		}
+		//終了を押された場合
 		else if (m_State == COMMAND_EXIT)
 		{
+			//アプリ終了
 			PostQuitMessage(0);
 		}
+		//上記以外はカーソルを戻すだけ
 		else
 		{
 			m_Cursor = 0;
@@ -382,13 +383,21 @@ namespace DxLibPlus
 			m_State = COMMAND_WAIT;
 			return;
 		}
+		//状態を攻撃に変更
 		m_State = COMMAND_ATTACK;
+		//攻撃倍率を選んだスキルの倍率にセットする
 		m_AttackRate = m_SkillList[m_Cursor].rate;
+		//選んだスキルのエフェクトを発生させる
 		theEffectManager.Start(m_SkillList[m_Cursor].effect);
+		//音の番号を取得
 		int sound = SOUNDKEY_BGM_COUNT + m_SkillList[m_Cursor].effect;
+		//スキルにあった音を鳴らす
 		theSoundManager.Play(SoundFile[sound].key);
+		//行動終了なので敵のターンへ移行する
 		theTurnManager.SetTurn(TURN_ENEMY);
+		//メッセージにスキル名を表示させる
 		gMessage = "プレイヤーの" + m_SkillList[m_Cursor].name + "！";
+		//カーソルのリセット
 		m_Cursor = 0;
 	}
 }

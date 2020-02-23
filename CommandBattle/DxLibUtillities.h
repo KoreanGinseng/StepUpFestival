@@ -115,6 +115,19 @@ namespace DxLibPlus
 		/// <changed>いのうえ,2020/02/19</changed>
 		// ********************************************************************************
 		static std::string WStringToString(std::wstring oWString);
+		// ********************************************************************************
+		/// <summary>
+		/// 文字列分割
+		/// </summary>
+		/// <param name="buff">分割する文字列</param>
+		/// <param name="spa">分割するキー</param>
+		/// <param name="outstrlen">長さ出力</param>
+		/// <param name="outindent">文字列インデント出力</param>
+		/// <returns>分割後文字列</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		static std::string GetSpalateString(const std::string& buff,const std::string& spa, int& outstrlen, int& outindent);
 	};
 }
 

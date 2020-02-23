@@ -161,26 +161,10 @@ namespace DxLibPlus
 
 		//現在のターン取得
 		Turn nowTurn = theTurnManager.GetTurn();
-		//ターンが変わった時、攻撃、アイテムの処理をする
+		//ターンが変わった時、攻撃の処理をする
 		if (!gbChangeTurn && theTurnManager.IsChanged())
 		{
-			//ターンの切り替え処理をする
-			gbChangeTurn = true;
-			//現在のターンがプレイヤーなら敵からの攻撃をくらう
-			switch (nowTurn)
-			{
-			case TURN_PLAYER:
-				DmgPlayer();
-				break;
-			case TURN_ENEMY:
-				DmgEnemy();
-				break;
-			}
-			//敵が死んでいればゲームクリア状態にする
-			if (gEnemy.IsDead() && gEnemy.GetDamageWait() <= 0)
-			{
-				gGameState = STATE_GAMECLEAR;
-			}
+			RefreshChangeTurn(nowTurn);
 			return;
 		}
 		//ターン切り替え完了までの処理
@@ -206,24 +190,13 @@ namespace DxLibPlus
 			gPlayer.Update();
 			break;
 		case TURN_ENEMY:
+			//ダメージの処理
 			gEnemy.RefreshDmg();
+			//敵の更新
 			gEnemy.Update();
-			if (gEnemy.GetDamageWait() <= 0)
-			{
-				theTurnManager.SetTurn(TURN_PLAYER);
-				gMessage = "敵の攻撃！";
-				if (!gEnemy.IsDead())
-				{
-					theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENEMYATTACK].key);
-				}
-			}
 			break;
 		}
-		//死亡チェック
-		if (gPlayer.IsDead() && (gPlayer.GetDamageWait() <= 0))
-		{
-			gGameState |= STATE_GAMEOVER;
-		}
+		CheckGameOver();
 	}
 	// ********************************************************************************
 	/// <summary>
@@ -425,6 +398,49 @@ namespace DxLibPlus
 		{
 			gPlayer.TurnStart();
 			gbChangeTurn = false;
+		}
+	}
+	// ********************************************************************************
+	/// <summary>
+	/// ターンが変わった時の次のターンまでつなぐ処理
+	/// </summary>
+	/// <param name="turn">現在のターン</param>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	void CGameApp::RefreshChangeTurn(const Turn & turn)
+	{
+		//ターンの切り替え処理をする
+		gbChangeTurn = true;
+		//現在のターンがプレイヤーなら敵からの攻撃をくらう
+		switch (turn)
+		{
+		case TURN_PLAYER:
+			DmgPlayer();
+			break;
+		case TURN_ENEMY:
+			DmgEnemy();
+			break;
+		}
+		//敵が死んでいればゲームクリア状態にする
+		if (gEnemy.IsDead() && gEnemy.GetDamageWait() <= 0)
+		{
+			gGameState = STATE_GAMECLEAR;
+		}
+	}
+	// ********************************************************************************
+	/// <summary>
+	/// ゲームオーバーの監視
+	/// </summary>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	void CGameApp::CheckGameOver(void)
+	{
+		//死亡チェック
+		if (gPlayer.IsDead() && (gPlayer.GetDamageWait() <= 0))
+		{
+			gGameState |= STATE_GAMEOVER;
 		}
 	}
 }
