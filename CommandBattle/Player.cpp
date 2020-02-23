@@ -199,7 +199,7 @@ namespace DxLibPlus
 				{
 					scroll = 0;
 					scroll = ((FontSize + FontMargin) * LineMax) * scrlCnt;
-					if (i < LineMax)
+					if (i < LineMax * scrlCnt)
 					{
 						continue;
 					}
