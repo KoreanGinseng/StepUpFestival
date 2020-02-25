@@ -43,14 +43,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -72,30 +72,40 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>../DxLibNoneModel_NoneSoftDrawCode_VC;../../../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>../DxLibNoneModel_NoneSoftDrawCode_VC;../../../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>USERNAME=$(USERNAME);</PreprocessorDefinitions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -103,10 +113,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>DxLibNoneModel_NoneSoftDrawCode_VC;../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>DxLibNoneModel_NoneSoftDrawCode_VC;../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -116,17 +129,22 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>../DxLibNoneModel_NoneSoftDrawCode_VC;../../../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>../../GitHub\DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../DxLibNoneModel_NoneSoftDrawCode_VC;../../../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>USERNAME=$(USERNAME);</PreprocessorDefinitions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -136,60 +154,57 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>DxLibNoneModel_NoneSoftDrawCode_VC;../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>DxLibNoneModel_NoneSoftDrawCode_VC;../DxLibNoneModel_NoneSoftDrawCode_VC;../../DxLibNoneModel_NoneSoftDrawCode_VC;</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="AnimationData.cpp" />
-    <ClCompile Include="AnimationManager.cpp" />
-    <ClCompile Include="Circle.cpp" />
-    <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="DxLibUtillities.cpp" />
     <ClCompile Include="EffectManager.cpp" />
-    <ClCompile Include="Fps.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameApp.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SceneBase.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="GameAppBase.cpp" />
+    <ClCompile Include="GraphicsUtillities.cpp" />
+    <ClCompile Include="Chara.cpp" />
+    <ClCompile Include="KeyInput.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="TextureManager.cpp" />
-    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="TurnManager.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animation.h" />
-    <ClInclude Include="AnimationData.h" />
-    <ClInclude Include="AnimationManager.h" />
-    <ClInclude Include="Base.h" />
-    <ClInclude Include="Circle.h" />
     <ClInclude Include="DxLibPlus.h" />
-    <ClInclude Include="Effect.h" />
+    <ClInclude Include="DxLibUtillities.h" />
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="EffectManager.h" />
-    <ClInclude Include="Fps.h" />
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameApp.h" />
+    <ClInclude Include="GameAppBase.h" />
     <ClInclude Include="GameDefine.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="SceneBase.h" />
-    <ClInclude Include="SceneEffectBase.h" />
-    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="GraphicsUtillities.h" />
+    <ClInclude Include="Chara.h" />
+    <ClInclude Include="KeyInput.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="SoundManager.h" />
-    <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureManager.h" />
-    <ClInclude Include="Title.h" />
+    <ClInclude Include="TurnManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CommandBattle.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="gameico.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

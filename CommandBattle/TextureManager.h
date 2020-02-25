@@ -1,17 +1,123 @@
+/*************************************************************************//*!
+
+					@file	TextureManager.h
+					@brief	テクスチャ管理クラス
+
+															@author	いのうえ
+															@date	2020.02.15
+*//**************************************************************************/
+
+//ONCE
 #pragma once
-#include	"DxLibPlus.h"
+
+//INCLUDE
+#include	"DxLib.h"
 #include	<unordered_map>
+#include	<string>
 
-class CTextureManager
+namespace DxLibPlus
 {
-private:
-	std::unordered_map<std::string, CTexture*> m_Resource;		//! データ
-	CTextureManager(void);
-	~CTextureManager(void);
-public:
-	static CTextureManager* GetTexture(void);					//! マネージャー呼び出し
-	static CTexture* GetTexture(const std::string& str);		//! 画像取得
-	static bool Load(const std::string& str);					//! 読込
-	static void Release(void);									//! 解放
-};
+	//STRUCT
+	// ********************************************************************************
+	/// <summary>
+	/// テクスチャ読み込み構造体
+	/// </summary>
+	// ********************************************************************************
+	typedef struct tag_TEXMNGINFO {
+		std::string	key;	//!<検索用キー
+		std::string	file;	//!<読み込みファイル名
+	}TexMngInfo;
 
+	// ********************************************************************************
+	/// <summary>
+	/// テクスチャ管理クラス
+	/// </summary>
+	// ********************************************************************************
+	class CTextureManager
+	{
+	private:
+		std::unordered_map<std::string, int>	m_GraphHandleList;	//!<グラフィックハンドル
+
+		// ********************************************************************************
+		/// <summary>
+		/// コンストラクタ
+		/// </summary>
+		/// <returns>None</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		CTextureManager(void);
+		// ********************************************************************************
+		/// <summary>
+		/// デストラクタ
+		/// </summary>
+		/// <returns>None</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		~CTextureManager(void);
+	public:
+		// ********************************************************************************
+		/// <summary>
+		/// マネージャー呼び出し
+		/// </summary>
+		/// <returns>マネージャー</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		static CTextureManager& GetTextureManager(void);
+		// ********************************************************************************
+		/// <summary>
+		/// 画像ファイルのハンドルを取得する
+		/// </summary>
+		/// <param name="name">登録キー名</param>
+		/// <returns>グラフィックのハンドル</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		int GetGraphHandle(const std::string& name);
+		// ********************************************************************************
+		/// <summary>
+		/// 画像ファイルの読み込み
+		/// </summary>
+		/// <param name="name">登録キー名</param>
+		/// <param name="fileName">画像ファイル名</param>
+		/// <returns>グラフィックのハンドル</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		int LoadGraph(const std::string& name, const std::string& fileName);
+		// ********************************************************************************
+		/// <summary>
+		/// 画像ファイルの横幅を取得する
+		/// </summary>
+		/// <param name="name">登録キー名</param>
+		/// <returns>画像幅</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		int GetWidth(const std::string& name) const;
+		// ********************************************************************************
+		/// <summary>
+		/// 画像ファイルの縦幅を取得する
+		/// </summary>
+		/// <param name="name">登録キー名</param>
+		/// <returns>画像高さ</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		int GetHeight(const std::string& name) const;
+		// ********************************************************************************
+		/// <summary>
+		/// 画像ファイルの一括読み込みする
+		/// </summary>
+		/// <param name="list">読み込みリスト</param>
+		/// <param name="cnt">リストの配列数</param>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void LoadList(TexMngInfo* list, const int& cnt);
+	};
+
+#define	theTextureManager	CTextureManager::GetTextureManager()
+}

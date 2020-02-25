@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CommandBattle: C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/TurnManager.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="dragon_red.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CommandBattle
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">コマンドバトルゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_turn_manager_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TurnManager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_turn_manager_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*************************************************************************/</span><span class="comment">/**************************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_dx_lib_plus.html">DxLibPlus</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fc">   14</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fc">Turn</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fca9c9858a1f3cf5850317f97d8ed4aab70">   15</a></span>&#160;        <a class="code" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fca9c9858a1f3cf5850317f97d8ed4aab70">TURN_PLAYER</a>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fcaff59dddc8f0f5d31084fb775189b91ae">   16</a></span>&#160;        <a class="code" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fcaff59dddc8f0f5d31084fb775189b91ae">TURN_ENEMY</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span>    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_turn_manager.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html">CTurnManager</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fc">Turn</a>        m_Turn;         </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fc">Turn</a>        m_PrevTurn;     </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">bool</span>        m_bChange;      </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html">CTurnManager</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        ~<a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html">CTurnManager</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html">CTurnManager</a>&amp; <a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html#a15cbc4108dcddcf880cd86d7fac161d6">GetTurnManager</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html#a865129c783182de6a43fd94aa3e74d78">RefreshTurn</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html#a43847e7f079239187c04b687eadc1f48">SetTurn</a>(<span class="keyword">const</span> <a class="code" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fc">Turn</a>&amp; turn);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fc">Turn</a> <a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html#a2857d5e7bc5ff54ab611d7d1f8ea6524">GetTurn</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_dx_lib_plus_1_1_c_turn_manager.html#a19d88f6d9bb06dc20e121ec6523e5da9">IsChanged</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    };</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="_turn_manager_8h.html#ae376b57251a57c9f7f7505b7732e41b9">   95</a></span>&#160;<span class="preprocessor">#define theTurnManager CTurnManager::GetTurnManager()</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">}</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_turn_manager_html_a15cbc4108dcddcf880cd86d7fac161d6"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_turn_manager.html#a15cbc4108dcddcf880cd86d7fac161d6">DxLibPlus::CTurnManager::GetTurnManager</a></div><div class="ttdeci">static CTurnManager &amp; GetTurnManager(void)</div><div class="ttdoc">マネージャ取得</div><div class="ttdef"><b>Definition:</b> TurnManager.cpp:48</div></div>
+<div class="ttc" id="anamespace_dx_lib_plus_html_a1c4af98ee1581cf9f8f5ac845e60e5fca9c9858a1f3cf5850317f97d8ed4aab70"><div class="ttname"><a href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fca9c9858a1f3cf5850317f97d8ed4aab70">DxLibPlus::TURN_PLAYER</a></div><div class="ttdeci">@ TURN_PLAYER</div><div class="ttdef"><b>Definition:</b> TurnManager.h:15</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_turn_manager_html_a2857d5e7bc5ff54ab611d7d1f8ea6524"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_turn_manager.html#a2857d5e7bc5ff54ab611d7d1f8ea6524">DxLibPlus::CTurnManager::GetTurn</a></div><div class="ttdeci">Turn GetTurn(void) const</div><div class="ttdoc">ターンの取得</div><div class="ttdef"><b>Definition:</b> TurnManager.cpp:92</div></div>
+<div class="ttc" id="anamespace_dx_lib_plus_html_a1c4af98ee1581cf9f8f5ac845e60e5fc"><div class="ttname"><a href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fc">DxLibPlus::Turn</a></div><div class="ttdeci">Turn</div><div class="ttdoc">ターン列挙</div><div class="ttdef"><b>Definition:</b> TurnManager.h:14</div></div>
+<div class="ttc" id="anamespace_dx_lib_plus_html_a1c4af98ee1581cf9f8f5ac845e60e5fcaff59dddc8f0f5d31084fb775189b91ae"><div class="ttname"><a href="namespace_dx_lib_plus.html#a1c4af98ee1581cf9f8f5ac845e60e5fcaff59dddc8f0f5d31084fb775189b91ae">DxLibPlus::TURN_ENEMY</a></div><div class="ttdeci">@ TURN_ENEMY</div><div class="ttdef"><b>Definition:</b> TurnManager.h:16</div></div>
+<div class="ttc" id="anamespace_dx_lib_plus_html"><div class="ttname"><a href="namespace_dx_lib_plus.html">DxLibPlus</a></div><div class="ttdef"><b>Definition:</b> Animation.h:18</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_turn_manager_html"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_turn_manager.html">DxLibPlus::CTurnManager</a></div><div class="ttdoc">ターン管理クラス</div><div class="ttdef"><b>Definition:</b> TurnManager.h:24</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_turn_manager_html_a865129c783182de6a43fd94aa3e74d78"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_turn_manager.html#a865129c783182de6a43fd94aa3e74d78">DxLibPlus::CTurnManager::RefreshTurn</a></div><div class="ttdeci">void RefreshTurn(void)</div><div class="ttdoc">ターンの更新</div><div class="ttdef"><b>Definition:</b> TurnManager.cpp:60</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_turn_manager_html_a43847e7f079239187c04b687eadc1f48"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_turn_manager.html#a43847e7f079239187c04b687eadc1f48">DxLibPlus::CTurnManager::SetTurn</a></div><div class="ttdeci">void SetTurn(const Turn &amp;turn)</div><div class="ttdoc">ターンのセット</div><div class="ttdef"><b>Definition:</b> TurnManager.cpp:80</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_turn_manager_html_a19d88f6d9bb06dc20e121ec6523e5da9"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_turn_manager.html#a19d88f6d9bb06dc20e121ec6523e5da9">DxLibPlus::CTurnManager::IsChanged</a></div><div class="ttdeci">bool IsChanged(void) const</div><div class="ttdoc">ターン変更フラグ取得</div><div class="ttdef"><b>Definition:</b> TurnManager.cpp:104</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e7b200d48aafb02999500d9f0b0e2e7a.html">CommandBattle</a></li><li class="navelem"><a class="el" href="_turn_manager_8h.html">TurnManager.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+\hypertarget{class_dx_lib_plus_1_1_c_key_input}{}\doxysection{Dx\+Lib\+Plus\+::C\+Key\+Input クラス}
+\label{class_dx_lib_plus_1_1_c_key_input}\index{DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}}
+
+
+キー入力クラス  
+
+
+
+
+{\ttfamily \#include $<$Key\+Input.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_key_input_a254ecadd09a69d8ce7c3c8a4b2c075b2}{Refresh\+Key}} (void)
+\begin{DoxyCompactList}\small\item\em キーの更新 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_key_input_a073a14d2d2d83dc89c31a6594a6c827b}{Is\+Key\+Push}} (const int \&keycode) const
+\begin{DoxyCompactList}\small\item\em 押した瞬間のフラグ取得 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_key_input_a16ef75626f2705a7e7ea3d3506f8d6f7}{Is\+Key\+Hold}} (const int \&keycode) const
+\begin{DoxyCompactList}\small\item\em 押している間のフラグ取得 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_key_input_a82cc06da45615a14c9cc8c5ec3387146}{Is\+Key\+Pull}} (const int \&keycode) const
+\begin{DoxyCompactList}\small\item\em キーから放した瞬間のフラグ取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dx_lib_plus_1_1_c_key_input}{C\+Key\+Input}} \& \mbox{\hyperlink{class_dx_lib_plus_1_1_c_key_input_ad07bd57f9a8c3e5f25c4641c2229a7e2}{Get\+Key\+Input}} (void)
+\begin{DoxyCompactList}\small\item\em キーマネージャー取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+キー入力クラス 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_key_input_ad07bd57f9a8c3e5f25c4641c2229a7e2}\label{class_dx_lib_plus_1_1_c_key_input_ad07bd57f9a8c3e5f25c4641c2229a7e2}} 
+\index{DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}!GetKeyInput@{GetKeyInput}}
+\index{GetKeyInput@{GetKeyInput}!DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}}
+\doxysubsubsection{\texorpdfstring{GetKeyInput()}{GetKeyInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dx_lib_plus_1_1_c_key_input}{C\+Key\+Input}} \& Dx\+Lib\+Plus\+::\+C\+Key\+Input\+::\+Get\+Key\+Input (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+キーマネージャー取得 
+
+\begin{DoxyReturn}{戻り値}
+キーマネージャー
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_key_input_a16ef75626f2705a7e7ea3d3506f8d6f7}\label{class_dx_lib_plus_1_1_c_key_input_a16ef75626f2705a7e7ea3d3506f8d6f7}} 
+\index{DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}!IsKeyHold@{IsKeyHold}}
+\index{IsKeyHold@{IsKeyHold}!DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}}
+\doxysubsubsection{\texorpdfstring{IsKeyHold()}{IsKeyHold()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Key\+Input\+::\+Is\+Key\+Hold (\begin{DoxyParamCaption}\item[{const int \&}]{keycode }\end{DoxyParamCaption}) const}
+
+
+
+押している間のフラグ取得 
+
+
+\begin{DoxyParams}{引数}
+{\em keycode} & キーコード\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+押している間のフラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_key_input_a82cc06da45615a14c9cc8c5ec3387146}\label{class_dx_lib_plus_1_1_c_key_input_a82cc06da45615a14c9cc8c5ec3387146}} 
+\index{DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}!IsKeyPull@{IsKeyPull}}
+\index{IsKeyPull@{IsKeyPull}!DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}}
+\doxysubsubsection{\texorpdfstring{IsKeyPull()}{IsKeyPull()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Key\+Input\+::\+Is\+Key\+Pull (\begin{DoxyParamCaption}\item[{const int \&}]{keycode }\end{DoxyParamCaption}) const}
+
+
+
+キーから放した瞬間のフラグ取得 
+
+
+\begin{DoxyParams}{引数}
+{\em keycode} & キーコード\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+キーから放した瞬間のフラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_key_input_a073a14d2d2d83dc89c31a6594a6c827b}\label{class_dx_lib_plus_1_1_c_key_input_a073a14d2d2d83dc89c31a6594a6c827b}} 
+\index{DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}!IsKeyPush@{IsKeyPush}}
+\index{IsKeyPush@{IsKeyPush}!DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}}
+\doxysubsubsection{\texorpdfstring{IsKeyPush()}{IsKeyPush()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Key\+Input\+::\+Is\+Key\+Push (\begin{DoxyParamCaption}\item[{const int \&}]{keycode }\end{DoxyParamCaption}) const}
+
+
+
+押した瞬間のフラグ取得 
+
+
+\begin{DoxyParams}{引数}
+{\em keycode} & キーコード\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+押された瞬間のフラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_key_input_a254ecadd09a69d8ce7c3c8a4b2c075b2}\label{class_dx_lib_plus_1_1_c_key_input_a254ecadd09a69d8ce7c3c8a4b2c075b2}} 
+\index{DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}!RefreshKey@{RefreshKey}}
+\index{RefreshKey@{RefreshKey}!DxLibPlus::CKeyInput@{DxLibPlus::CKeyInput}}
+\doxysubsubsection{\texorpdfstring{RefreshKey()}{RefreshKey()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Key\+Input\+::\+Refresh\+Key (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+キーの更新 
+
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_key_input_8h}{Key\+Input.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_key_input_8cpp}{Key\+Input.\+cpp}}\end{DoxyCompactItemize}

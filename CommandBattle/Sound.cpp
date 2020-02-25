@@ -1,61 +1,118 @@
+/*************************************************************************//*!
+
+					@file	Sound.cpp
+					@brief	サウンドクラス
+
+															@author	いのうえ
+															@date	2020.02.21
+*//**************************************************************************/
+
+//INCLUDE
 #include "Sound.h"
 
-
-
-CSound::CSound(void) :
-m_pSound(nullptr),
-m_bPlay(false)
+namespace DxLibPlus
 {
-}
-
-
-CSound::~CSound(void)
-{
-}
-
-CSoundBuffer * CSound::GetSoundBuffer(void)
-{
-	return m_pSound;
-}
-
-bool CSound::IsPlay(void) const
-{
-	return m_bPlay;
-}
-
-void CSound::Play(const int& playType)
-{
-	m_pSound->Play(playType);
-	m_bPlay = true;
-}
-
-bool CSound::Load(const std::string & str)
-{
-	m_pSound = new CSoundBuffer();
-	m_pSound->Load(str.c_str());
-	return true;
-}
-
-void CSound::Update(void)
-{
-	//再生フラグが立っていない場合スキップ
-	if (!m_bPlay)
+	// ********************************************************************************
+	/// <summary>
+	/// コンストラクタ
+	/// </summary>
+	/// <returns>None</returns>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	CSound::CSound(void) :
+		m_SoundHandle(0),
+		m_bLoop(false)
 	{
-		return;
 	}
-	//再生終了しているならフラグを折る
-	if (!m_pSound->IsPlay())
+	// ********************************************************************************
+	/// <summary>
+	/// デストラクタ
+	/// </summary>
+	/// <returns>None</returns>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	CSound::~CSound(void)
 	{
-		m_bPlay = false;
+		Release();
 	}
-}
-
-void CSound::Release(void)
-{
-	m_pSound->Release();
-	if (m_pSound)
+	// ********************************************************************************
+	/// <summary>
+	/// 読み込み
+	/// </summary>
+	/// <param name="file">ファイル名</param>
+	/// <returns></returns>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	bool CSound::Load(const std::string & file)
 	{
-		delete m_pSound;
-		m_pSound = nullptr;
+		m_SoundHandle = DxLib::LoadSoundMem(file.c_str());
+		if (m_SoundHandle == -1)
+		{
+			return false;
+		}
+		return true;
+	}
+	// ********************************************************************************
+	/// <summary>
+	/// 再生する
+	/// </summary>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	void CSound::Play(void)
+	{
+		int playType = m_bLoop ? DX_PLAYTYPE_LOOP : DX_PLAYTYPE_BACK;
+		DxLib::PlaySoundMem(m_SoundHandle, playType);
+	}
+	// ********************************************************************************
+	/// <summary>
+	/// 再生中かチェックする
+	/// </summary>
+	/// <returns>再生中かどうかのフラグ</returns>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	bool CSound::IsPlay(void) const
+	{
+		return DxLib::CheckSoundMem(m_SoundHandle) ? true : false;
+	}
+	// ********************************************************************************
+	/// <summary>
+	/// 止める
+	/// </summary>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	void CSound::Stop(void)
+	{
+		DxLib::StopSoundMem(m_SoundHandle);
+	}
+	// ********************************************************************************
+	/// <summary>
+	/// ループ設定
+	/// </summary>
+	/// <param name="b">ループフラグ</param>
+	/// <param name="loopTime">ループ再生する開始時間(ミリ秒)</param>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	void CSound::SetLoop(const bool & b, const int& loopTime)
+	{
+		m_bLoop = b;
+		DxLib::SetLoopPosSoundMem(loopTime, m_SoundHandle);
+	}
+	// ********************************************************************************
+	/// <summary>
+	/// 解放
+	/// </summary>
+	/// <created>いのうえ,2020/02/23</created>
+	/// <changed>いのうえ,2020/02/23</changed>
+	// ********************************************************************************
+	void CSound::Release(void)
+	{
+		DxLib::DeleteSoundMem(m_SoundHandle);
 	}
 }

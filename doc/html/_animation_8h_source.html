@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CommandBattle: C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/Animation.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="dragon_red.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CommandBattle
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">コマンドバトルゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_animation_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Animation.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_animation_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*************************************************************************/</span><span class="comment">/**************************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//ONCE</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//INCLUDE</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include    &quot;DxLib.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include    &quot;<a class="code" href="_texture_manager_8h.html">TextureManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include    &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespace_dx_lib_plus.html">   18</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_dx_lib_plus.html">DxLibPlus</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span>    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_pattern.html">   25</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_dx_lib_plus_1_1_pattern.html">Pattern</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_pattern.html#a983889d37c78b7c759b5cf985e4a3014">   26</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_dx_lib_plus_1_1_pattern.html#a983889d37c78b7c759b5cf985e4a3014">wait</a>;               </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_pattern.html#a3c3326e8c0a5310ab355836ba14352b3">   27</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_dx_lib_plus_1_1_pattern.html#a3c3326e8c0a5310ab355836ba14352b3">no</a>;                 </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_pattern.html#aae47ade3a20826b3c52816455c4356f5">   28</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_dx_lib_plus_1_1_pattern.html#aae47ade3a20826b3c52816455c4356f5">step</a>;               </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span>    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_animation.html">   35</a></span>&#160;    <span class="keyword">template</span>&lt; <span class="keywordtype">int</span> N &gt; <span class="keyword">struct </span><a class="code" href="struct_dx_lib_plus_1_1_animation.html">Animation</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_animation.html#a4074d89f2015e6972d6be2aa63446928">   36</a></span>&#160;        std::string <a class="code" href="struct_dx_lib_plus_1_1_animation.html#a4074d89f2015e6972d6be2aa63446928">name</a>;           </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_animation.html#a4efea3974fd7ba98ea7ce3472a880595">   37</a></span>&#160;        <span class="keywordtype">int</span>         <a class="code" href="struct_dx_lib_plus_1_1_animation.html#a4efea3974fd7ba98ea7ce3472a880595">offsetX</a>;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_animation.html#aca769869461ac649d4f6ce4c32e54bce">   38</a></span>&#160;        <span class="keywordtype">int</span>         <a class="code" href="struct_dx_lib_plus_1_1_animation.html#aca769869461ac649d4f6ce4c32e54bce">offsetY</a>;        </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_animation.html#a64d2d181fd598b220395bff811c8b556">   39</a></span>&#160;        <span class="keywordtype">int</span>         <a class="code" href="struct_dx_lib_plus_1_1_animation.html#a64d2d181fd598b220395bff811c8b556">width</a>;          </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_animation.html#a11028942c340c9212f28a4a7418a48d4">   40</a></span>&#160;        <span class="keywordtype">int</span>         <a class="code" href="struct_dx_lib_plus_1_1_animation.html#a11028942c340c9212f28a4a7418a48d4">height</a>;         </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_animation.html#a9bd2a40d4039866bfc01939b41cc8851">   41</a></span>&#160;        <span class="keywordtype">bool</span>        <a class="code" href="struct_dx_lib_plus_1_1_animation.html#a9bd2a40d4039866bfc01939b41cc8851">bLoop</a>;          </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_animation.html#a012236bb69271815aa29e0e50605408a">   42</a></span>&#160;        <a class="code" href="struct_dx_lib_plus_1_1_pattern.html">Pattern</a>     <a class="code" href="struct_dx_lib_plus_1_1_animation.html#a012236bb69271815aa29e0e50605408a">pattern</a>[N];     </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    };</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html">   49</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_dx_lib_plus_1_1_rectangle.html">Rectangle</a> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html#a6eef140a44bc2bcb9b32319c5d8f0fea">   50</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a6eef140a44bc2bcb9b32319c5d8f0fea">left</a>;               </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html#a42d2b9e7886b16119970bd58053d4190">   51</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a42d2b9e7886b16119970bd58053d4190">top</a>;                </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html#afcb8298b868e91d8193202d90c34f034">   52</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#afcb8298b868e91d8193202d90c34f034">right</a>;              </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html#accb8649abad7056a54280d831a604319">   53</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#accb8649abad7056a54280d831a604319">bottom</a>;             </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html#ad68aabe92e79e50e1da6f378dfdde49b">   62</a></span>&#160;        <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#ad68aabe92e79e50e1da6f378dfdde49b">Rectangle</a>(<span class="keywordtype">void</span>) :</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a6eef140a44bc2bcb9b32319c5d8f0fea">left</a>(0),</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a42d2b9e7886b16119970bd58053d4190">top</a>(0),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#afcb8298b868e91d8193202d90c34f034">right</a>(0),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#accb8649abad7056a54280d831a604319">bottom</a>(0)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html#ac2bd3da4195bdbe946827ddb0e3e8bed">   81</a></span>&#160;        <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#ac2bd3da4195bdbe946827ddb0e3e8bed">Rectangle</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; l, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; t, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; r, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; b) :</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a6eef140a44bc2bcb9b32319c5d8f0fea">left</a>(l),</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a42d2b9e7886b16119970bd58053d4190">top</a>(t),</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#afcb8298b868e91d8193202d90c34f034">right</a>(r),</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#accb8649abad7056a54280d831a604319">bottom</a>(b)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html#a8b8dc6425e917670b675c218452fb802">   96</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a8b8dc6425e917670b675c218452fb802">GetWidth</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#afcb8298b868e91d8193202d90c34f034">right</a> - <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a6eef140a44bc2bcb9b32319c5d8f0fea">left</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="struct_dx_lib_plus_1_1_rectangle.html#aacc112b25a9db109d361005a40700e02">  108</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#aacc112b25a9db109d361005a40700e02">GetHeight</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#accb8649abad7056a54280d831a604319">bottom</a> - <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html#a42d2b9e7886b16119970bd58053d4190">top</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    };</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"></span>    <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html">  119</a></span>&#160;    <span class="keyword">template</span>&lt; <span class="keywordtype">int</span> N &gt; <span class="keyword">class </span><a class="code" href="class_dx_lib_plus_1_1_c_animation.html">CAnimation</a></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">int</span>             m_NowFlame;         </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">int</span>             m_NowWait;          </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">int</span>             m_FlameCount;       </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">int</span>             m_NowAnimNo;        </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">int</span>             m_MaxAnimCount;     </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="struct_dx_lib_plus_1_1_animation.html">Animation&lt;N&gt;</a>*   m_pAnim;            </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">bool</span>            m_bShow;            </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a9e3a006f51b9c350aefb3159752e0bfe">  138</a></span>&#160;        <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a9e3a006f51b9c350aefb3159752e0bfe">CAnimation</a>(<span class="keywordtype">void</span>) :</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            m_NowFlame(0),</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            m_NowWait(0),</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            m_FlameCount(0),</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            m_NowAnimNo(0),</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            m_MaxAnimCount(0),</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            m_pAnim(nullptr),</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            m_bShow(false)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a743874d88d6e8c56d361da798db6abce">  156</a></span>&#160;        <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a743874d88d6e8c56d361da798db6abce">~CAnimation</a>(<span class="keywordtype">void</span>) { <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a004143043e2124fa24690f2140691fcc">Release</a>(); }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a8cee36e871f229cae7c2e366ce39c234">  165</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a8cee36e871f229cae7c2e366ce39c234">ChangeMotion</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; animNo)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            m_NowAnimNo = animNo;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            m_FlameCount = N;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            m_NowFlame = 0;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            m_NowWait = 0;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a1cfe382ee0944df1d7e1007e5cee8964">  181</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a1cfe382ee0944df1d7e1007e5cee8964">Create</a>(<a class="code" href="struct_dx_lib_plus_1_1_animation.html">Animation&lt;N&gt;</a>* anim, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; animCount)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="comment">//必要数作成する</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            m_pAnim = <span class="keyword">new</span> <a class="code" href="struct_dx_lib_plus_1_1_animation.html">Animation&lt;N&gt;</a>[animCount];</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="comment">//データのコピー</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            *m_pAnim = *anim;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="comment">//最大数のセット</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            m_MaxAnimCount = animCount;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a004143043e2124fa24690f2140691fcc">  197</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a004143043e2124fa24690f2140691fcc">Release</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">if</span> (m_pAnim)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                <span class="keyword">delete</span>[] m_pAnim;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                m_pAnim = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a4556b4946428aabed319d2226c1023a5">  212</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a4556b4946428aabed319d2226c1023a5">AddTimer</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">if</span> (++m_NowWait &gt;= m_pAnim[m_NowAnimNo].pattern[m_NowFlame].wait)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                m_NowWait = 0;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                <span class="keywordflow">if</span> (++m_NowFlame &gt;= m_FlameCount)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    m_NowFlame = m_pAnim[m_NowAnimNo].<a class="code" href="struct_dx_lib_plus_1_1_animation.html#a9bd2a40d4039866bfc01939b41cc8851">bLoop</a> ? 0 : m_FlameCount;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a0acc2971d8eb988f1343c462d5866b9c">  231</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a0acc2971d8eb988f1343c462d5866b9c">IsEndMotion</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">return</span> m_pAnim-&gt;<a class="code" href="struct_dx_lib_plus_1_1_animation.html#a9bd2a40d4039866bfc01939b41cc8851">bLoop</a> ? false : (m_NowFlame &gt;= m_FlameCount);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a85bb330c1690fd7243ab380d56fe6ff7">  243</a></span>&#160;        <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html">Rectangle</a> <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a85bb330c1690fd7243ab380d56fe6ff7">GetSrcRect</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordtype">int</span> x = m_pAnim[m_NowAnimNo].<a class="code" href="struct_dx_lib_plus_1_1_animation.html#a4efea3974fd7ba98ea7ce3472a880595">offsetX</a> + m_pAnim[m_NowAnimNo].<a class="code" href="struct_dx_lib_plus_1_1_animation.html#a64d2d181fd598b220395bff811c8b556">width</a> * m_pAnim[m_NowAnimNo].<a class="code" href="struct_dx_lib_plus_1_1_animation.html#a012236bb69271815aa29e0e50605408a">pattern</a>[m_NowFlame].no;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordtype">int</span> y = m_pAnim[m_NowAnimNo].<a class="code" href="struct_dx_lib_plus_1_1_animation.html#aca769869461ac649d4f6ce4c32e54bce">offsetY</a> + m_pAnim[m_NowAnimNo].<a class="code" href="struct_dx_lib_plus_1_1_animation.html#a11028942c340c9212f28a4a7418a48d4">height</a> * m_pAnim[m_NowAnimNo].<a class="code" href="struct_dx_lib_plus_1_1_animation.html#a012236bb69271815aa29e0e50605408a">pattern</a>[m_NowFlame].step;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_dx_lib_plus_1_1_rectangle.html">Rectangle</a>(</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                x,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                y,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                x + m_pAnim[m_NowAnimNo].width,</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                y + m_pAnim[m_NowAnimNo].height</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            );</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a636401f0a2b30369b4570c18e1208934">  262</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a636401f0a2b30369b4570c18e1208934">SetShow</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; b)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            m_bShow = b;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment"></span>        <span class="comment">// ********************************************************************************</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="class_dx_lib_plus_1_1_c_animation.html#a9a4add591e7ec4f2c33995547ecdf8c5">  274</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_dx_lib_plus_1_1_c_animation.html#a9a4add591e7ec4f2c33995547ecdf8c5">IsShow</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">return</span> m_bShow;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    };</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_dx_lib_plus_1_1_animation_html_a9bd2a40d4039866bfc01939b41cc8851"><div class="ttname"><a href="struct_dx_lib_plus_1_1_animation.html#a9bd2a40d4039866bfc01939b41cc8851">DxLibPlus::Animation::bLoop</a></div><div class="ttdeci">bool bLoop</div><div class="ttdoc">高さ</div><div class="ttdef"><b>Definition:</b> Animation.h:41</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a636401f0a2b30369b4570c18e1208934"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a636401f0a2b30369b4570c18e1208934">DxLibPlus::CAnimation::SetShow</a></div><div class="ttdeci">void SetShow(const bool &amp;b)</div><div class="ttdoc">表示フラグの設定</div><div class="ttdef"><b>Definition:</b> Animation.h:262</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html_ac2bd3da4195bdbe946827ddb0e3e8bed"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html#ac2bd3da4195bdbe946827ddb0e3e8bed">DxLibPlus::Rectangle::Rectangle</a></div><div class="ttdeci">Rectangle(const int &amp;l, const int &amp;t, const int &amp;r, const int &amp;b)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> Animation.h:81</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a743874d88d6e8c56d361da798db6abce"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a743874d88d6e8c56d361da798db6abce">DxLibPlus::CAnimation::~CAnimation</a></div><div class="ttdeci">~CAnimation(void)</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> Animation.h:156</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html_a6eef140a44bc2bcb9b32319c5d8f0fea"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html#a6eef140a44bc2bcb9b32319c5d8f0fea">DxLibPlus::Rectangle::left</a></div><div class="ttdeci">int left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> Animation.h:50</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_animation_html_aca769869461ac649d4f6ce4c32e54bce"><div class="ttname"><a href="struct_dx_lib_plus_1_1_animation.html#aca769869461ac649d4f6ce4c32e54bce">DxLibPlus::Animation::offsetY</a></div><div class="ttdeci">int offsetY</div><div class="ttdoc">画像オフセットY</div><div class="ttdef"><b>Definition:</b> Animation.h:38</div></div>
+<div class="ttc" id="a_texture_manager_8h_html"><div class="ttname"><a href="_texture_manager_8h.html">TextureManager.h</a></div><div class="ttdoc">テクスチャ管理クラス</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_animation_html"><div class="ttname"><a href="struct_dx_lib_plus_1_1_animation.html">DxLibPlus::Animation</a></div><div class="ttdoc">アニメーション作成用構造体</div><div class="ttdef"><b>Definition:</b> Animation.h:35</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a9a4add591e7ec4f2c33995547ecdf8c5"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a9a4add591e7ec4f2c33995547ecdf8c5">DxLibPlus::CAnimation::IsShow</a></div><div class="ttdeci">bool IsShow(void) const</div><div class="ttdoc">表示フラグの取得</div><div class="ttdef"><b>Definition:</b> Animation.h:274</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html_a8b8dc6425e917670b675c218452fb802"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html#a8b8dc6425e917670b675c218452fb802">DxLibPlus::Rectangle::GetWidth</a></div><div class="ttdeci">int GetWidth(void) const</div><div class="ttdoc">横幅取得</div><div class="ttdef"><b>Definition:</b> Animation.h:96</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_pattern_html_a3c3326e8c0a5310ab355836ba14352b3"><div class="ttname"><a href="struct_dx_lib_plus_1_1_pattern.html#a3c3326e8c0a5310ab355836ba14352b3">DxLibPlus::Pattern::no</a></div><div class="ttdeci">int no</div><div class="ttdoc">横</div><div class="ttdef"><b>Definition:</b> Animation.h:27</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html_a42d2b9e7886b16119970bd58053d4190"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html#a42d2b9e7886b16119970bd58053d4190">DxLibPlus::Rectangle::top</a></div><div class="ttdeci">int top</div><div class="ttdoc">上</div><div class="ttdef"><b>Definition:</b> Animation.h:51</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html_ad68aabe92e79e50e1da6f378dfdde49b"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html#ad68aabe92e79e50e1da6f378dfdde49b">DxLibPlus::Rectangle::Rectangle</a></div><div class="ttdeci">Rectangle(void)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> Animation.h:62</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_animation_html_a11028942c340c9212f28a4a7418a48d4"><div class="ttname"><a href="struct_dx_lib_plus_1_1_animation.html#a11028942c340c9212f28a4a7418a48d4">DxLibPlus::Animation::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">アニメーション高さ</div><div class="ttdef"><b>Definition:</b> Animation.h:40</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_pattern_html_a983889d37c78b7c759b5cf985e4a3014"><div class="ttname"><a href="struct_dx_lib_plus_1_1_pattern.html#a983889d37c78b7c759b5cf985e4a3014">DxLibPlus::Pattern::wait</a></div><div class="ttdeci">int wait</div><div class="ttdoc">待ちフレーム</div><div class="ttdef"><b>Definition:</b> Animation.h:26</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a8cee36e871f229cae7c2e366ce39c234"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a8cee36e871f229cae7c2e366ce39c234">DxLibPlus::CAnimation::ChangeMotion</a></div><div class="ttdeci">void ChangeMotion(const int &amp;animNo)</div><div class="ttdoc">アニメーション変更</div><div class="ttdef"><b>Definition:</b> Animation.h:165</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_animation_html_a4efea3974fd7ba98ea7ce3472a880595"><div class="ttname"><a href="struct_dx_lib_plus_1_1_animation.html#a4efea3974fd7ba98ea7ce3472a880595">DxLibPlus::Animation::offsetX</a></div><div class="ttdeci">int offsetX</div><div class="ttdoc">画像オフセットX</div><div class="ttdef"><b>Definition:</b> Animation.h:37</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html_aacc112b25a9db109d361005a40700e02"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html#aacc112b25a9db109d361005a40700e02">DxLibPlus::Rectangle::GetHeight</a></div><div class="ttdeci">int GetHeight(void) const</div><div class="ttdoc">縦幅取得</div><div class="ttdef"><b>Definition:</b> Animation.h:108</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html_accb8649abad7056a54280d831a604319"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html#accb8649abad7056a54280d831a604319">DxLibPlus::Rectangle::bottom</a></div><div class="ttdeci">int bottom</div><div class="ttdoc">下</div><div class="ttdef"><b>Definition:</b> Animation.h:53</div></div>
+<div class="ttc" id="anamespace_dx_lib_plus_html"><div class="ttname"><a href="namespace_dx_lib_plus.html">DxLibPlus</a></div><div class="ttdef"><b>Definition:</b> Animation.h:18</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_animation_html_a64d2d181fd598b220395bff811c8b556"><div class="ttname"><a href="struct_dx_lib_plus_1_1_animation.html#a64d2d181fd598b220395bff811c8b556">DxLibPlus::Animation::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">アニメーション幅</div><div class="ttdef"><b>Definition:</b> Animation.h:39</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_pattern_html_aae47ade3a20826b3c52816455c4356f5"><div class="ttname"><a href="struct_dx_lib_plus_1_1_pattern.html#aae47ade3a20826b3c52816455c4356f5">DxLibPlus::Pattern::step</a></div><div class="ttdeci">int step</div><div class="ttdoc">縦</div><div class="ttdef"><b>Definition:</b> Animation.h:28</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html">DxLibPlus::Rectangle</a></div><div class="ttdoc">矩形構造体</div><div class="ttdef"><b>Definition:</b> Animation.h:49</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_rectangle_html_afcb8298b868e91d8193202d90c34f034"><div class="ttname"><a href="struct_dx_lib_plus_1_1_rectangle.html#afcb8298b868e91d8193202d90c34f034">DxLibPlus::Rectangle::right</a></div><div class="ttdeci">int right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> Animation.h:52</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a4556b4946428aabed319d2226c1023a5"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a4556b4946428aabed319d2226c1023a5">DxLibPlus::CAnimation::AddTimer</a></div><div class="ttdeci">void AddTimer(void)</div><div class="ttdoc">アニメーションを進める</div><div class="ttdef"><b>Definition:</b> Animation.h:212</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_animation_html_a4074d89f2015e6972d6be2aa63446928"><div class="ttname"><a href="struct_dx_lib_plus_1_1_animation.html#a4074d89f2015e6972d6be2aa63446928">DxLibPlus::Animation::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">アニメーション名</div><div class="ttdef"><b>Definition:</b> Animation.h:36</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a9e3a006f51b9c350aefb3159752e0bfe"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a9e3a006f51b9c350aefb3159752e0bfe">DxLibPlus::CAnimation::CAnimation</a></div><div class="ttdeci">CAnimation(void)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> Animation.h:138</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_pattern_html"><div class="ttname"><a href="struct_dx_lib_plus_1_1_pattern.html">DxLibPlus::Pattern</a></div><div class="ttdoc">アニメーションパターン構造体</div><div class="ttdef"><b>Definition:</b> Animation.h:25</div></div>
+<div class="ttc" id="astruct_dx_lib_plus_1_1_animation_html_a012236bb69271815aa29e0e50605408a"><div class="ttname"><a href="struct_dx_lib_plus_1_1_animation.html#a012236bb69271815aa29e0e50605408a">DxLibPlus::Animation::pattern</a></div><div class="ttdeci">Pattern pattern[N]</div><div class="ttdoc">アニメーションパターン</div><div class="ttdef"><b>Definition:</b> Animation.h:42</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a004143043e2124fa24690f2140691fcc"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a004143043e2124fa24690f2140691fcc">DxLibPlus::CAnimation::Release</a></div><div class="ttdeci">void Release(void)</div><div class="ttdoc">解放</div><div class="ttdef"><b>Definition:</b> Animation.h:197</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a85bb330c1690fd7243ab380d56fe6ff7"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a85bb330c1690fd7243ab380d56fe6ff7">DxLibPlus::CAnimation::GetSrcRect</a></div><div class="ttdeci">Rectangle GetSrcRect(void) const</div><div class="ttdoc">アニメーションの矩形取得</div><div class="ttdef"><b>Definition:</b> Animation.h:243</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a0acc2971d8eb988f1343c462d5866b9c"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a0acc2971d8eb988f1343c462d5866b9c">DxLibPlus::CAnimation::IsEndMotion</a></div><div class="ttdeci">bool IsEndMotion(void) const</div><div class="ttdoc">モーション終了フラグ取得</div><div class="ttdef"><b>Definition:</b> Animation.h:231</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html">DxLibPlus::CAnimation</a></div><div class="ttdoc">アニメーションクラス</div><div class="ttdef"><b>Definition:</b> Animation.h:119</div></div>
+<div class="ttc" id="aclass_dx_lib_plus_1_1_c_animation_html_a1cfe382ee0944df1d7e1007e5cee8964"><div class="ttname"><a href="class_dx_lib_plus_1_1_c_animation.html#a1cfe382ee0944df1d7e1007e5cee8964">DxLibPlus::CAnimation::Create</a></div><div class="ttdeci">void Create(Animation&lt; N &gt; *anim, const int &amp;animCount)</div><div class="ttdoc">アニメーションの作成</div><div class="ttdef"><b>Definition:</b> Animation.h:181</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e7b200d48aafb02999500d9f0b0e2e7a.html">CommandBattle</a></li><li class="navelem"><a class="el" href="_animation_8h.html">Animation.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

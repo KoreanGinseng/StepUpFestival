@@ -1,61 +1,58 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "GameApp.h"
+#include "GameDefine.h"
+#include "resource.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	// ウインドウモードで起動
-	ChangeWindowMode(TRUE);
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	DxLib::SetOutApplicationLogValidFlag(false);
 
-	//画面サイズの変更
-	SetGraphMode(640, 480, 16);
-
-	if (DxLib_Init() == -1)		// ＤＸライブラリ初期化処理
-	{
-		return -1;				// エラーが起きたら直ちに終了
-	}
-
-	// 描画先画面を裏画面にする
-	SetDrawScreen(DX_SCREEN_BACK);
-	
 	//ゲーム本体
-	CGameApp	gameApp;
-	//ゲームの初期化
-	if (gameApp.Initialize() != 0)
+	CGameApp gameApp;
+
+	//初期化
+	CGraphicsUtillities::ChangeWindowMode(true);
+	CGraphicsUtillities::SetWindowSize(1024, 768);
+	CGraphicsUtillities::SetWindowTitle("コマンドバトル");
+	CGraphicsUtillities::SetWindowIcon(IDI_ICON1);
+
+	//ＤＸライブラリ初期化処理
+	if (CDxLibUtillities::DxLibInit() == -1)
 	{
 		return -1;
 	}
 
-	//ゲームループ
-	while (ProcessMessage() == 0)
-	{
-		//FPSの計測
-		g_pFps->Update();
-		g_pInput->RefreshKey();
+	//初期化
+	CGraphicsUtillities::SetDrawScreen(DX_SCREEN_BACK);
+	CGraphicsUtillities::SetFontSize(FontSize);
+	gameApp.Initialize();
 
+	//ゲームループ
+	while (CDxLibUtillities::ProcessMessage() == 0)
+	{
 		//更新
+		theInput.RefreshKey();
+		//エスケープキーで終了処理
+		if (theInput.IsKeyPush(KEY_INPUT_ESCAPE))
+		{
+			PostQuitMessage(0);
+		}
+		theTurnManager.RefreshTurn();
+		theEffectManager.Update();
 		gameApp.Update();
 
 		//描画
-		//画面クリア
-		if (ClearDrawScreen() == -1)
-		{
-			return -1;
-		}
-
+		CGraphicsUtillities::ClearDrawScreen();
 		gameApp.Render();
-
-		//裏画面を表画面に反映
-		if (ScreenFlip() == -1)
-		{
-			return -1;
-		}
-
-		//FPSの調整
-		g_pFps->Wait();
+		CGraphicsUtillities::ScreenFlip();
 	}
 
+	//解放
 	gameApp.Release();
-	DxLib::DxLib_End();				// ＤＸライブラリ使用の終了処理
 
-	return 0;					// ソフトの終了 
+	//ＤＸライブラリ使用の終了処理
+	CDxLibUtillities::DxLibEnd();
+	return 0;
 }

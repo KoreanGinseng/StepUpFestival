@@ -1,0 +1,210 @@
+\hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities}{}\doxysection{Dx\+Lib\+Plus\+::C\+Graphics\+Utillities クラス}
+\label{class_dx_lib_plus_1_1_c_graphics_utillities}\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+
+
+描画ユーティリティクラス  
+
+
+
+
+{\ttfamily \#include $<$Graphics\+Utillities.\+h$>$}
+
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_aabcd04f2f9e1f036afe0d6dd9abee081}{Change\+Window\+Mode}} (const int \&flag)
+\begin{DoxyCompactList}\small\item\em ウィンドウモード・フルスクリーンモードの変更を行う \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_a716a407f853094c9b909c8c2ed5f2b07}{Set\+Window\+Title}} (const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em ウィンドウのタイトルを変更する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_af0b0392a3f82ce45f45de40aa5f52034}{Set\+Window\+Icon}} (const int \&id)
+\begin{DoxyCompactList}\small\item\em ウィンドウのアイコンを変更する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_a49b7c25556740de9d9e081eabb74e52a}{Set\+Window\+Size}} (const int \&w, const int \&h)
+\begin{DoxyCompactList}\small\item\em ウィンドウのサイズを変更する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_a4b39ccc9e3b1400f305d86a22a302aef}{Set\+Font\+Size}} (const int \&size)
+\begin{DoxyCompactList}\small\item\em フォントのサイズを変更する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_a25ca743f3f75fe38d7c16d64bf030102}{Get\+Target\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em 画面のサイズ幅を取得する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_afe4bdfa30d49760546836677a54eaf66}{Get\+Target\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em 画面のサイズ縦を取得する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_a64ec412f8e497545d275a9a000458d8b}{Set\+Draw\+Screen}} (const int \&screen)
+\begin{DoxyCompactList}\small\item\em 描画先グラフィック領域の指定 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_ac356ac872ba5ab2d86e142de80a73b10}{Clear\+Draw\+Screen}} (void)
+\begin{DoxyCompactList}\small\item\em 画面に書かれたものを削除する \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_dx_lib_plus_1_1_c_graphics_utillities_a7a627641c7c822a67cbd678b1afff1e9}{Screen\+Flip}} (void)
+\begin{DoxyCompactList}\small\item\em 画面裏に書かれたものを表に反映する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+描画ユーティリティクラス 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_aabcd04f2f9e1f036afe0d6dd9abee081}\label{class_dx_lib_plus_1_1_c_graphics_utillities_aabcd04f2f9e1f036afe0d6dd9abee081}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!ChangeWindowMode@{ChangeWindowMode}}
+\index{ChangeWindowMode@{ChangeWindowMode}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{ChangeWindowMode()}{ChangeWindowMode()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Change\+Window\+Mode (\begin{DoxyParamCaption}\item[{const int \&}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ウィンドウモード・フルスクリーンモードの変更を行う 
+
+
+\begin{DoxyParams}{引数}
+{\em flag} & ウィンドウモードで起動するかのフラグ情報\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(\+D\+X\+\_\+\+C\+H\+A\+N\+G\+E\+S\+C\+R\+E\+E\+N\+\_\+\+O\+K)or失敗
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_ac356ac872ba5ab2d86e142de80a73b10}\label{class_dx_lib_plus_1_1_c_graphics_utillities_ac356ac872ba5ab2d86e142de80a73b10}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!ClearDrawScreen@{ClearDrawScreen}}
+\index{ClearDrawScreen@{ClearDrawScreen}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{ClearDrawScreen()}{ClearDrawScreen()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Clear\+Draw\+Screen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+画面に書かれたものを削除する 
+
+\begin{DoxyReturn}{戻り値}
+成功(0)か失敗(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_afe4bdfa30d49760546836677a54eaf66}\label{class_dx_lib_plus_1_1_c_graphics_utillities_afe4bdfa30d49760546836677a54eaf66}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!GetTargetHeight@{GetTargetHeight}}
+\index{GetTargetHeight@{GetTargetHeight}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{GetTargetHeight()}{GetTargetHeight()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Get\+Target\+Height (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+画面のサイズ縦を取得する 
+
+\begin{DoxyReturn}{戻り値}
+画面高さ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_a25ca743f3f75fe38d7c16d64bf030102}\label{class_dx_lib_plus_1_1_c_graphics_utillities_a25ca743f3f75fe38d7c16d64bf030102}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!GetTargetWidth@{GetTargetWidth}}
+\index{GetTargetWidth@{GetTargetWidth}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{GetTargetWidth()}{GetTargetWidth()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Get\+Target\+Width (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+画面のサイズ幅を取得する 
+
+\begin{DoxyReturn}{戻り値}
+画面幅
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_a7a627641c7c822a67cbd678b1afff1e9}\label{class_dx_lib_plus_1_1_c_graphics_utillities_a7a627641c7c822a67cbd678b1afff1e9}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!ScreenFlip@{ScreenFlip}}
+\index{ScreenFlip@{ScreenFlip}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{ScreenFlip()}{ScreenFlip()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Screen\+Flip (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+画面裏に書かれたものを表に反映する 
+
+\begin{DoxyReturn}{戻り値}
+成功(0)か失敗(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_a64ec412f8e497545d275a9a000458d8b}\label{class_dx_lib_plus_1_1_c_graphics_utillities_a64ec412f8e497545d275a9a000458d8b}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!SetDrawScreen@{SetDrawScreen}}
+\index{SetDrawScreen@{SetDrawScreen}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{SetDrawScreen()}{SetDrawScreen()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Set\+Draw\+Screen (\begin{DoxyParamCaption}\item[{const int \&}]{screen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+描画先グラフィック領域の指定 
+
+
+\begin{DoxyParams}{引数}
+{\em screen} & 対象となるグラフィック領域を指定する\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)か失敗(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_a4b39ccc9e3b1400f305d86a22a302aef}\label{class_dx_lib_plus_1_1_c_graphics_utillities_a4b39ccc9e3b1400f305d86a22a302aef}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!SetFontSize@{SetFontSize}}
+\index{SetFontSize@{SetFontSize}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{SetFontSize()}{SetFontSize()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Set\+Font\+Size (\begin{DoxyParamCaption}\item[{const int \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+フォントのサイズを変更する 
+
+
+\begin{DoxyParams}{引数}
+{\em size} & サイズ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)か失敗(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_af0b0392a3f82ce45f45de40aa5f52034}\label{class_dx_lib_plus_1_1_c_graphics_utillities_af0b0392a3f82ce45f45de40aa5f52034}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!SetWindowIcon@{SetWindowIcon}}
+\index{SetWindowIcon@{SetWindowIcon}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{SetWindowIcon()}{SetWindowIcon()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Set\+Window\+Icon (\begin{DoxyParamCaption}\item[{const int \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ウィンドウのアイコンを変更する 
+
+
+\begin{DoxyParams}{引数}
+{\em id} & アイコン\+ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)か失敗(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_a49b7c25556740de9d9e081eabb74e52a}\label{class_dx_lib_plus_1_1_c_graphics_utillities_a49b7c25556740de9d9e081eabb74e52a}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!SetWindowSize@{SetWindowSize}}
+\index{SetWindowSize@{SetWindowSize}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{SetWindowSize()}{SetWindowSize()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Set\+Window\+Size (\begin{DoxyParamCaption}\item[{const int \&}]{w,  }\item[{const int \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ウィンドウのサイズを変更する 
+
+
+\begin{DoxyParams}{引数}
+{\em w} & 横幅\\
+\hline
+{\em h} & 縦幅\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)か失敗(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_graphics_utillities_a716a407f853094c9b909c8c2ed5f2b07}\label{class_dx_lib_plus_1_1_c_graphics_utillities_a716a407f853094c9b909c8c2ed5f2b07}} 
+\index{DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}!SetWindowTitle@{SetWindowTitle}}
+\index{SetWindowTitle@{SetWindowTitle}!DxLibPlus::CGraphicsUtillities@{DxLibPlus::CGraphicsUtillities}}
+\doxysubsubsection{\texorpdfstring{SetWindowTitle()}{SetWindowTitle()}}
+{\footnotesize\ttfamily int Dx\+Lib\+Plus\+::\+C\+Graphics\+Utillities\+::\+Set\+Window\+Title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ウィンドウのタイトルを変更する 
+
+
+\begin{DoxyParams}{引数}
+{\em title} & タイトル文字列\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+成功(0)か失敗(-\/1)
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/21$<$/created$>$ $<$changed$>$いのうえ,2020/02/21$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_graphics_utillities_8h}{Graphics\+Utillities.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_graphics_utillities_8cpp}{Graphics\+Utillities.\+cpp}}\end{DoxyCompactItemize}

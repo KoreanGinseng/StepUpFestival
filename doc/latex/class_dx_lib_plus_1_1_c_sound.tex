@@ -1,0 +1,151 @@
+\hypertarget{class_dx_lib_plus_1_1_c_sound}{}\doxysection{Dx\+Lib\+Plus\+::C\+Sound クラス}
+\label{class_dx_lib_plus_1_1_c_sound}\index{DxLibPlus::CSound@{DxLibPlus::CSound}}
+
+
+サウンドクラス  
+
+
+
+
+{\ttfamily \#include $<$Sound.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_ae6bef0b7479d41f6ffab7c4b2c4fce95}{C\+Sound}} (void)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_aade1b3099cfdc62acdf50fa65f897ebc}{$\sim$\+C\+Sound}} (void)
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_a504dc6da89dd751e96fff3a9f60944e7}{Load}} (const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em 読み込み \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_a46131239281e972e0e112415f3808450}{Play}} (void)
+\begin{DoxyCompactList}\small\item\em 再生する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_ad8ccc8ee9506d5088cfa0c6a025c9a41}{Is\+Play}} (void) const
+\begin{DoxyCompactList}\small\item\em 再生中かチェックする \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_afe30b0f69af9227b1a379416a3bed5a8}{Stop}} (void)
+\begin{DoxyCompactList}\small\item\em 止める \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_acea9581e01dc96e297e4ef80d5a5e9c6}{Set\+Loop}} (const bool \&b, const int \&loop\+Time=0)
+\begin{DoxyCompactList}\small\item\em ループ設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dx_lib_plus_1_1_c_sound_a5e4c4ca1a193e6527caa0a000112727b}{Release}} (void)
+\begin{DoxyCompactList}\small\item\em 解放 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+サウンドクラス 
+
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_ae6bef0b7479d41f6ffab7c4b2c4fce95}\label{class_dx_lib_plus_1_1_c_sound_ae6bef0b7479d41f6ffab7c4b2c4fce95}} 
+\index{DxLibPlus::CSound@{DxLibPlus::CSound}!CSound@{CSound}}
+\index{CSound@{CSound}!DxLibPlus::CSound@{DxLibPlus::CSound}}
+\doxysubsubsection{\texorpdfstring{CSound()}{CSound()}}
+{\footnotesize\ttfamily Dx\+Lib\+Plus\+::\+C\+Sound\+::\+C\+Sound (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+\begin{DoxyReturn}{戻り値}
+None
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_aade1b3099cfdc62acdf50fa65f897ebc}\label{class_dx_lib_plus_1_1_c_sound_aade1b3099cfdc62acdf50fa65f897ebc}} 
+\index{DxLibPlus::CSound@{DxLibPlus::CSound}!````~CSound@{$\sim$CSound}}
+\index{````~CSound@{$\sim$CSound}!DxLibPlus::CSound@{DxLibPlus::CSound}}
+\doxysubsubsection{\texorpdfstring{$\sim$CSound()}{~CSound()}}
+{\footnotesize\ttfamily Dx\+Lib\+Plus\+::\+C\+Sound\+::$\sim$\+C\+Sound (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+\begin{DoxyReturn}{戻り値}
+None
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ 
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_ad8ccc8ee9506d5088cfa0c6a025c9a41}\label{class_dx_lib_plus_1_1_c_sound_ad8ccc8ee9506d5088cfa0c6a025c9a41}} 
+\index{DxLibPlus::CSound@{DxLibPlus::CSound}!IsPlay@{IsPlay}}
+\index{IsPlay@{IsPlay}!DxLibPlus::CSound@{DxLibPlus::CSound}}
+\doxysubsubsection{\texorpdfstring{IsPlay()}{IsPlay()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Sound\+::\+Is\+Play (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+再生中かチェックする 
+
+\begin{DoxyReturn}{戻り値}
+再生中かどうかのフラグ
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_a504dc6da89dd751e96fff3a9f60944e7}\label{class_dx_lib_plus_1_1_c_sound_a504dc6da89dd751e96fff3a9f60944e7}} 
+\index{DxLibPlus::CSound@{DxLibPlus::CSound}!Load@{Load}}
+\index{Load@{Load}!DxLibPlus::CSound@{DxLibPlus::CSound}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily bool Dx\+Lib\+Plus\+::\+C\+Sound\+::\+Load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file }\end{DoxyParamCaption})}
+
+
+
+読み込み 
+
+
+\begin{DoxyParams}{引数}
+{\em file} & ファイル名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+
+\end{DoxyReturn}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_a46131239281e972e0e112415f3808450}\label{class_dx_lib_plus_1_1_c_sound_a46131239281e972e0e112415f3808450}} 
+\index{DxLibPlus::CSound@{DxLibPlus::CSound}!Play@{Play}}
+\index{Play@{Play}!DxLibPlus::CSound@{DxLibPlus::CSound}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+::\+Play (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+再生する 
+
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_a5e4c4ca1a193e6527caa0a000112727b}\label{class_dx_lib_plus_1_1_c_sound_a5e4c4ca1a193e6527caa0a000112727b}} 
+\index{DxLibPlus::CSound@{DxLibPlus::CSound}!Release@{Release}}
+\index{Release@{Release}!DxLibPlus::CSound@{DxLibPlus::CSound}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+::\+Release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+解放 
+
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_acea9581e01dc96e297e4ef80d5a5e9c6}\label{class_dx_lib_plus_1_1_c_sound_acea9581e01dc96e297e4ef80d5a5e9c6}} 
+\index{DxLibPlus::CSound@{DxLibPlus::CSound}!SetLoop@{SetLoop}}
+\index{SetLoop@{SetLoop}!DxLibPlus::CSound@{DxLibPlus::CSound}}
+\doxysubsubsection{\texorpdfstring{SetLoop()}{SetLoop()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+::\+Set\+Loop (\begin{DoxyParamCaption}\item[{const bool \&}]{b,  }\item[{const int \&}]{loop\+Time = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+ループ設定 
+
+
+\begin{DoxyParams}{引数}
+{\em b} & ループフラグ\\
+\hline
+{\em loop\+Time} & ループ再生する開始時間(ミリ秒)\\
+\hline
+\end{DoxyParams}
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ \mbox{\Hypertarget{class_dx_lib_plus_1_1_c_sound_afe30b0f69af9227b1a379416a3bed5a8}\label{class_dx_lib_plus_1_1_c_sound_afe30b0f69af9227b1a379416a3bed5a8}} 
+\index{DxLibPlus::CSound@{DxLibPlus::CSound}!Stop@{Stop}}
+\index{Stop@{Stop}!DxLibPlus::CSound@{DxLibPlus::CSound}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void Dx\+Lib\+Plus\+::\+C\+Sound\+::\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+止める 
+
+$<$created$>$いのうえ,2020/02/23$<$/created$>$ $<$changed$>$いのうえ,2020/02/23$<$/changed$>$ 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_sound_8h}{Sound.\+h}}\item 
+C\+:/\+Users/inoue/\+Documents/\+Git\+Hub/\+Step\+Up\+Festival/\+Command\+Battle/\mbox{\hyperlink{_sound_8cpp}{Sound.\+cpp}}\end{DoxyCompactItemize}

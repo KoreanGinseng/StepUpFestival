@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CommandBattle: DxLibPlus::CGameAppBase クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="dragon_red.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CommandBattle
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">コマンドバトルゲーム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_dx_lib_plus_1_1_c_game_app_base.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_dx_lib_plus_1_1_c_game_app_base-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">DxLibPlus::CGameAppBase クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ゲームアプリ基礎クラス  
+ <a href="class_dx_lib_plus_1_1_c_game_app_base.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_app_base_8h_source.html">GameAppBase.h</a>&gt;</code></p>
+<div class="dynheader">
+DxLibPlus::CGameAppBase の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_dx_lib_plus_1_1_c_game_app_base__inherit__graph.png" border="0" usemap="#_dx_lib_plus_1_1_c_game_app_base_inherit__map" alt="Inheritance graph"/></div>
+<map name="_dx_lib_plus_1_1_c_game_app_base_inherit__map" id="_dx_lib_plus_1_1_c_game_app_base_inherit__map">
+<area shape="rect" title="ゲームアプリ基礎クラス" alt="" coords="145,5,332,32"/>
+<area shape="rect" href="class_dx_lib_plus_1_1_c_chara.html" title="キャラクター基礎クラス" alt="" coords="89,80,221,107"/>
+<area shape="rect" href="class_dx_lib_plus_1_1_c_game_app.html" title="ゲームアプリクラス" alt="" coords="245,80,401,107"/>
+<area shape="rect" href="class_dx_lib_plus_1_1_c_enemy.html" title="敵クラス" alt="" coords="5,155,144,181"/>
+<area shape="rect" href="class_dx_lib_plus_1_1_c_player.html" title="プレイヤークラス" alt="" coords="169,155,303,181"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a0158e2ef6562726b9bdfa4a9df254a2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html#a0158e2ef6562726b9bdfa4a9df254a2a">CGameAppBase</a> (void)</td></tr>
+<tr class="memdesc:a0158e2ef6562726b9bdfa4a9df254a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_dx_lib_plus_1_1_c_game_app_base.html#a0158e2ef6562726b9bdfa4a9df254a2a">[詳解]</a><br /></td></tr>
+<tr class="separator:a0158e2ef6562726b9bdfa4a9df254a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927525a8a9befb761d3ee5422299faa3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html#a927525a8a9befb761d3ee5422299faa3">~CGameAppBase</a> (void)</td></tr>
+<tr class="memdesc:a927525a8a9befb761d3ee5422299faa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_dx_lib_plus_1_1_c_game_app_base.html#a927525a8a9befb761d3ee5422299faa3">[詳解]</a><br /></td></tr>
+<tr class="separator:a927525a8a9befb761d3ee5422299faa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0f54be0d5af97385061fe443f34b6e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html#a4f0f54be0d5af97385061fe443f34b6e">Initialize</a> (void)=0</td></tr>
+<tr class="memdesc:a4f0f54be0d5af97385061fe443f34b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <a href="class_dx_lib_plus_1_1_c_game_app_base.html#a4f0f54be0d5af97385061fe443f34b6e">[詳解]</a><br /></td></tr>
+<tr class="separator:a4f0f54be0d5af97385061fe443f34b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f27ad7c672777e9b07a8685fbebde1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html#ab0f27ad7c672777e9b07a8685fbebde1">Update</a> (void)=0</td></tr>
+<tr class="memdesc:ab0f27ad7c672777e9b07a8685fbebde1"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新  <a href="class_dx_lib_plus_1_1_c_game_app_base.html#ab0f27ad7c672777e9b07a8685fbebde1">[詳解]</a><br /></td></tr>
+<tr class="separator:ab0f27ad7c672777e9b07a8685fbebde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e50b691856d650e8a4ab875e949a76"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html#ae5e50b691856d650e8a4ab875e949a76">Render</a> (void)=0</td></tr>
+<tr class="memdesc:ae5e50b691856d650e8a4ab875e949a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画  <a href="class_dx_lib_plus_1_1_c_game_app_base.html#ae5e50b691856d650e8a4ab875e949a76">[詳解]</a><br /></td></tr>
+<tr class="separator:ae5e50b691856d650e8a4ab875e949a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39fcfcbcf3cdbd86a3d6578ba3b1d777"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html#a39fcfcbcf3cdbd86a3d6578ba3b1d777">Release</a> (void)</td></tr>
+<tr class="memdesc:a39fcfcbcf3cdbd86a3d6578ba3b1d777"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放  <a href="class_dx_lib_plus_1_1_c_game_app_base.html#a39fcfcbcf3cdbd86a3d6578ba3b1d777">[詳解]</a><br /></td></tr>
+<tr class="separator:a39fcfcbcf3cdbd86a3d6578ba3b1d777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ゲームアプリ基礎クラス </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a0158e2ef6562726b9bdfa4a9df254a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0158e2ef6562726b9bdfa4a9df254a2a">&#9670;&nbsp;</a></span>CGameAppBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DxLibPlus::CGameAppBase::CGameAppBase </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="section return"><dt>戻り値</dt><dd>None</dd></dl>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt; </p>
+
+</div>
+</div>
+<a id="a927525a8a9befb761d3ee5422299faa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a927525a8a9befb761d3ee5422299faa3">&#9670;&nbsp;</a></span>~CGameAppBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DxLibPlus::CGameAppBase::~CGameAppBase </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デストラクタ </p>
+<dl class="section return"><dt>戻り値</dt><dd>None</dd></dl>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt; </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a4f0f54be0d5af97385061fe443f34b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0f54be0d5af97385061fe443f34b6e">&#9670;&nbsp;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DxLibPlus::CGameAppBase::Initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#ae11413f6654fe1052ba47f6dba10e740">DxLibPlus::CChara</a>, <a class="el" href="class_dx_lib_plus_1_1_c_enemy.html#a5cf2ac7d82590b62a7b6a127c3324b3c">DxLibPlus::CEnemy</a>, <a class="el" href="class_dx_lib_plus_1_1_c_player.html#a732861af7a969564f0bb55ceb3b7f0b3">DxLibPlus::CPlayer</a>, <a class="el" href="class_dx_lib_plus_1_1_c_game_app.html#a03968f93b18138ea151244899b8b953e">DxLibPlus::CGameApp</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a39fcfcbcf3cdbd86a3d6578ba3b1d777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39fcfcbcf3cdbd86a3d6578ba3b1d777">&#9670;&nbsp;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DxLibPlus::CGameAppBase::Release </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解放 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_player.html#a153fa019060e0e6c3283348808edca84">DxLibPlus::CPlayer</a>, <a class="el" href="class_dx_lib_plus_1_1_c_chara.html#a42acfeeaf243547811a115390bcffc70">DxLibPlus::CChara</a>, <a class="el" href="class_dx_lib_plus_1_1_c_game_app.html#af44cd65bad6a20d5b0a59c02ec7c6df2">DxLibPlus::CGameApp</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="ae5e50b691856d650e8a4ab875e949a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e50b691856d650e8a4ab875e949a76">&#9670;&nbsp;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DxLibPlus::CGameAppBase::Render </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#afcd4e9810b4c8e2ca465b02dd524fabd">DxLibPlus::CChara</a>, <a class="el" href="class_dx_lib_plus_1_1_c_enemy.html#ac2490ef8c20d1a7909130809ea0d858e">DxLibPlus::CEnemy</a>, <a class="el" href="class_dx_lib_plus_1_1_c_player.html#a65a612e0b1665f73a5a382378156cf64">DxLibPlus::CPlayer</a>, <a class="el" href="class_dx_lib_plus_1_1_c_game_app.html#aeb20079a8d3baad28950fa8e79c4ac9a">DxLibPlus::CGameApp</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ab0f27ad7c672777e9b07a8685fbebde1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f27ad7c672777e9b07a8685fbebde1">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DxLibPlus::CGameAppBase::Update </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新 </p>
+<p>&lt;created&gt;いのうえ,2020/02/21&lt;/created&gt; &lt;changed&gt;いのうえ,2020/02/21&lt;/changed&gt; </p>
+
+<p><a class="el" href="class_dx_lib_plus_1_1_c_chara.html#ade4bd0ed9699a938a515ad1f1c88af6f">DxLibPlus::CChara</a>, <a class="el" href="class_dx_lib_plus_1_1_c_enemy.html#adbf8cea2d123e57a82aefebe49650d4a">DxLibPlus::CEnemy</a>, <a class="el" href="class_dx_lib_plus_1_1_c_player.html#a0c58afe3bef52f66e8830ef104f942a9">DxLibPlus::CPlayer</a>, <a class="el" href="class_dx_lib_plus_1_1_c_game_app.html#a080b2897b97ff4075fa92f0bc6edd57f">DxLibPlus::CGameApp</a>で実装されています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/<a class="el" href="_game_app_base_8h_source.html">GameAppBase.h</a></li>
+<li>C:/Users/inoue/Documents/GitHub/StepUpFestival/CommandBattle/<a class="el" href="_game_app_base_8cpp.html">GameAppBase.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_dx_lib_plus.html">DxLibPlus</a></li><li class="navelem"><a class="el" href="class_dx_lib_plus_1_1_c_game_app_base.html">CGameAppBase</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

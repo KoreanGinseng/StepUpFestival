@@ -1,38 +1,103 @@
+/*************************************************************************//*!
+
+					@file	Sound.h
+					@brief	サウンドクラス
+
+															@author	いのうえ
+															@date	2020.02.21
+*//**************************************************************************/
+
+//ONCE
 #pragma once
-#include	"DxLibPlus.h"
+
+//INCLUDE
+#include	"DxLib.h"
 #include	<string>
 
-class CSoundBuffer {
-private:
-	int		m_Handle;
-	float	m_Volume;
-public:
-	CSoundBuffer() : m_Handle(0), m_Volume(0) {}
-	~CSoundBuffer() {};
-	void Load(const TCHAR* Filename) { m_Handle = LoadSoundMem(Filename); }		//サウンド読み込み
-	int Play(int PlayType) { return PlaySoundMem(m_Handle, PlayType, TRUE); }	//サウンド再生
-	int IsPlay() { return CheckSoundMem(m_Handle); }							//再生中か判定
-	int Stop() { return StopSoundMem(m_Handle); }								//サウンド停止
-	int Resume(int PlayType) { return PlaySoundMem(m_Handle, PlayType, FALSE); } //サウンド再開
-	int Release() { return DeleteSoundMem(m_Handle); }							//サウンド削除
-	int SetVolume(int VolumePal) { m_Volume = VolumePal; return ChangeVolumeSoundMem(m_Volume, m_Handle); }//音量調整
-	int GetVolume() { return m_Volume; }
-};
-
-//サウンドエフェクト用クラス
-class CSound
+namespace DxLibPlus
 {
-private:
-	CSoundBuffer*	m_pSound;						//! サウンド
-	bool			m_bPlay;						//! 再生フラグ
-public:
-	CSound(void);									//! コンストラクタ
-	~CSound(void);									//! デストラクタ
-	CSoundBuffer*	GetSoundBuffer(void);			//! サウンド取得
-	bool			IsPlay(void) const;				//! 再生フラグ取得
-	void			Play(const int& playType);		//! 再生
-	bool			Load(const std::string& str);	//! 読込
-	void			Update(void);					//! 更新
-	void			Release(void);					//! 解放
-};
+	// ********************************************************************************
+	/// <summary>
+	/// サウンドクラス
+	/// </summary>
+	// ********************************************************************************
+	class CSound
+	{
+	private:
+		int m_SoundHandle;		//!<サウンドハンドル
+		bool m_bLoop;			//!<ループフラグ
+	public:
+		// ********************************************************************************
+		/// <summary>
+		/// コンストラクタ
+		/// </summary>
+		/// <returns>None</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		CSound(void);
+		// ********************************************************************************
+		/// <summary>
+		/// デストラクタ
+		/// </summary>
+		/// <returns>None</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		~CSound(void);
+		// ********************************************************************************
+		/// <summary>
+		/// 読み込み
+		/// </summary>
+		/// <param name="file">ファイル名</param>
+		/// <returns></returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		bool Load(const std::string& file);
+		// ********************************************************************************
+		/// <summary>
+		/// 再生する
+		/// </summary>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void Play(void);
+		// ********************************************************************************
+		/// <summary>
+		/// 再生中かチェックする
+		/// </summary>
+		/// <returns>再生中かどうかのフラグ</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		bool IsPlay(void) const;
+		// ********************************************************************************
+		/// <summary>
+		/// 止める
+		/// </summary>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void Stop(void);
+		// ********************************************************************************
+		/// <summary>
+		/// ループ設定
+		/// </summary>
+		/// <param name="b">ループフラグ</param>
+		/// <param name="loopTime">ループ再生する開始時間(ミリ秒)</param>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void SetLoop(const bool& b, const int& loopTime = 0);
+		// ********************************************************************************
+		/// <summary>
+		/// 解放
+		/// </summary>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void Release(void);
+	};
+}
 

@@ -1,31 +1,126 @@
+/*************************************************************************//*!
+
+					@file	SoundManager.h
+					@brief	サウンド管理クラス
+
+															@author	いのうえ
+															@date	2020.02.21
+*//**************************************************************************/
+
+//ONCE
 #pragma once
-#include	"DxLibPlus.h"
-#include	<unordered_map>
-#include	<vector>
+
+//INCLUDE
 #include	"Sound.h"
+#include	<unordered_map>
 
-constexpr	int		DefSoundPool = 10;			//! 再生プール数
-
-//サウンドエフェクト管理クラス
-class CSoundManager
+namespace DxLibPlus 
 {
-private:
-	std::unordered_map<std::string, std::vector<CSound*>> m_ResourceSE;		//! データ
-	std::unordered_map<std::string, CSoundBuffer*> m_ResourceBGM;			//! データ
-	CSoundManager(void);
-	~CSoundManager(void);
-public:
-	static CSoundManager* GetSound(void);									//! マネージャー呼び出し 
-	static CSound* GetSoundSE(const std::string& str);						//! 再生可能なサウンド取得
-	static CSoundBuffer* GetSoundBGM(const std::string& str);				//! 再生可能なサウンド取得
-	static CSoundBuffer* GetSoundBuffer(const std::string& str);			//! 再生可能なサウンド取得
-	static void PlaySE(const std::string& str, const int& playType);		//! 再生
-	static void PlayBGM(const std::string& str, const int& playType);		//! 再生
-	static void SetVolumeSE(const std::string& str, const float& vol);		//! 音量の調節 vol(0.0f ~ 1.0f)
-	static void SetVolumeBGM(const std::string& str, const float& vol);		//! 音量の調節 vol(0.0f ~ 1.0f)
-	static bool LoadSE(const std::string& str);								//! 読込
-	static bool LoadBGM(const std::string& str);							//! 読込
-	static void Update(void);												//! サウンド制御
-	static void Release(void);												//! 解放
-};
+	// ********************************************************************************
+	/// <summary>
+	/// サウンド管理クラス
+	/// </summary>
+	// ********************************************************************************
+	class CSoundManager
+	{
+	private:
+		std::unordered_map<std::string, CSound>	m_List;		//!<リスト
+
+		// ********************************************************************************
+		/// <summary>
+		/// コンストラクタ
+		/// </summary>
+		/// <returns>None</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		CSoundManager(void);
+		// ********************************************************************************
+		/// <summary>
+		/// デストラクタ
+		/// </summary>
+		/// <returns>None</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		~CSoundManager(void);
+	public:
+		// ********************************************************************************
+		/// <summary>
+		/// マネージャ取得
+		/// </summary>
+		/// <returns>マネージャ</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		static CSoundManager& GetSoundManager(void);
+		// ********************************************************************************
+		/// <summary>
+		/// 読み込み
+		/// </summary>
+		/// <param name="key">呼び出し用キー</param>
+		/// <param name="file">ファイル名</param>
+		/// <returns>成功(0)か失敗(-1)</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		bool Load(const std::string& key, const std::string& file);
+		// ********************************************************************************
+		/// <summary>
+		/// 再生する
+		/// </summary>
+		/// <param name="key">呼び出し用キー</param>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void Play(const std::string& key);
+		// ********************************************************************************
+		/// <summary>
+		/// 再生中かどうかチェックする
+		/// </summary>
+		/// <param name="key">呼び出し用キー</param>
+		/// <returns>再生中かどうかのフラグ</returns>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		bool IsPlay(const std::string& key);
+		// ********************************************************************************
+		/// <summary>
+		/// 止める
+		/// </summary>
+		/// <param name="key">呼び出し用キー</param>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void Stop(const std::string& key);
+		// ********************************************************************************
+		/// <summary>
+		/// すべての音を止める
+		/// </summary>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void Stop(void);
+		// ********************************************************************************
+		/// <summary>
+		/// ループ設定
+		/// </summary>
+		/// <param name="key">呼び出し用キー</param>
+		/// <param name="b">ループフラグ</param>
+		/// <param name="time">ループする開始時間(ミリ秒)</param>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void SetLoop(const std::string& key, const bool& b, const int& time = 0);
+		// ********************************************************************************
+		/// <summary>
+		/// 解放
+		/// </summary>
+		/// <created>いのうえ,2020/02/23</created>
+		/// <changed>いのうえ,2020/02/23</changed>
+		// ********************************************************************************
+		void Release(void);
+	};
+#define theSoundManager CSoundManager::GetSoundManager()
+}
 
