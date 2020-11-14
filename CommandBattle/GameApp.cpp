@@ -7,11 +7,9 @@
 															@date	2020.02.14
 *//**************************************************************************/
 
-//INCLUDE
 #include "GameApp.h"
 #include "GameDefine.h"
-#include "Player.h"
-#include "Enemy.h"
+#include "GameScene.h"
 
 //画像登録情報
 TexMngInfo TexFile[] = {
@@ -72,13 +70,6 @@ Animation<10> EffectAnim[] = {
 	},
 };
 
-CPlayer		gPlayer;					//!<プレイヤー
-CEnemy		gEnemy;						//!<敵
-bool		gbChangeTurn = false;		//!<ターン変更フラグ
-int			gGameState = STATE_GAME;	//!<ゲームの状態
-
-std::string gMessage = "";				//!<メッセージ
-
 namespace DxLibPlus
 {
 	// ********************************************************************************
@@ -109,22 +100,8 @@ namespace DxLibPlus
 		{
 			theEffectManager.CreateEffect(static_cast<SkillType>(i), &EffectAnim[i], 1);
 		}
-
-		//ターンの初期化
-		theTurnManager.SetTurn(TURN_PLAYER);
-
-		//プレイヤーの読み込み
-		gPlayer.Load();
-		//敵の読み込み
-		gEnemy.Load();
-		//プレイヤーの初期化
-		gPlayer.Initialize();
-		//敵の初期化
-		gEnemy.Initialize();
-
-		//バトルBGMの再生
-		theSoundManager.Play(SoundFile[SOUNDKEY_BGM_BATTLE].key);
 	}
+
 	// ********************************************************************************
 	/// <summary>
 	/// 更新
@@ -134,70 +111,9 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CGameApp::Update(void)
 	{
-		//ゲームオーバーかクリアの判定
-		unsigned int check = gGameState & STATE_CHECK;
-		//状態別にメッセージを設定する
-		switch (check)
-		{
-		case STATE_GAMECLEAR:
-			GameStateClear();
-			break;
-		case STATE_GAMEOVER:
-			GameStateOver();
-			break;
-		}
-		//ゲームオーバーかゲームクリアでエンターキーを押すとリスタート
-		if (check)
-		{
-			if (theInput.IsKeyPush(KEY_INPUT_RETURN))
-			{
-				//リスタートの処理
-				ReStart();
-				//決定音を鳴らす
-				theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENTER].key);
-			}
-			return;
-		}
 
-		//現在のターン取得
-		Turn nowTurn = theTurnManager.GetTurn();
-		//ターンが変わった時、攻撃の処理をする
-		if (!gbChangeTurn && theTurnManager.IsChanged())
-		{
-			RefreshChangeTurn(nowTurn);
-			return;
-		}
-		//ターン切り替え完了までの処理
-		else if (gbChangeTurn && !theTurnManager.IsChanged())
-		{
-			//現在のターンにするための処理
-			switch (nowTurn)
-			{
-			case TURN_PLAYER:
-				RefreshPlayer();
-				break;
-			case TURN_ENEMY:
-				gbChangeTurn = false;
-				break;
-			}
-			return;
-		}
-
-		//ターンによって更新
-		switch (nowTurn)
-		{
-		case TURN_PLAYER:
-			gPlayer.Update();
-			break;
-		case TURN_ENEMY:
-			//ダメージの処理
-			gEnemy.RefreshDmg();
-			//敵の更新
-			gEnemy.Update();
-			break;
-		}
-		CheckGameOver();
 	}
+
 	// ********************************************************************************
 	/// <summary>
 	/// 描画
@@ -207,36 +123,9 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CGameApp::Render(void)
 	{
-		//敵の描画
-		gEnemy.Render();
-		//コマンドボックスの描画
-		DxLib::DrawBox(CommandRectX, CommandRectY, CommandRectX + CommandRectW, CommandRectY + CommandRectH, DxLib::GetColor(0, 0, 0), true);
-		DxLib::DrawBox(CommandRectX, CommandRectY, CommandRectX + CommandRectW, CommandRectY + CommandRectH, DxLib::GetColor(255, 255, 255), false);
-		//メッセージボックスの描画
-		DxLib::DrawBox(MessageRectX, MessageRectY, MessageRectX + MessageRectW, MessageRectY + MessageRectH, DxLib::GetColor(0, 0, 0), true);
-		DxLib::DrawBox(MessageRectX, MessageRectY, MessageRectX + MessageRectW, MessageRectY + MessageRectH, DxLib::GetColor(255, 255, 255), false);
-		//メッセージの描画
-		DxLib::DrawFormatString(MessageRectX + FontSize, MessageRectY + FontMargin, DxLib::GetColor(255, 255, 255), "%s", gMessage.c_str());
-		//プレイヤーの描画
-		gPlayer.Render();
-		//プレイヤーのステータス描画
-		if (gPlayer.GetDamageWait() % 10 != 1)
-		{
-			unsigned int Color = DxLib::GetColor(255, 255, 255);
-			//死んでいれば色を赤くする
-			if (gPlayer.IsDead())
-			{
-				Color = DxLib::GetColor(192, 64, 64);
-			}
-			//ステータスボックスの描画
-			DxLib::DrawBox(PlayerRectX, PlayerRectY, PlayerRectX + PlayerRectW, PlayerRectY + PlayerRectH, DxLib::GetColor(0, 0, 0), true);
-			DxLib::DrawBox(PlayerRectX, PlayerRectY, PlayerRectX + PlayerRectW, PlayerRectY + PlayerRectH, Color, false);
-			//ステータスの描画
-			gPlayer.RenderStatus();
-		}
-		//エフェクトの描画
-		theEffectManager.Render();
+
 	}
+
 	// ********************************************************************************
 	/// <summary>
 	/// 解放
@@ -246,12 +135,10 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CGameApp::Release(void)
 	{
-		//各解放処理
-		gPlayer.Release();
-		gEnemy.Release();
 		theEffectManager.Release();
 		theSoundManager.Release();
 	}
+
 	// ********************************************************************************
 	/// <summary>
 	/// リソースフォルダの指定
@@ -279,168 +166,23 @@ namespace DxLibPlus
 			SetCurrentDirectory("Resource");
 		}
 	}
-	// ********************************************************************************
-	/// <summary>
-	/// ゲームクリア状態の処理
-	/// </summary>
-	/// <created>いのうえ,2020/02/21</created>
-	/// <changed>いのうえ,2020/02/21</changed>
-	// ********************************************************************************
-	void CGameApp::GameStateClear(void)
+
+
+	CSceneBase * CGameApp::CreateScene(const SceneName & scene)
 	{
-		//メッセージの変更
-		gMessage = "敵を倒した！\nEnterキーでリスタート！";
-		//バトルBGMが鳴っていれば止める
-		if (theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_BATTLE].key))
+		switch (scene)
 		{
-			theSoundManager.Stop(SoundFile[SOUNDKEY_BGM_BATTLE].key);
+		case SCENE_TITLE:
+			return nullptr;
+		case SCENE_GAME:
+			return new CGameScene();
+		case SCENE_GAMEOVER:
+			return nullptr;
+		case SCENE_GAMECLEAR:
+			return nullptr;
+		default:
+			return nullptr;
 		}
-		//クリア音楽が鳴っていなければならす
-		if (!theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_CLEAR].key))
-		{
-			theSoundManager.Play(SoundFile[SOUNDKEY_BGM_CLEAR].key);
-		}
-	}
-	// ********************************************************************************
-	/// <summary>
-	/// ゲームオーバー状態の処理
-	/// </summary>
-	/// <created>いのうえ,2020/02/21</created>
-	/// <changed>いのうえ,2020/02/21</changed>
-	// ********************************************************************************
-	void CGameApp::GameStateOver(void)
-	{
-		//メッセージの変更
-		gMessage = "死んでしまった！\nEnterキーでリスタート！";
-		//バトルBGMが鳴っていれば止める
-		if (theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_BATTLE].key))
-		{
-			theSoundManager.Stop(SoundFile[SOUNDKEY_BGM_BATTLE].key);
-		}
-		//ゲームオーバー音楽が鳴っていなければならす
-		if (!theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_OVER].key))
-		{
-			theSoundManager.Play(SoundFile[SOUNDKEY_BGM_OVER].key);
-		}
-	}
-	// ********************************************************************************
-	/// <summary>
-	/// リスタート時の初期化
-	/// </summary>
-	/// <created>いのうえ,2020/02/21</created>
-	/// <changed>いのうえ,2020/02/21</changed>
-	// ********************************************************************************
-	void CGameApp::ReStart(void)
-	{
-		//プレイヤーの初期化
-		gPlayer.Initialize();
-		//敵の初期化
-		gEnemy.Initialize();
-		//ゲームの状態の初期化
-		gGameState = STATE_GAME;
-		//ターンの初期化
-		theTurnManager.SetTurn(TURN_PLAYER);
-		//サウンド全ストップ
-		theSoundManager.Stop();
-		//バトルBGMの再生
-		theSoundManager.Play(SoundFile[SOUNDKEY_BGM_BATTLE].key);
-	}
-	// ********************************************************************************
-	/// <summary>
-	/// プレイヤーへのダメージ処理
-	/// </summary>
-	/// <created>いのうえ,2020/02/21</created>
-	/// <changed>いのうえ,2020/02/21</changed>
-	// ********************************************************************************
-	void CGameApp::DmgPlayer(void)
-	{
-		//敵が死んでいれば攻撃させない
-		if (gEnemy.IsDead())
-		{
-			return;
-		}
-		//敵の攻撃力を取得
-		int dmg = gEnemy.GetAttack();
-		//プレイヤーにダメージを与える
-		gPlayer.Dmg(dmg);
-		//メッセージの変更
-		gMessage += "\nプレイヤーに" + std::to_string(dmg) + "のダメージ！";
-	}
-	// ********************************************************************************
-	/// <summary>
-	/// 敵へのダメージ処理
-	/// </summary>
-	/// <created>いのうえ,2020/02/21</created>
-	/// <changed>いのうえ,2020/02/21</changed>
-	// ********************************************************************************
-	void CGameApp::DmgEnemy(void)
-	{
-		//プレイヤーの攻撃力を取得
-		int dmg = gPlayer.GetAttack();
-		//敵にダメージを与える
-		gEnemy.Dmg(dmg);
-		//メッセージの変更
-		gMessage += "\n敵に" + std::to_string(dmg) + "のダメージ！";
-	}
-	// ********************************************************************************
-	/// <summary>
-	/// プレイヤーのターンにつなぐまでの処理
-	/// </summary>
-	/// <created>いのうえ,2020/02/21</created>
-	/// <changed>いのうえ,2020/02/21</changed>
-	// ********************************************************************************
-	void CGameApp::RefreshPlayer(void)
-	{
-		//プレイヤーのダメージ表現
-		gPlayer.RefreshDmg();
-		//ダメージ表現中にターンは切り替えない
-		if (gPlayer.GetDamageWait() <= 0)
-		{
-			gPlayer.TurnStart();
-			gbChangeTurn = false;
-		}
-	}
-	// ********************************************************************************
-	/// <summary>
-	/// ターンが変わった時の次のターンまでつなぐ処理
-	/// </summary>
-	/// <param name="turn">現在のターン</param>
-	/// <created>いのうえ,2020/02/23</created>
-	/// <changed>いのうえ,2020/02/23</changed>
-	// ********************************************************************************
-	void CGameApp::RefreshChangeTurn(const Turn & turn)
-	{
-		//ターンの切り替え処理をする
-		gbChangeTurn = true;
-		//現在のターンがプレイヤーなら敵からの攻撃をくらう
-		switch (turn)
-		{
-		case TURN_PLAYER:
-			DmgPlayer();
-			break;
-		case TURN_ENEMY:
-			DmgEnemy();
-			break;
-		}
-		//敵が死んでいればゲームクリア状態にする
-		if (gEnemy.IsDead() && gEnemy.GetDamageWait() <= 0)
-		{
-			gGameState = STATE_GAMECLEAR;
-		}
-	}
-	// ********************************************************************************
-	/// <summary>
-	/// ゲームオーバーの監視
-	/// </summary>
-	/// <created>いのうえ,2020/02/23</created>
-	/// <changed>いのうえ,2020/02/23</changed>
-	// ********************************************************************************
-	void CGameApp::CheckGameOver(void)
-	{
-		//死亡チェック
-		if (gPlayer.IsDead() && (gPlayer.GetDamageWait() <= 0))
-		{
-			gGameState |= STATE_GAMEOVER;
-		}
+		return nullptr;
 	}
 }

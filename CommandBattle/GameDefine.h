@@ -44,9 +44,15 @@ enum GameState {
 	STATE_CHECK			= 0xFFFFFFFF,
 };
 
+enum SceneName {
+	SCENE_TITLE,
+	SCENE_GAME,
+	SCENE_GAMECLEAR,
+	SCENE_GAMEOVER,
+};
+
 extern TexMngInfo	TexFile[TEXKEY_COUNT];
 extern SoundMngInfo SoundFile[SOUNDKEY_COUNT];
-extern std::string  gMessage;
 
 struct Status {
 	int		hp;

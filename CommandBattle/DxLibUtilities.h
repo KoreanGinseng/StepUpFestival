@@ -21,12 +21,12 @@ namespace DxLibPlus
 	/// DxLibユーティリティクラス
 	/// </summary>
 	// ********************************************************************************
-	class CDxLibUtillities
+	class CDxLibUtilities
 	{
 	private:
 		//スタティッククラスにするためにコンストラクタの削除
-		CDxLibUtillities(void) = delete;
-		~CDxLibUtillities(void) = delete;
+		CDxLibUtilities(void) = delete;
+		~CDxLibUtilities(void) = delete;
 	public:
 		// ********************************************************************************
 		/// <summary>

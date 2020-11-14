@@ -13,7 +13,7 @@
 //INCLUDE
 #include	<crtdbg.h>
 #include	"GameApp.h"
-#include	"DxLibUtillities.h"
+#include	"DxLibUtilities.h"
 #include	"GraphicsUtillities.h"
 #include	"TextureManager.h"
 #include	"TurnManager.h"

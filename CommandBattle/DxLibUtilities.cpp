@@ -8,7 +8,7 @@
 *//**************************************************************************/
 
 //INCLUDE
-#include "DxLibUtillities.h"
+#include "DxLibUtilities.h"
 
 
 namespace DxLibPlus
@@ -21,7 +21,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	int CDxLibUtillities::DxLibInit(void)
+	int CDxLibUtilities::DxLibInit(void)
 	{
 		return DxLib::DxLib_Init();
 	}
@@ -33,7 +33,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	int CDxLibUtillities::DxLibEnd(void)
+	int CDxLibUtilities::DxLibEnd(void)
 	{
 		return DxLib::DxLib_End();
 	}
@@ -45,7 +45,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	int CDxLibUtillities::ProcessMessage(void)
+	int CDxLibUtilities::ProcessMessage(void)
 	{
 		return DxLib::ProcessMessage();
 	}
@@ -58,7 +58,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	int CDxLibUtillities::WaitTimer(const int & t)
+	int CDxLibUtilities::WaitTimer(const int & t)
 	{
 		return DxLib::WaitTimer(t);
 	}
@@ -71,7 +71,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	int CDxLibUtillities::Random(const int & max)
+	int CDxLibUtilities::Random(const int & max)
 	{
 		return DxLib::GetRand(max);
 	}
@@ -85,7 +85,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	int CDxLibUtillities::Random(const int & min, const int & max)
+	int CDxLibUtilities::Random(const int & min, const int & max)
 	{
 		return DxLib::GetRand(max - min) + min;
 	}
@@ -97,7 +97,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	float CDxLibUtillities::RandomFloat(void)
+	float CDxLibUtilities::RandomFloat(void)
 	{
 		return static_cast<float>(DxLib::GetRand(100)) * 0.01f;
 	}
@@ -110,7 +110,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	int CDxLibUtillities::SetRandom(const int & seed)
+	int CDxLibUtilities::SetRandom(const int & seed)
 	{
 		return DxLib::SRand(seed);
 	}
@@ -123,7 +123,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/19</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/19</changed>
 	// ********************************************************************************
-	std::string CDxLibUtillities::WStringToString(std::wstring oWString)
+	std::string CDxLibUtilities::WStringToString(std::wstring oWString)
 	{
 		// wstring Å® SJIS
 		int iBufferSize = WideCharToMultiByte(CP_OEMCP, 0, oWString.c_str()
@@ -157,7 +157,7 @@ namespace DxLibPlus
 	/// <created>Ç¢ÇÃÇ§Ç¶,2020/02/23</created>
 	/// <changed>Ç¢ÇÃÇ§Ç¶,2020/02/23</changed>
 	// ********************************************************************************
-	std::string CDxLibUtillities::GetSpalateString(const std::string & buff, const std::string & spa, int & outstrlen, int & outindent)
+	std::string CDxLibUtilities::GetSpalateString(const std::string & buff, const std::string & spa, int & outstrlen, int & outindent)
 	{
 		std::string re = "";
 		outstrlen = buff.find_first_of("\n", outindent) - outindent;

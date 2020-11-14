@@ -67,7 +67,7 @@ namespace DxLibPlus
 		//ファイルの終端まで読み込む
 		ifs.imbue(std::locale(std::locale::empty(), new std::codecvt_utf8<wchar_t>));
 		std::wstring wstr((std::istreambuf_iterator<wchar_t>(ifs)), std::istreambuf_iterator<wchar_t>());
-		std::string buff = CDxLibUtillities::WStringToString(wstr);
+		std::string buff = CDxLibUtilities::WStringToString(wstr);
 		int length = buff.length();
 		int indentCnt = 0;
 		int strlen = 0;
@@ -75,16 +75,16 @@ namespace DxLibPlus
 		while (length > indentCnt && strlen >= 0)
 		{
 			//改行区切りで文字列取得
-			str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+			str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 			//ステータスコマンドの場合
 			if (str == "status")
 			{
 				//HPの取得
-				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+				str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				m_Status.hp = std::atoi(str.c_str());
 				m_OffsetHp = m_Status.hp;
 				//ATTACKの取得
-				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+				str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				m_Status.attack = std::atoi(str.c_str());
 			}
 			//スキルコマンドの場合
@@ -92,13 +92,13 @@ namespace DxLibPlus
 			{
 				Skill addData;
 				//スキル名取得
-				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+				str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				addData.name = str;
 				//スキル攻撃倍率取得
-				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+				str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				addData.rate = static_cast<float>(std::atof(str.c_str()));
 				//エフェクトの種類取得
-				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+				str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				addData.effect = (str == "FIRE") ? SKILL_FIRE : (str == "ICE") ? SKILL_ICE : (str == "THUNDER") ? SKILL_THUNDER : SKILL_SLASH;
 				//スキルの登録
 				m_SkillList.push_back(addData);
