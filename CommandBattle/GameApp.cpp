@@ -10,6 +10,7 @@
 #include "GameApp.h"
 #include "GameDefine.h"
 #include "GameScene.h"
+#include "TitleScene.h"
 
 //画像登録情報
 TexMngInfo TexFile[] = {
@@ -70,6 +71,9 @@ Animation<10> EffectAnim[] = {
 	},
 };
 
+//シーンの生成
+CSceneBase* CreateScene(const SceneName& scene);
+
 namespace DxLibPlus
 {
 	// ********************************************************************************
@@ -100,6 +104,10 @@ namespace DxLibPlus
 		{
 			theEffectManager.CreateEffect(static_cast<SkillType>(i), &EffectAnim[i], 1);
 		}
+
+		// シーンの作成
+		m_pScene = CreateScene(SCENE_TITLE);
+		m_pScene->Initialize();
 	}
 
 	// ********************************************************************************
@@ -111,7 +119,16 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CGameApp::Update(void)
 	{
+		m_pScene->Update();
 
+		if (m_pScene->IsEnd())
+		{
+			SceneName nextScene = (SceneName)m_pScene->GetNextScene();
+			m_pScene->Release();
+			delete m_pScene;
+			m_pScene = CreateScene(nextScene);
+			m_pScene->Initialize();
+		}
 	}
 
 	// ********************************************************************************
@@ -123,7 +140,7 @@ namespace DxLibPlus
 	// ********************************************************************************
 	void CGameApp::Render(void)
 	{
-
+		m_pScene->Render();
 	}
 
 	// ********************************************************************************
@@ -137,6 +154,12 @@ namespace DxLibPlus
 	{
 		theEffectManager.Release();
 		theSoundManager.Release();
+		if (m_pScene)
+		{
+			m_pScene->Release();
+			delete m_pScene;
+			m_pScene = nullptr;
+		}
 	}
 
 	// ********************************************************************************
@@ -153,8 +176,8 @@ namespace DxLibPlus
 		GetCurrentDirectory(MAX_PATH + 1, pass);
 		std::string full = pass;
 		//カレントパスに変換
-		int len = full.length();
-		int lastlen = full.find_last_of("\\");
+		int len = (int)full.length();
+		int lastlen = (int)full.find_last_of("\\");
 		std::string current = full.substr(lastlen + 1, len - lastlen);
 		//現在のファイル位置からリソースフォルダの設定
 		if (current == "CommandBattle")
@@ -166,23 +189,24 @@ namespace DxLibPlus
 			SetCurrentDirectory("Resource");
 		}
 	}
+}
 
 
-	CSceneBase * CGameApp::CreateScene(const SceneName & scene)
+
+CSceneBase* CreateScene(const SceneName & scene)
+{
+	switch (scene)
 	{
-		switch (scene)
-		{
-		case SCENE_TITLE:
-			return nullptr;
-		case SCENE_GAME:
-			return new CGameScene();
-		case SCENE_GAMEOVER:
-			return nullptr;
-		case SCENE_GAMECLEAR:
-			return nullptr;
-		default:
-			return nullptr;
-		}
+	case SCENE_TITLE:
+		return new CTitleScene();
+	case SCENE_GAME:
+		return new CGameScene();
+	case SCENE_GAMEOVER:
+		return nullptr;
+	case SCENE_GAMECLEAR:
+		return nullptr;
+	default:
 		return nullptr;
 	}
+	return nullptr;
 }

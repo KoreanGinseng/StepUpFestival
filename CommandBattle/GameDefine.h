@@ -51,8 +51,8 @@ enum SceneName {
 	SCENE_GAMEOVER,
 };
 
-extern TexMngInfo	TexFile[TEXKEY_COUNT];
-extern SoundMngInfo SoundFile[SOUNDKEY_COUNT];
+extern DxLibPlus::TexMngInfo   TexFile[TEXKEY_COUNT];
+extern DxLibPlus::SoundMngInfo SoundFile[SOUNDKEY_COUNT];
 
 struct Status {
 	int		hp;

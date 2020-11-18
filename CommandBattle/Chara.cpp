@@ -95,7 +95,7 @@ namespace DxLibPlus
 	int CChara::GetAttack(void) const
 	{
 		//‘f‚ÌUŒ‚—Í * UŒ‚”{—¦ * 0.8~1.2‚Ì—””{‚ÌŒ‹‰Ê‚ğ•Ô‚·
-		return static_cast<int>(m_Status.attack * m_AttackRate * (CDxLibUtillities::Random(8, 12) * 0.1f));
+		return static_cast<int>(m_Status.attack * m_AttackRate * (CDxLibUtilities::Random(8, 12) * 0.1f));
 	}
 	// ********************************************************************************
 	/// <summary>

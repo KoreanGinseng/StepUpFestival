@@ -12,12 +12,12 @@
 
 //INCLUDE
 #include "GameAppBase.h"
-#include "DxLibPlus.h"
-#include "SceneBase.h"
-#include "GameDefine.h"
 
 namespace DxLibPlus
 {
+	class CSceneBase;
+	using LPSceneBase = CSceneBase*;
+
 	// ********************************************************************************
 	/// <summary>
 	/// ゲームアプリクラス
@@ -27,7 +27,7 @@ namespace DxLibPlus
 	{
 	private:
 
-		CSceneBase* m_pScene;
+		LPSceneBase m_pScene;
 
 	public:
 		// ********************************************************************************
@@ -90,9 +90,6 @@ namespace DxLibPlus
 		/// <changed>いのうえ,2020/02/21</changed>
 		// ********************************************************************************
 		void SetResourceFolder(void);
-
-		//シーンの生成
-		CSceneBase* CreateScene(const SceneName& scene);
 	};
 }
 

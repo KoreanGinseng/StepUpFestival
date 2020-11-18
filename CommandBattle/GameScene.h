@@ -17,7 +17,7 @@ namespace DxLibPlus
 		bool		m_bChangeTurn = false;		//!<ターン変更フラグ
 		int			m_GameState = STATE_GAME;	//!<ゲームの状態
 
-		std::string m_Message = "";				//!<メッセージ
+		static std::string m_Message;			//!<メッセージ
 
 	public:
 		//コンストラクタ
@@ -32,6 +32,9 @@ namespace DxLibPlus
 		virtual void Render(void) override;
 		//解放
 		virtual void Release(void) override;
+
+		static std::string& GetMessage(void);
+		static void SetMessage(const std::string& str);
 
 	private:
 		// ********************************************************************************

@@ -19,7 +19,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	CGraphicsUtillities::SetWindowIcon(IDI_ICON1);
 
 	//ＤＸライブラリ初期化処理
-	if (CDxLibUtillities::DxLibInit() == -1)
+	if (CDxLibUtilities::DxLibInit() == -1)
 	{
 		return -1;
 	}
@@ -30,7 +30,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	gameApp.Initialize();
 
 	//ゲームループ
-	while (CDxLibUtillities::ProcessMessage() == 0)
+	while (CDxLibUtilities::ProcessMessage() == 0)
 	{
 		//更新
 		theInput.RefreshKey();
@@ -53,6 +53,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	gameApp.Release();
 
 	//ＤＸライブラリ使用の終了処理
-	CDxLibUtillities::DxLibEnd();
+	CDxLibUtilities::DxLibEnd();
 	return 0;
 }

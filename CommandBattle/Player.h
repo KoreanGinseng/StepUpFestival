@@ -38,6 +38,7 @@ namespace DxLibPlus
 		} m_State;										//!<状態
 		int							m_Cursor;			//!<カーソル
 		std::vector<Skill>			m_SkillList;		//!<スキルリスト
+		bool                        m_bEnd{ false };    //!<逃げるフラグ
 	public:
 		// ********************************************************************************
 		/// <summary>
@@ -114,6 +115,8 @@ namespace DxLibPlus
 		/// <changed>いのうえ,2020/02/21</changed>
 		// ********************************************************************************
 		void TurnStart(void);
+
+		bool IsEnd(void) const { return m_bEnd; }
 
 	private:
 		// ********************************************************************************

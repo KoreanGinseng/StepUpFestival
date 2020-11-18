@@ -9,6 +9,7 @@
 
 //INCLUDE
 #include "Enemy.h"
+#include "GameScene.h"
 
 namespace DxLibPlus
 {
@@ -55,24 +56,24 @@ namespace DxLibPlus
 		//ファイルの終端まで読み込む
 		ifs.imbue(std::locale(std::locale::empty(), new std::codecvt_utf8<wchar_t>));
 		std::wstring wstr((std::istreambuf_iterator<wchar_t>(ifs)), std::istreambuf_iterator<wchar_t>());
-		std::string buff = CDxLibUtillities::WStringToString(wstr);
-		int length = buff.length();
+		std::string buff = CDxLibUtilities::WStringToString(wstr);
+		int length = (int)buff.length();
 		int indentCnt = 0;
 		int strlen = 0;
 		std::string str = "";
 		while (length > indentCnt && strlen >= 0)
 		{
 			//改行区切りで文字列取得
-			str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+			str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 			//ステータスコマンドの場合
 			if (str == "status")
 			{
 				//HPの取得
-				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+				str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				m_Status.hp = std::atoi(str.c_str());
 				m_OffsetHp = m_Status.hp;
 				//ATTACKの取得
-				str = CDxLibUtillities::GetSpalateString(buff, "\n", strlen, indentCnt);
+				str = CDxLibUtilities::GetSpalateString(buff, "\n", strlen, indentCnt);
 				m_Status.attack = std::atoi(str.c_str());
 			}
 		}
@@ -88,7 +89,7 @@ namespace DxLibPlus
 	void CEnemy::Initialize(void)
 	{
 		//敵の種類をランダムで決める
-		m_Type = static_cast<EnemyType>(CDxLibUtillities::Random(ENE_COUNT) - 1);
+		m_Type = static_cast<EnemyType>(CDxLibUtilities::Random(ENE_COUNT) - 1);
 		//画像のキーを取得しておく
 		m_TexKey;
 		switch (m_Type)
@@ -137,7 +138,7 @@ namespace DxLibPlus
 			return;
 		}
 		//メッセージの変更
-		gMessage = "敵の攻撃！";
+		CGameScene::SetMessage("敵の攻撃！");
 		//攻撃音を鳴らす
 		theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENEMYATTACK].key);
 	}

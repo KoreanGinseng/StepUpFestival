@@ -1,11 +1,15 @@
 #include "GameScene.h"
 #include "TurnManager.h"
 
+std::string DxLibPlus::CGameScene::m_Message = "";
+
 namespace DxLibPlus
 {
 	CGameScene::CGameScene(void)
 		: CSceneBase()
 	{
+		//サウンド全ストップ
+		theSoundManager.Stop();
 	}
 
 	CGameScene::~CGameScene(void)
@@ -50,9 +54,11 @@ namespace DxLibPlus
 			if (theInput.IsKeyPush(KEY_INPUT_RETURN))
 			{
 				//リスタートの処理
-				ReStart();
+				//ReStart();
 				//決定音を鳴らす
 				theSoundManager.Play(SoundFile[SOUNDKEY_SE_ENTER].key);
+				m_bEnd = true;
+				m_NextScene = SCENE_TITLE;
 			}
 			return;
 		}
@@ -86,6 +92,11 @@ namespace DxLibPlus
 		{
 		case TURN_PLAYER:
 			m_Player.Update();
+			m_bEnd = m_Player.IsEnd();
+			if (m_bEnd)
+			{
+				m_NextScene = SCENE_TITLE;
+			}
 			break;
 		case TURN_ENEMY:
 			//ダメージの処理
@@ -137,6 +148,16 @@ namespace DxLibPlus
 		m_Enemy.Release();
 	}
 
+	std::string & CGameScene::GetMessage(void)
+	{
+		return m_Message;
+	}
+
+	void CGameScene::SetMessage(const std::string & str)
+	{
+		m_Message = str;
+	}
+
 	// ********************************************************************************
 	/// <summary>
 	/// ゲームクリア状態の処理
@@ -147,7 +168,7 @@ namespace DxLibPlus
 	void CGameScene::GameStateClear(void)
 	{
 		//メッセージの変更
-		m_Message = "敵を倒した！\nEnterキーでリスタート！";
+		m_Message = "敵を倒した！\nEnterキーでタイトルへ！";
 		//バトルBGMが鳴っていれば止める
 		if (theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_BATTLE].key))
 		{
@@ -169,7 +190,7 @@ namespace DxLibPlus
 	void CGameScene::GameStateOver(void)
 	{
 		//メッセージの変更
-		m_Message = "死んでしまった！\nEnterキーでリスタート！";
+		m_Message = "死んでしまった！\nEnterキーでタイトルへ！";
 		//バトルBGMが鳴っていれば止める
 		if (theSoundManager.IsPlay(SoundFile[SOUNDKEY_BGM_BATTLE].key))
 		{

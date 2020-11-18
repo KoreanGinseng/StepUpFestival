@@ -9,12 +9,13 @@
 
 //INCLUDE
 #include "Player.h"
+#include "GameScene.h"
 
 //コマンドリスト
 std::string gCommandList[] = {
 	"たたかう",
 	"とくぎ",
-	"ゲーム終了",
+	"にげる",
 };
 
 namespace DxLibPlus
@@ -68,7 +69,7 @@ namespace DxLibPlus
 		ifs.imbue(std::locale(std::locale::empty(), new std::codecvt_utf8<wchar_t>));
 		std::wstring wstr((std::istreambuf_iterator<wchar_t>(ifs)), std::istreambuf_iterator<wchar_t>());
 		std::string buff = CDxLibUtilities::WStringToString(wstr);
-		int length = buff.length();
+		int length = (int)buff.length();
 		int indentCnt = 0;
 		int strlen = 0;
 		std::string str = "";
@@ -126,7 +127,7 @@ namespace DxLibPlus
 		m_Status.hp = m_OffsetHp;
 		m_Cursor = 0;
 		m_State = COMMAND_WAIT;
-		gMessage = "どうする？";
+		CGameScene::SetMessage("どうする？");
 		m_DamageWait = 0;
 	}
 
@@ -260,7 +261,7 @@ namespace DxLibPlus
 		//待機状態
 		m_State = COMMAND_WAIT;
 		//メッセージ変更
-		gMessage = "どうする？";
+		CGameScene::SetMessage("どうする？");
 
 	}
 	// ********************************************************************************
@@ -354,13 +355,14 @@ namespace DxLibPlus
 			//行動終了なので敵のターンへ移行する
 			theTurnManager.SetTurn(TURN_ENEMY);
 			//メッセージを変更
-			gMessage = "プレイヤーの攻撃！";
+			CGameScene::SetMessage("プレイヤーの攻撃！");
 		}
 		//終了を押された場合
 		else if (m_State == COMMAND_EXIT)
 		{
 			//アプリ終了
-			PostQuitMessage(0);
+			m_bEnd = true;
+			//PostQuitMessage(0);
 		}
 		//上記以外はカーソルを戻すだけ
 		else
@@ -396,7 +398,7 @@ namespace DxLibPlus
 		//行動終了なので敵のターンへ移行する
 		theTurnManager.SetTurn(TURN_ENEMY);
 		//メッセージにスキル名を表示させる
-		gMessage = "プレイヤーの" + m_SkillList[m_Cursor].name + "！";
+		CGameScene::SetMessage("プレイヤーの" + m_SkillList[m_Cursor].name + "！");
 		//カーソルのリセット
 		m_Cursor = 0;
 	}

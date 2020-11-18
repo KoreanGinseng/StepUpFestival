@@ -160,7 +160,7 @@ namespace DxLibPlus
 	std::string CDxLibUtilities::GetSpalateString(const std::string & buff, const std::string & spa, int & outstrlen, int & outindent)
 	{
 		std::string re = "";
-		outstrlen = buff.find_first_of("\n", outindent) - outindent;
+		outstrlen = (int)buff.find_first_of("\n", outindent) - outindent;
 		re = buff.substr(outindent, outstrlen);
 		outindent += outstrlen + 1;
 		return re;

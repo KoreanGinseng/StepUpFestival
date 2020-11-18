@@ -179,6 +179,7 @@
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="TurnManager.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
@@ -201,6 +202,7 @@
     <ClInclude Include="Sound.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TitleScene.h" />
     <ClInclude Include="TurnManager.h" />
   </ItemGroup>
   <ItemGroup>
