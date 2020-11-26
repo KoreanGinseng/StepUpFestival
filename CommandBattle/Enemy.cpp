@@ -104,6 +104,7 @@ namespace DxLibPlus
 			m_TexKey = TEXKEY_DRAGON_BLUE;
 			break;
 		case ENE_KOMODO:
+		default:
 			m_TexKey = TEXKEY_DRAGON_KOMODO;
 			break;
 		}
